@@ -23,7 +23,7 @@ body {
     text-align: center;
     font-size: 22px;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 20px 0 ;
     font-family: 'Georgia', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -31,15 +31,14 @@ body {
 
 /* Document Layout */
 .document {
-  margin: 6em;
+  margin: 3em;
 }
 
-.p {
+.document.p {
   text-indent: 1em;
-  text-align: justify;
+  text-align: center;
   padding: 30px;
-  font-style: italic;
-  font-size: 1.3em; 
+  font-size: 1.1em; 
 }
 
 
@@ -58,7 +57,7 @@ img {
     justify-content: center; /* Horizontally center the image */
     align-items: center; /* Vertically center the image */
     height: 60vh; /* Full viewport height */
-    padding: 20px;
+    padding: 10px;
     position: relative; /* Allow child elements (image) to be positioned relative to this container */
 }
 
@@ -70,9 +69,35 @@ img {
     margin: auto; /* Center the image */
     border-radius: 50%; /* Make the image itself circular */
     position: relative; /* Make it movable */
-    top: -2cm; /* Move the image upwards by 5cm */
+    top: -1.5cm; /* Move the image upwards by 5cm */
 }
 
+/* Credits Section */
+#credits {
+    background-color: #f9f9f9; /* Subtle grey background */
+    padding: 10px 0; /* Adjust spacing around the text */
+    text-indent: 7em;
+    text-align: center; /* Center-align the content */
+    font-family: 'Georgia', serif; /* Consistent font family */
+    font-size: 14px; /* Balance text size */
+    border-top: 2px solid #ccc; /* Visual separation with a top border */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in total width calculation */
+    margin: 0; /* Remove margins */
+}
+
+/* Align text within a single line, optionally with text overflow ellipsis */
+#credits p {
+    margin: 0; /* Remove margins around the paragraph */
+    white-space: nowrap; /* Keep text on one line */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+    color: #555; /* Neutral grey for text */
+}
+
+#credits strong {
+    color: #111; /* Bold text in black for key highlights */
+}
 
 
 /* Footer */
@@ -134,6 +159,14 @@ img {
 }
 
 /* Buttons */
+.closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+   }
+
 .openbtn {
   font-size: 20px;
   cursor: pointer;

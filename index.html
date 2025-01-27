@@ -9,6 +9,7 @@
    </head>
    <body>
       <div id="mySidebar" class="sidebar">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <a href="index.html">Accueil</a>
          <a href="https://github.com/16thExegesisDH">Construction du projet: Github</a>
          <a href="https://ihr-num.unige.ch/rrp/">RRP | Reformation Readings of Paul</a>
@@ -17,30 +18,28 @@
          <ul id="documentList" style="display: none; padding-left: 20px;">
             <li><a href="Web_interface/HTML/6_Aretius.html" target="_blank">Aretius Benedictus</a></li>
             <li><a href="Web_interface/HTML/6_Lambertus.html" target="_blank">Lambertus Danaeus</a></li>
-            <li><a href="Web_interface/HTML/Documents/document3.html" target="_blank">Document 3</a></li>
+            <li><a href="Web_interface/HTML/8_test.html" target="_blank">8_test</a></li>
          </ul>
       </div>  
       <div id="main">
          <button class="openbtn" onclick="openNav()">☰ Navigation</button>
-         <!--  the downlaod option is unnecessary here
-         <span class="download">
-            <button class="openbtn">
-               <a href="../HTML/miroir.html" target="_blank">[↓] XML-TEI</a>
-            </button>
-            <button class="openbtn">
-               <a href="../PDF/.pdf" target="_blank">[↓] PDF</a>
-            </button>
-         </span> -->
-         <div class="title">Exégèse paulinienne en ligne</div>
+         <div class="title">16th Century Exegesis of Paul :  a Digital Library</div>
          <div class="document">
-            <span class="p">Bienvenue sur le site du projet : 16th Century Paul's Exegesis.</span>
+            <p>Welcome to the website for the project: 16th Century Exegesis of Paul. The aim of this site is to provide a digital library of the reformed commentaries on Paul's epistles in the 16th century, with access to their PDF and XML-TEI versions. The results of topic-modeling will also be integrated, enabling a comparison of the epistles by verse (summer 2025).</p>
+            <p>More information about the project on the digital portal of the SNSF project ‘16th century Pauline exegesis’ (<a href=‘https://data.snf.ch/grants/grant/207696’>→ data.snf.ch/grants/grant/207696</a>). For a description of the project's research objectives please refer to the page dedicated to it <a href=‘https://www.theologie.uzh.ch/de/faecher/neues-testament/Professur-f%C3%BCr-neutestamentliche-Wissenschaft/16th_century_exegesis_of_paul.html’>→ at the University of Zurich</a>.</p></div>
          </div>
-      </div> 
      
       <div class="image">
-         <img class="picture" src="Web_interface/IMG/183631020.png" alt="Paul in the matrix">
-      </div>
-      
+       <img class="picture" src="Web_interface/IMG/183631020.png" alt="Paul in the matrix">
+    </div>
+
+    <div id="credits">
+   <p>
+    <strong>Terms of Use and Citation</strong> The citation terms are as follows :
+    "16th Century Exegesis of Paul - a Digital Library: 16th Century Exegesis of Paul, SNF207696, Universties of Geneva and Zürich, dir. Ueli Zahnd and Stefan Krauter, [date of consultation]".
+   </p>
+   <p>coding & desing: <a href="mailto:floriane.goy@unige.ch">floriane.goy@unige.ch</a></p>
+</div>      
       <div id="footer">
          <div class="logos">
             <img class="logo" src="Web_interface/IMG/ihreformation_blanc.png" alt="Logo UNIGE">
