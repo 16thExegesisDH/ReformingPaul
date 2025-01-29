@@ -32,9 +32,8 @@ body, html {
 
 /* Footer */
 #footer {
-    margin: 0;
     background-color: black;
-    padding: 0;
+    padding: 10px 40px;
     color: white;
     text-align: center; /* Optional: center the text or content */
 }
@@ -48,19 +47,20 @@ body, html {
 
 /* Style each logo with appropriate height */
 .logo {
-    height: 40px;
+    height: 80px;
     width: auto;
 }
 
 .logo2 {
-    height: 20px;
+    height: 60px;
     width: auto;
 }
 
 .logo3 {
-    height: 20px;
+    height: 60px;
     width: auto;
 }
+
 
 
 /* Table Styles */
@@ -91,6 +91,12 @@ body, html {
     text-align: justify;
     text-justify: inter-word;
     margin: 0;
+}
+
+p.note-text{
+   text-align: left;
+   margin-left: 180px;
+   line-height: 0.3;
 }
 
 /* Verset Styling */
