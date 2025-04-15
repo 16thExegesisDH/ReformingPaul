@@ -18,3 +18,11 @@ function toggleDocumentList() {
                  documentList.style.display = 'none';
              }
          }
+
+function toggleImageSource() {
+   const img = document.getElementById("toggleImage");
+   const firstSrc = "Web_interface/IMG/183631020.png";
+   const secondSrc = "Web_interface/IMG/team_paul_petit.png";
+
+   img.src = (img.src.includes("183631020.png")) ? secondSrc : firstSrc;
+}
