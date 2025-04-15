@@ -71,6 +71,38 @@ img {
     position: relative; /* Make it movable */
     top: -1.5cm; /* Move the image upwards by 5cm */
 }
+/*image for dh architecture*/
+  .main-image {
+    display: block;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    width: 710px;
+    height: 440px;
+    margin: 20px auto;
+    position: relative; 
+  }
+
+  .subpictures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 10px auto;
+    max-width: 1000px;
+  }
+
+  .subpictures img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    transition: transform 0.2s ease;
+  }
+
+  .subpictures img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 
 /* Credits Section */
 #credits {
