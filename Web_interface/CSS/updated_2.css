@@ -1,4 +1,4 @@
-/* General Reset */
+/* General Reset css for the digital edition*/
 * {
     box-sizing: border-box;
 }
@@ -17,6 +17,9 @@ body, html {
     margin-right: 20px;
     padding: 20px;
     padding-top: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
 /* Title */
@@ -28,6 +31,34 @@ body, html {
     font-family: 'Georgia', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/* Credits Section */
+#credits {
+    background-color: #f9f9f9; /* Subtle grey background */
+    padding: 10px 0; /* Adjust spacing around the text */
+    text-indent: 7em;
+    text-align: center; /* Center-align the content */
+    font-family: 'Georgia', serif; /* Consistent font family */
+    font-size: 14px; /* Balance text size */
+    border-top: 2px solid #ccc; /* Visual separation with a top border */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in total width calculation */
+    margin: 0; /* Remove margins */
+    margin-top:50px;
+}
+
+/* Align text within a single line, optionally with text overflow ellipsis */
+#credits p {
+    margin: 0; /* Remove margins around the paragraph */
+    white-space: nowrap; /* Keep text on one line */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+    color: #555; /* Neutral grey for text */
+}
+
+#credits strong {
+    color: #111; /* Bold text in black for key highlights */
 }
 
 /* Footer */
