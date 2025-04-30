@@ -1,25 +1,42 @@
 % !TeX TS-program = lualatex
 \documentclass{article}
 \usepackage[T1]{fontenc}
-\usepackage{microtype}% Pour l'ajustement de la mise en page
+\usepackage{microtype}
 \usepackage[pdfusetitle,hidelinks]{hyperref}
-\usepackage[english]{french} % Pour les règles typographiques du français
-\usepackage{polyglossia}
-\setotherlanguage{greek}
-\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
-\usepackage{reledpar} % Package pour l'édition
 
-\usepackage{fontspec} % 
-\setmainfont{Liberation Serif}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguages{latin,greek}
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
 
 \usepackage{sectsty}
 \usepackage{xcolor}
 
-% Redefine \section font
-\sectionfont{\normalfont\scshape\color{gray}}
-\subsectionfont{\normalfont}
-% Redefine \subsubsection font
-\subsubsectionfont{\normalfont\footnotesize\color{black}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\nouppercase{\leftmark}}  
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Redefine \section to remove numbering
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\normalfont\scshape\color{gray}}{}{0pt}{} % no number in heading
+\titleformat{\subsection}[hang]{\normalfont}{}{0pt}{} % also remove subsection number
+\titleformat{\subsubsection}[hang]{\normalfont\footnotesize\color{black}}{}{0pt}{}
+
+% Modify how section marks are stored to exclude numbers
+\makeatletter
+\renewcommand{\sectionmark}[1]{%
+	\markboth{#1}{}} % Only store the section title, without number
+\renewcommand{\subsectionmark}[1]{%
+	\markright{#1}} % Only store the subsection title, without number
+\renewcommand{\numberline}[1]{} % Hide the section number in TOC
+\makeatother
 
 \begin{document}
 
@@ -30,7 +47,7 @@
 \clearpage
 \begin{pages} 
 \beginnumbering
-        
+\section{CAP. II.}
 \section*{AD TIM. CAP II. }
 \marginpar{[ p.107 ]}\pstart rum pelago est ueritas canonica fides pura et chari- tas syncera. In his qui perstant et pura simplicitate ad portum tendunt salutis, salui portum attingunt foe licitatis aeeternae. Porro qui flatibus arrogantiae et con tentionis uela dant abreptique malarum cupiditatum fluctibus a uia recta recedunt, et fidei lucidam cyno- suram negligunt, impingunt in perfidiae scopulos atque intereunt. Quid uero sit sathanae tradere expositum est 1. Cor.5. cap. Finis huius traditionis est ut pudore probroque correcti, discant ab impiis parumque Christi- anis dogmatis temperare. Hactenus tractalauimus nego tium de sana doctrina tradenda et uitandis fabulis, di uersis impiisque dogmatis atque opinionibus.  \pend 
 \phantomsection
@@ -120,7 +137,12 @@
 \phantomsection
 \addcontentsline{toc}{subsection}{\textit{Indubitatus sermo, Si quis epi- scopi munus appetit bonum opus desiderat. Oportet igitur episco- pum irreprehensibilem esse, unius uxoris maritum, uigilantem, sobri um, modestum, hospitalem, aptum ad docendum, non uinolentum, non percussorem, non turpiter lu- cri cupidum, sed aequum, alienum a pugnis, alienum ab auaritia, }}
 \subsection*{\textit{Indubitatus sermo, Si quis epi- scopi munus appetit bonum opus desiderat. Oportet igitur episco- pum irreprehensibilem esse, unius uxoris maritum, uigilantem, sobri um, modestum, hospitalem, aptum ad docendum, non uinolentum, non percussorem, non turpiter lu- cri cupidum, sed aequum, alienum a pugnis, alienum ab auaritia, }}\pstart Chrysostomus et huius abbreuiator Theophyla- ctus hanc particulam πιςτὸς ὁ λόγος retulerunt ad  \pend
-\subsubsection*{CAP. III. }
+\endnumbering
+\beginnumbering
+\section{CAP. III. }
+\pstart
+\pend
+\endnumbering
 \end{pages}
 \end{document}
         
