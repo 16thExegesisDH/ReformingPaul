@@ -5,7 +5,7 @@
     version="2.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
-    
+    <!-- script for MDZ -->
     <!-- Match the root element -->
     <xsl:template match="/">
         <html>
@@ -15,15 +15,13 @@
                 <title>
                     <xsl:value-of select="//title[parent::titleStmt]"/>
                 </title>
-                <link href="../../Web_interface/CSS/updated_2.css" rel="stylesheet"/>
-                <script src="../../Web_interface/JS/script.js" defer="defer"></script>
+                <link href="../../../Web_interface/CSS/updated_2.css" rel="stylesheet"/>
+                <script src="../../../Web_interface/JS/script.js" defer="defer"></script>
             </head>
             <body>
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <a href="../../index.html">Accueil</a>
-                    <a href="https://github.com/16thExegesisDH">Construction du projet: Github</a>
-                    <a href="https://ihr-num.unige.ch/rrp/">RRP | Reformation Readings of Paul</a>
+                    <a href="../../../index.html">Home</a>
                 </div> 
                 
                 <xsl:element name="div">
@@ -43,9 +41,9 @@
                             </xsl:attribute>
                             <xsl:element name="a">
                                 <xsl:attribute name="href">
-                                    <xsl:text>../Web_interface/TEI/</xsl:text>
+                                    <xsl:text>../../TEI/</xsl:text>
                                     <xsl:value-of select="//TEI/@xml:id"/>
-                                    <xsl:text>_tei_NF.xml</xsl:text>
+                                    <xsl:text>_tei_NF.zip</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="target">
                                     <xsl:text>_blank</xsl:text>
@@ -59,9 +57,9 @@
                             </xsl:attribute>
                             <xsl:element name="a">
                                 <xsl:attribute name="href">
-                                    <xsl:text>../Web_interface/PDF/</xsl:text>
+                                    <xsl:text>../../PDF/</xsl:text>
                                     <xsl:value-of select="//TEI/@xml:id"/>
-                                    <xsl:text>.update.pdf</xsl:text>
+                                    <xsl:text>_update.pdf</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="target">
                                     <xsl:text>_blank</xsl:text>
@@ -94,7 +92,7 @@
                                 <xsl:text>logo</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="src">
-                                <xsl:text>../IMG/ihreformation_blanc.png</xsl:text>
+                                <xsl:text>../../../Web_interface/IMG/ihreformation_blanc.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
                         <xsl:element name="img">
@@ -102,7 +100,7 @@
                                 <xsl:text>logo2</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="src">
-                                <xsl:text>../IMG/SNF_logo_standard_web_sw_neg_e.png</xsl:text>
+                                <xsl:text>../../../Web_interface/IMG/SNF_logo_standard_web_sw_neg_e.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
                         <xsl:element name="img">
@@ -110,25 +108,14 @@
                                 <xsl:text>logo3</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="src">
-                                <xsl:text>../IMG/uzh-logo-white.png</xsl:text>
+                                <xsl:text>../../../Web_interface/IMG/uzh-logo-white.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
-                            <!-- for latter addition as a credit not a footer cf page d'accueil 
-                            <xsl:element name="p">
-                                <xsl:text>coding &amp; desing:</xsl:text>
-                                <xsl:element name="a">
-                                    <xsl:attribute name="href">
-                                        <xsl:text>mailto:floriane.goy@unige.ch</xsl:text>
-                                     </xsl:attribute>
-                                    <xsl:text> floriane.goy@unige.ch </xsl:text>
-                                </xsl:element>
-                            </xsl:element> -->
-                      </xsl:element>
+                        </xsl:element>
                     </xsl:element>
                 </xsl:element>
             </body>
         </html>
-        
     </xsl:template>
     <xsl:template match="teiHeader"/>
     <xsl:template match="sourceDoc"/>
@@ -150,7 +137,7 @@
             </xsl:attribute>
             <xsl:for-each select="pb">
                 <!-- Extract the relevant digit sequence from pb/@corresp -->
-                <xsl:variable name="pbID" select="substring-after(@corresp, 'fbsb00035303_')"/>
+                <xsl:variable name="pbID" select="substring-after(@corresp, 'fbsb10313792_')"/>
                 <xsl:element name="div">
                     <xsl:attribute name="class">
                         <xsl:text>content-wrapper</xsl:text>
@@ -165,20 +152,9 @@
                         <xsl:attribute name="id">
                             <xsl:value-of select="substring-after(@corresp,'f')"/>
                         </xsl:attribute>
-                        <xsl:apply-templates select="../fw[starts-with(@corresp, concat('#fbsb00035303_', $pbID))]"/>
-                        <xsl:apply-templates select="../ab[starts-with(@corresp, concat('#fbsb00035303_', $pbID))]"/>
-                        
-                            <xsl:element name="div">
-                                <xsl:attribute name="class">
-                                    <xsl:text>note-section</xsl:text>
-                                </xsl:attribute>
-                                <xsl:attribute name="id">
-                                    <xsl:value-of select="concat('#', substring-after(@corresp, 'f'))"/>
-                                </xsl:attribute>
-                                <xsl:apply-templates select="../note[starts-with(@corresp, concat('#fbsb00035303_', $pbID))]"/>
-                            </xsl:element> 
-                    </xsl:element> 
-                    
+                        <xsl:apply-templates select="../fw[starts-with(@corresp, concat('#fbsb10313792_', $pbID))]"/>
+                        <xsl:apply-templates select="../ab[starts-with(@corresp, concat('#fbsb10313792_', $pbID))]"/>
+                    </xsl:element>
                     
                     <!-- Generate the image section after the text-container -->
                     <xsl:element name="div">
@@ -197,26 +173,13 @@
         </xsl:element>
     </xsl:template>
     
-    <xsl:template match="note">
-            <xsl:element name="p">
-                <xsl:attribute name="class">note-text</xsl:attribute>
-                <xsl:apply-templates select=".//reg"/>   
-            </xsl:element>
-    </xsl:template>
-    
-    <xsl:template match="reg">
-        <xsl:value-of select="translate(., '-', '')"/>
-    </xsl:template>
-    
-    
     <!-- Copy the content of fw and ab elements -->
-    <xsl:template match="fw |ab ">
+    <xsl:template match="fw | ab">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates select="node()"/>
         </xsl:copy>
-    </xsl:template> 
-   
+    </xsl:template>
        
     <xsl:template match="ab">
         <!-- right section  with the text -->
@@ -260,9 +223,28 @@
         </xsl:choose> 
       </xsl:element>
     </xsl:template>
-   
+    
+    
+    <xsl:template match="placeName">
+        <xsl:element name="span">
+            <xsl:attribute name="class">
+                <xsl:text>placeName</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="persName">
+        <xsl:element name="span">
+            <xsl:attribute name="class">
+                <xsl:text>persName</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    
     <xsl:template match="fw">
-    <!-- right section  with the text -->
+        <!-- right section  with the text -->
         <xsl:element name="div">
             <xsl:attribute name="class">
                 <xsl:text>text-section</xsl:text>
@@ -302,7 +284,7 @@
             </xsl:otherwise>
         </xsl:choose>
       </xsl:element>
-    </xsl:template> 
+    </xsl:template>
     
     <!--  -->
     <xsl:template match="choice">
@@ -318,6 +300,17 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-      
+    
+    
+    
+    <xsl:template match="abbr"/>
+    <xsl:template match="expan">
+        <xsl:element name="span">
+            <xsl:attribute name="class">
+                <xsl:text>expan</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
 
 </xsl:stylesheet>

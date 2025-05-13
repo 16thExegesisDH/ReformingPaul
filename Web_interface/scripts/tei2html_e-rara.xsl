@@ -5,7 +5,7 @@
     version="2.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
-    
+    <!-- script for e-rara image -->
     <!-- Match the root element -->
     <xsl:template match="/">
         <html>
@@ -15,17 +15,15 @@
                 <title>
                     <xsl:value-of select="//title[parent::titleStmt]"/>
                 </title>
-                <link href="../Website_Paul_projet/CSS/updated_2.css" rel="stylesheet"/>
-                <script src="../Website_Paul_projet/JS/script.js" defer="defer"></script>
+                <link href="../../../Web_interface/CSS/updated_2.css" rel="stylesheet"/>
+                <script src="../../../Web_interface/JS/script.js" defer="defer"></script>
             </head>
             <body>
                 <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
-                    <a href="../Website_Paul_projet/HTML/home.html">Accueil</a>
-                    <a href="https://github.com/16thExegesisDH">Construction du projet: Github</a>
-                    <a href="https://ihr-num.unige.ch/rrp/">RRP | Reformation Readings of Paul</a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="../../../index.html">Home</a>
                 </div> 
-                
+<!-- setup for the main div -->
                 <xsl:element name="div">
                     <xsl:attribute name="id">
                         <xsl:text>main</xsl:text>
@@ -43,7 +41,9 @@
                             </xsl:attribute>
                             <xsl:element name="a">
                                 <xsl:attribute name="href">
-                                    <xsl:text>../5_Lambertus_tei_NF.xml</xsl:text>
+                                    <xsl:text>../../TEI/</xsl:text>
+                                    <xsl:value-of select="//TEI/@xml:id"/>
+                                    <xsl:text>_tei_NF.zip</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="target">
                                     <xsl:text>_blank</xsl:text>
@@ -57,9 +57,9 @@
                             </xsl:attribute>
                             <xsl:element name="a">
                                 <xsl:attribute name="href">
-                                    <xsl:text>../Website_Paul_projet/PDF/</xsl:text>
+                                    <xsl:text>../../PDF/</xsl:text>
                                     <xsl:value-of select="//TEI/@xml:id"/>
-                                    <xsl:text>.update.pdf</xsl:text>
+                                    <xsl:text>_update.pdf</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="target">
                                     <xsl:text>_blank</xsl:text>
@@ -78,21 +78,45 @@
                     
                     
                     <xsl:apply-templates/>
-                    
-                    <xsl:element name="div">
-                        <xsl:attribute name="id">
-                            <xsl:text>footer</xsl:text>
-                        </xsl:attribute>
-                        <xsl:element name="div">
-                            <xsl:attribute name="class">
-                                <xsl:text>logos</xsl:text>
+                </xsl:element>
+<!-- setup for the credit  -->
+                <xsl:element name="div">
+                    <xsl:attribute name="id">
+                        <xsl:text>credits</xsl:text>
+                    </xsl:attribute>
+                    <xsl:element name="p">
+                        <xsl:element name="strong">
+                            <xsl:text>Terms of Use and Citation </xsl:text>
+                        </xsl:element>
+                        <xsl:text>The citation terms are as follows :
+        "16th Century Exegesis of Paul - a Digital Library: 16th Century Exegesis of Paul, SNF207696, Universties of Geneva and Zürich, dir. Ueli Zahnd and Stefan Krauter, [date of consultation]". </xsl:text>
+                    </xsl:element>
+                    <xsl:element name="p">
+                        <xsl:text>coding &amp; design :</xsl:text>
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:text>mailto:floriane.goy@unige.ch</xsl:text>
                             </xsl:attribute>
+                            <xsl:text>floriane.goy@unige.ch</xsl:text>
+                        </xsl:element>
+                    </xsl:element>
+                </xsl:element>
+                
+<!-- setup for the footer -->
+                <xsl:element name="div">
+                    <xsl:attribute name="id">
+                        <xsl:text>footer</xsl:text>
+                    </xsl:attribute>
+                    <xsl:element name="div">
+                        <xsl:attribute name="class">
+                            <xsl:text>logos</xsl:text>
+                        </xsl:attribute>
                         <xsl:element name="img">
                             <xsl:attribute name="class">
                                 <xsl:text>logo</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="src">
-                                <xsl:text>../IMG/ihreformation_blanc.png</xsl:text>
+                                <xsl:text>../../../Web_interface/IMG/ihreformation_blanc.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
                         <xsl:element name="img">
@@ -100,7 +124,7 @@
                                 <xsl:text>logo2</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="src">
-                                <xsl:text>../IMG/SNF_logo_standard_web_sw_neg_e.png</xsl:text>
+                                <xsl:text>../../../Web_interface/IMG/SNF_logo_standard_web_sw_neg_e.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
                         <xsl:element name="img">
@@ -108,12 +132,11 @@
                                 <xsl:text>logo3</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="src">
-                                <xsl:text>../IMG/uzh-logo-white.png</xsl:text>
+                                <xsl:text>../../../Web_interface/IMG/uzh-logo-white.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
-                      </xsl:element>
                     </xsl:element>
-                </xsl:element>
+                </xsl:element> 
             </body>
         </html>
     </xsl:template>
@@ -150,7 +173,19 @@
                         </xsl:attribute>
                         <xsl:apply-templates select="../fw[starts-with(@corresp, concat('#f', $pbID))]"/>
                         <xsl:apply-templates select="../ab[starts-with(@corresp, concat('#f', $pbID))]"/>
-                    </xsl:element>
+                        
+                        <!-- Add a zone for the marginal glossis (MarginText_Note) -->
+                            <xsl:element name="div">
+                                <xsl:attribute name="class">
+                                    <xsl:text>note-section</xsl:text>
+                                </xsl:attribute>
+                                <xsl:attribute name="id">
+                                    <xsl:value-of select="concat('#', substring-after(@corresp, 'f'))"/>
+                                </xsl:attribute>
+                                <xsl:apply-templates select="../note[starts-with(@corresp, concat('#f', $pbID))]"/>
+                            </xsl:element> 
+                    </xsl:element> 
+                    
                     
                     <!-- Generate the image section after the text-container -->
                     <xsl:element name="div">
@@ -168,6 +203,27 @@
             </xsl:for-each>
         </xsl:element>
     </xsl:template>
+    
+    <!-- copy the text forme the note (MarginText_Note) -->
+    <xsl:template match="note">
+        <xsl:element name="p">
+            <xsl:attribute name="class">note-text</xsl:attribute>
+            <xsl:apply-templates select=".//reg"/>   
+        </xsl:element>
+    </xsl:template>
+    
+    <!-- removes all the hyphens and add a space at the end of the line if there is no hyphens -->
+    <xsl:template match="reg">
+        <xsl:choose>
+            <xsl:when test="contains(., '-')">
+                <xsl:value-of select="translate(., '-', '')"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="concat(., ' ')"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     
     <!-- Copy the content of fw and ab elements -->
     <xsl:template match="fw | ab">
@@ -219,26 +275,7 @@
         </xsl:choose> 
       </xsl:element>
     </xsl:template>
-    
-    
-    <xsl:template match="placeName">
-        <xsl:element name="span">
-            <xsl:attribute name="class">
-                <xsl:text>placeName</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-    
-    <xsl:template match="persName">
-        <xsl:element name="span">
-            <xsl:attribute name="class">
-                <xsl:text>persName</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-    
+        
     <xsl:template match="fw">
         <!-- right section  with the text -->
         <xsl:element name="div">
@@ -285,39 +322,16 @@
     <!--  -->
     <xsl:template match="choice">
         <xsl:choose>
-            <xsl:when test="ancestor::ab[@type='Main*']">
-                <xsl:variable name="truc">
-                    <xsl:number level="any" count="choice[parent::ab/@type='Main*']" from="body"/>
-                </xsl:variable>
-                
-                <xsl:variable name="absolute_line_number" select="count(ancestor::body/preceding-sibling::choice)"/>
-                
-                <xsl:value-of select="$truc"/>. <xsl:value-of select="reg"/><xsl:element name="br"/>
+            <xsl:when test="ab[@type='Main*']">
+               <xsl:value-of select="reg"/><xsl:element name="br"/>
             </xsl:when>
-           
-                <xsl:when test="descendant::seg"><xsl:element name="i">                
-                    <xsl:value-of select="reg"/> </xsl:element><xsl:element name="br"/>
-                </xsl:when>
-                <xsl:when test="descendant::reg">
-                    <xsl:value-of select="reg"/><xsl:element name="br"/>
-                </xsl:when>
-           
+            <xsl:when test="ab[@type='TitlePageZone']">
+                <xsl:value-of select="reg"/><xsl:element name="br"/>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="reg"/><xsl:element name="br"/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-    
-    
-    
-    <xsl:template match="abbr"/>
-    <xsl:template match="expan">
-        <xsl:element name="span">
-            <xsl:attribute name="class">
-                <xsl:text>expan</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
     </xsl:template>
 
 </xsl:stylesheet>

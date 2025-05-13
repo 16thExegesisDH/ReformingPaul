@@ -21,7 +21,7 @@
             <body>
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <a href="../../index.html">Accueil</a>
+                    <a href="../../index.html">Home</a>
                     <a href="https://github.com/16thExegesisDH">Construction du projet: Github</a>
                     <a href="https://ihr-num.unige.ch/rrp/">RRP | Reformation Readings of Paul</a>
                 </div> 
@@ -113,11 +113,22 @@
                                 <xsl:text>../IMG/uzh-logo-white.png</xsl:text>
                             </xsl:attribute>
                         </xsl:element>
-                      </xsl:element>Website_Paul_projet
+                            <!-- for latter addition as a credit not a footer cf page d'accueil 
+                            <xsl:element name="p">
+                                <xsl:text>coding &amp; desing:</xsl:text>
+                                <xsl:element name="a">
+                                    <xsl:attribute name="href">
+                                        <xsl:text>mailto:floriane.goy@unige.ch</xsl:text>
+                                     </xsl:attribute>
+                                    <xsl:text> floriane.goy@unige.ch </xsl:text>
+                                </xsl:element>
+                            </xsl:element> -->
+                      </xsl:element>
                     </xsl:element>
                 </xsl:element>
             </body>
         </html>
+        
     </xsl:template>
     <xsl:template match="teiHeader"/>
     <xsl:template match="sourceDoc"/>
@@ -139,7 +150,7 @@
             </xsl:attribute>
             <xsl:for-each select="pb">
                 <!-- Extract the relevant digit sequence from pb/@corresp -->
-                <xsl:variable name="pbID" select="substring-after(@corresp, 'fbsb10313792_')"/>
+                <xsl:variable name="pbID" select="substring-after(@corresp, 'fbsb00035303_')"/>
                 <xsl:element name="div">
                     <xsl:attribute name="class">
                         <xsl:text>content-wrapper</xsl:text>
@@ -154,9 +165,20 @@
                         <xsl:attribute name="id">
                             <xsl:value-of select="substring-after(@corresp,'f')"/>
                         </xsl:attribute>
-                        <xsl:apply-templates select="../fw[starts-with(@corresp, concat('#fbsb10313792_', $pbID))]"/>
-                        <xsl:apply-templates select="../ab[starts-with(@corresp, concat('#fbsb10313792_', $pbID))]"/>
-                    </xsl:element>
+                        <xsl:apply-templates select="../fw[starts-with(@corresp, concat('#fbsb00035303_', $pbID))]"/>
+                        <xsl:apply-templates select="../ab[starts-with(@corresp, concat('#fbsb00035303_', $pbID))]"/>
+                        
+                            <xsl:element name="div">
+                                <xsl:attribute name="class">
+                                    <xsl:text>note-section</xsl:text>
+                                </xsl:attribute>
+                                <xsl:attribute name="id">
+                                    <xsl:value-of select="concat('#', substring-after(@corresp, 'f'))"/>
+                                </xsl:attribute>
+                                <xsl:apply-templates select="../note[starts-with(@corresp, concat('#fbsb00035303_', $pbID))]"/>
+                            </xsl:element> 
+                    </xsl:element> 
+                    
                     
                     <!-- Generate the image section after the text-container -->
                     <xsl:element name="div">
@@ -175,13 +197,26 @@
         </xsl:element>
     </xsl:template>
     
+    <xsl:template match="note">
+            <xsl:element name="p">
+                <xsl:attribute name="class">note-text</xsl:attribute>
+                <xsl:apply-templates select=".//reg"/>   
+            </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="reg">
+        <xsl:value-of select="translate(., '-', '')"/>
+    </xsl:template>
+    
+    
     <!-- Copy the content of fw and ab elements -->
-    <xsl:template match="fw | ab">
+    <xsl:template match="fw |ab ">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates select="node()"/>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template> 
+   
        
     <xsl:template match="ab">
         <!-- right section  with the text -->
@@ -225,28 +260,9 @@
         </xsl:choose> 
       </xsl:element>
     </xsl:template>
-    
-    
-    <xsl:template match="placeName">
-        <xsl:element name="span">
-            <xsl:attribute name="class">
-                <xsl:text>placeName</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-    
-    <xsl:template match="persName">
-        <xsl:element name="span">
-            <xsl:attribute name="class">
-                <xsl:text>persName</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-    
+   
     <xsl:template match="fw">
-        <!-- right section  with the text -->
+    <!-- right section  with the text -->
         <xsl:element name="div">
             <xsl:attribute name="class">
                 <xsl:text>text-section</xsl:text>
@@ -286,7 +302,7 @@
             </xsl:otherwise>
         </xsl:choose>
       </xsl:element>
-    </xsl:template>
+    </xsl:template> 
     
     <!--  -->
     <xsl:template match="choice">
@@ -302,17 +318,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
-    
-    
-    <xsl:template match="abbr"/>
-    <xsl:template match="expan">
-        <xsl:element name="span">
-            <xsl:attribute name="class">
-                <xsl:text>expan</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
+      
 
 </xsl:stylesheet>
