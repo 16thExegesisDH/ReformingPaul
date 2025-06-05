@@ -117,6 +117,12 @@
 <!-- Case: NOT starting with CAP : for store the verset in the Table Of Content-->
             <xsl:when test="@type='MainZone-Head' and not(choice/reg[matches(., '^CAP.*')]) and not(hi/choice/reg[matches(., '^CAP.*')])">
                 <xsl:variable name="verset">
+                    <!-- Insert DropCapital only if immediately the MainZone-Head -->
+                    <xsl:if test="preceding-sibling::*[1][self::ab[@type='DropCapitalZone']]">
+                        <xsl:text>\huge\textbf{</xsl:text>
+                        <xsl:value-of select="preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg"/>
+                        <xsl:text>}\normalsize </xsl:text>
+                    </xsl:if> 
                     <xsl:apply-templates/>
                 </xsl:variable>
                 <xsl:text>
@@ -147,7 +153,7 @@
             </xsl:when>
             <xsl:when test="@type='MainZone-P'">
                 <xsl:text>\pstart </xsl:text>
-                <!-- Insert DropCapital only if immediately preceded by DropCapitalZone -->
+                <!-- Insert DropCapital only if immediately the MainZone-P -->
                 <xsl:if test="preceding-sibling::*[1][self::ab[@type='DropCapitalZone']]">
                     <xsl:text>\huge\textbf{</xsl:text>
                     <xsl:value-of select="preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg"/>

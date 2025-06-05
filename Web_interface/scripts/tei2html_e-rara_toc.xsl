@@ -20,7 +20,7 @@
                 <title>
                     <xsl:value-of select="//title[parent::titleStmt]"/>
                 </title>
-                <link href="../../../Web_interface/CSS/updated_3_toc.css" rel="stylesheet"/>
+                <link href="../../../Web_interface/CSS/lefevre_3_toc.css" rel="stylesheet"/>
                 <script src="../../../Web_interface/JS/script_toc.js" defer="defer"></script>
             </head>
             <body>
@@ -152,23 +152,23 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="../../../index.html">Home</a>
             <div id="toc_container">
-                <a class="toc_title" href="javascript:void(0)" onclick="toggleTOC()">Table of Content</a>
+                <a class="toc_title" href="javascript:void(0)" onclick="toggleTOC()">&gt; Table of Content</a>
                 <ul class="toc_list" style="display: none; padding-left: 8px;">
                     <xsl:for-each-group select="//*[@type='MainZone-Head']"
-                        group-starting-with="*[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]]">
+                        group-starting-with="*[choice/reg[matches(., '^CAP')] or hi/choice/reg[matches(., '^CAP')]]">
                         <xsl:variable name="FirstNode" select="current-group()[1]"/>
                         <xsl:variable name="firstNodeText" select="string-join($FirstNode//reg, ' ')"/>
                         
                         <li>
                             <a href="#{
-                                if ($FirstNode[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]])
+                                if ($FirstNode[choice/reg[matches(., '^CAP')] or hi/choice/reg[matches(., '^CAP')]])
                                 then translate(normalize-space($firstNodeText), ' ', '_')
                                 else 'Introduction'
                                 }"
                                 class="point-header"
                                 onclick="toggleSubPoints(this)">
                                 <xsl:value-of select="
-                                    if ($FirstNode[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]])
+                                    if ($FirstNode[choice/reg[matches(., '^CAP')] or hi/choice/reg[matches(., '^CAP')]])
                                     then concat('> ', normalize-space($firstNodeText))
                                     else '> Introduction'"/>
                             </a>
@@ -177,13 +177,28 @@
                                     then current-group()[position() > 1] 
                                     else current-group()">
                                     
-                                    <xsl:variable name="versetFixedText" select="replace(normalize-space(string-join(.//reg, ' ')), '-\s+', '')"/>
+                                    <!-- Define base text from current context -->
+                                    <xsl:variable name="versetBaseText" select="replace(normalize-space(string-join(.//reg, ' ')), '-\s+', '')"/>
                                     
+                                    <!-- Add prefix from preceding DropCapitalZone if available -->
+                                    <xsl:variable name="versetFixedText" select="
+                                        concat(
+                                        if (preceding-sibling::*[1][self::ab[@type='DropCapitalZone']])
+                                        then string-join(preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg, '')
+                                        else '',$versetBaseText)"/>
+                                    
+                                    <!-- Only output if the result has content -->
                                     <xsl:if test="string-length($versetFixedText) &gt; 0">
                                         <li>
-                                            <!-- for a explicite descriptopm of the use of the fonction (lower-case..etc) see the part concerning MainZoneHead -->
-                                            <a href="#{lower-case(string-join(subsequence(tokenize($versetFixedText, '\s+'), 1, 3),'_'))}">
-                                                <xsl:value-of select="$versetFixedText"/>
+                                            <!-- Get current position in this group -->
+                                            <xsl:variable name="currentNum" select="position()"/>
+                                            <!-- Anchor link ID based on the same prefix and first 3 words -->
+                                            <a href="#{concat(
+                                                if (preceding-sibling::*[1][self::ab[@type='DropCapitalZone']])
+                                                then string-join(preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg, '')
+                                                else '',lower-case(string-join(subsequence(tokenize($versetBaseText, '\s+'),1,3),'_')))}">
+                                                <!-- Output number and text -->
+                                                <xsl:value-of select="concat($currentNum, '. ', $versetFixedText)"/>
                                             </a>
                                         </li>
                                     </xsl:if>
@@ -264,10 +279,20 @@
     
 <!-- copy the text forme the note (MarginText_Note) -->
     <xsl:template match="note">
-        <xsl:element name="p">
-            <xsl:attribute name="class">note-text</xsl:attribute>
-            <xsl:apply-templates select=".//reg"/>   
-        </xsl:element>
+        <xsl:choose>
+            <xsl:when test="@type='MarginTextZone'">
+                <xsl:element name="p">
+                    <xsl:attribute name="class">note-number</xsl:attribute>
+                    <xsl:apply-templates select=".//reg"/>   
+                </xsl:element> 
+            </xsl:when>
+            <xsl:when test="@type='MarginTextZone-Notes'">
+                <xsl:element name="p">
+                    <xsl:attribute name="class">note-text</xsl:attribute>
+                    <xsl:apply-templates select=".//reg"/>   
+                </xsl:element>  
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
 <!-- removes all the hyphens and add a space at the end of the line if there is no hyphens -->
@@ -283,38 +308,72 @@
     </xsl:template>
     
 <!-- Template for all 'ab' elements -->
+    
     <xsl:template match="ab">
-<!-- DropCapitalZone is handled by MainZone-P, so we skip rendering it here -->
+        <!-- Skip DropCapitalZone and MainZone-P -->
         <xsl:if test="@type != 'DropCapitalZone' and @type != 'MainZone-P'">
             <div class="text-section">
                 <xsl:choose>
-<!-- MainZone-Head special case -->
                     
-                    <xsl:when test="@type='MainZone-Head' and (choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')])">
+                    <!-- MainZone-Head that starts a CAP -->
+                    <xsl:when test="@type='MainZone-Head' and (choice/reg[matches(., '^CAP')] or hi/choice/reg[matches(., '^CAP')])">
                         <xsl:variable name="Chapter" select="translate(normalize-space(string-join(.//reg, ' ')), ' ', '_')"/>
-                        
-                        <!--</xsl:variable>-->
-                        <span class="ab_mzHead" id="{$Chapter}">
-                        <xsl:apply-templates/>
-                        </span>
-                    </xsl:when>
-                    
-                    <xsl:when test="@type='MainZone-Head' and not(choice/reg[matches(., '^CAP')]) and not(hi/choice/reg[matches(., '^CAP')])">
-                        <span class="ab_mzHead" id="{
-                            lower-case(string-join(subsequence(tokenize(replace(string-join(.//reg, ' '), '-\s+', ''), '\s+'),1, 3),'_'))}">
+                        <span class="ab_mzHead_Chp" id="{$Chapter}">
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
-<!-- Step 1: Join all reg elements <xsl:variable name="versetRaw" select="string-join(.//reg, ' ')" />-->
-<!-- Step 2: Fix hyphenated breaks (e.g., episco- pum → episcopum)<xsl:variable name="versetFixed" select="replace(normalize-space($versetRaw), '-\s+', '')" />-->
-<!-- Step 3: Tokenize words <xsl:variable name="words" select="tokenize($versetFixed, '\s+')" />-->
-<!-- Step 4: Build ID with first 3 words joined by underscores <xsl:variable name="versetID" select="lower-case(string-join(subsequence($words, 1, 3), '_'))" />-->
-                    <xsl:when test="@type='MainZone-Entry'">
-                        <span class="ab_mzEntry">
-                            ◦  <xsl:apply-templates/>
+                    
+                    <!-- MainZone-Head inside a CAP group (numbered) -->
+                    <xsl:when test="@type='MainZone-Head' and not(choice/reg[matches(., '^CAP')]) and not(hi/choice/reg[matches(., '^CAP')])">
+                        
+                        <!-- Find last CAP -->
+                        <xsl:variable name="lastCap" select="preceding-sibling::ab[@type='MainZone-Head'][choice/reg[matches(., '^CAP')] or hi/choice/reg[matches(., '^CAP')]][1]"/>
+                        
+                        <!-- Count all previous MainZone-Head (non-CAP) since that CAP -->
+                        <xsl:variable name="indexInGroup" select="
+                            count(
+                            $lastCap/following-sibling::ab[
+                            @type='MainZone-Head' and 
+                            not(choice/reg[matches(., '^CAP')]) and 
+                            not(hi/choice/reg[matches(., '^CAP')]) and 
+                            . &lt;&lt; current()
+                            ]
+                            ) + 1"/>
+                        
+                        <!-- Generate ID like before -->
+                        <span class="ab_mzHead" id="{
+                            concat(
+                            if (preceding-sibling::*[1][self::ab[@type='DropCapitalZone']])
+                            then string-join(preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg, '')
+                            else '',
+                            lower-case(string-join(subsequence(tokenize(replace(string-join(.//reg, ' '), '-\s+', ''), '\s+'), 1, 3), '_'))
+                            )}">
+                            
+                            <!-- Show incremented number -->
+                            <span class="ab_number">
+                                <xsl:value-of select="concat($indexInGroup, '. ')"/>
+                            </span>
+                            
+                            <!-- Show DropCap if it exists -->
+                            <xsl:if test="preceding-sibling::*[1][self::ab[@type='DropCapitalZone']]">
+                                <span class="ab_Drop">
+                                    <xsl:value-of select="preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg"/>
+                                </span>
+                            </xsl:if>
+                            
+                            <!-- Render the rest -->
+                            <xsl:apply-templates/>
                         </span>
                     </xsl:when>
-<!-- Default case -->
+                    
+                    <!-- MainZone-Entry -->
+                    <xsl:when test="@type='MainZone-Entry'">
+                        <span class="ab_mzEntry">
+                            ◦ <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
+                    
+                    <!-- Default case -->
                     <xsl:otherwise>
                         <table>
                             <tr>
@@ -326,10 +385,12 @@
                             </tr>
                         </table>
                     </xsl:otherwise>
+                    
                 </xsl:choose>
             </div>
         </xsl:if>
     </xsl:template>
+    
     
 <!-- Skip direct output of DropCapitalZone -->
     <xsl:template match="ab[@type='DropCapitalZone']"/>

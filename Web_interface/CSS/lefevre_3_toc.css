@@ -73,7 +73,7 @@ body, html {
     font-size: 0.85em;  /*la taille a été change en fonction du forma de la page*/
     line-height: 1.5; 
     margin: 0; 
-    text-align: justify; 
+    /*text-align: justify; */
 }
 p.note-text { 
     text-align: left; 
@@ -108,10 +108,20 @@ p.note-number {
     margin: 1cm 0;
 }
 
+.ab_mzHead_Chp {
+    text-align: center; 
+    font-style: caps; 
+    font-size: 2em; 
+    display: flex; 
+    font-size: 1.1em; 
+    margin-left: 100px; 
+    
+}
+
 .ab_mzHead, .ab_mzEntry { 
     text-align: justify; 
     font-style: italic; 
-    font-size: 1.3em; 
+    font-size: 1em; /*la taille a été change en fonction du forma de la page*/
 }
 .ab_mzEntry { margin-left: 30px; }
 .ab_Drop { 
@@ -120,6 +130,15 @@ p.note-number {
     font-weight: bold; 
     text-transform: uppercase; 
     color: #333; 
+}
+
+.ab_number{
+    text-align: justify; 
+    font-weight: bold; 
+    font-size: 1em; 
+    font-style: normal; 
+    margin: 1cm 0;
+    color: ##566573; 
 }
 
 /* Footnotes */

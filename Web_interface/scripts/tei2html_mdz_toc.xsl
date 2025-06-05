@@ -151,7 +151,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="../../../index.html">Home</a>
             <div id="toc_container">
-                <a class="toc_title" href="javascript:void(0)" onclick="toggleTOC()">Table of Content</a>
+                <a class="toc_title" href="javascript:void(0)" onclick="toggleTOC()">&gt; Table of Content</a>
                 <ul class="toc_list" style="display: none; padding-left: 8px;">
                     <xsl:for-each-group select="//*[@type='MainZone-Head']"
                         group-starting-with="*[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]]">
@@ -312,12 +312,30 @@
     </xsl:template>
     
 <!-- copy the text forme the note (MarginText_Note) -->
-    <xsl:template match="note">
+   <!-- <xsl:template match="note">
         <xsl:element name="p">
             <xsl:attribute name="class">note-text</xsl:attribute>
             <xsl:apply-templates select=".//reg"/>   
         </xsl:element>
+    </xsl:template>-->
+    <!-- possibility to test in the mdz-toc xsl script -->
+    <xsl:template match="note">
+        <xsl:choose>
+            <xsl:when test="@type='MarginTextZone'">
+                <xsl:element name="p">
+                    <xsl:attribute name="class">note-number</xsl:attribute>
+                    <xsl:apply-templates select=".//reg"/>   
+                </xsl:element> 
+            </xsl:when>
+            <xsl:when test="@type='MarginTextZone-Notes'">
+                <xsl:element name="p">
+                    <xsl:attribute name="class">note-text</xsl:attribute>
+                    <xsl:apply-templates select=".//reg"/>   
+                </xsl:element>  
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
+    
     
 <!-- removes all the hyphens and add a space at the end of the line if there is no hyphens -->
     <xsl:template match="reg">
