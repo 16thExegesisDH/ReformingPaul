@@ -78,7 +78,8 @@ body, html {
 p.note-text { 
     text-align: left; 
     margin-left: 180px; 
-    line-height: 0.3; 
+    line-height: 1em;  
+    font-size: 0.8em;
 }
 
 p.note-number {
