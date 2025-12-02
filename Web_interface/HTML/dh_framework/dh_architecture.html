@@ -3,51 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Architecture</title>
-  <link href="../../../Web_interface/CSS/style2.css" rel="stylesheet">
-  <script src="../../../Web_interface/JS/script.js" defer></script>
+  <title>Digital Analysis</title>
+  <link href="../../../Web_interface/CSS/FG_stylesheet.css" rel="stylesheet">
+  <script src="../../../Web_interface/JS/my_function2.js" defer></script>
 </head>
 <body>
-
-  <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <aside class="sidebar" id="mySidebar" aria-label="Menu principal">
+    <a class="closebtn" href="#" onclick="closeNav()" aria-label="Fermer le menu">×</a><ul>
     <a href="../../../index.html">Home</a>
-    <a href="https://github.com/16thExegesisDH">Project Repository | Github</a></li>
-  </div>
-    <div id="main">
-      <button class="openbtn" onclick="openNav()">☰ Navigation</button>
-      <div class="title">Digital architecture</div>
-      <div class="document">
-                <p>Welcome to the website for the project: 16th Century Exegesis of Paul. The aim of this site is to provide a digital library of the reformed commentaries on Paul's epistles in the 16th century, with access to their PDF and XML-TEI versions. The results of topic-modeling will also be integrated, enabling a comparison of the epistles by verse (summer 2025).</p>
-        </div>       
-         <!-- Subpictures -->
-      <div class="subpictures">
-        <a href="subpage1.html"><img src="Web_interface/IMG/sub1.png" alt="subpicture 1"></a>
-        <a href="subpage2.html"><img src="Web_interface/IMG/sub2.png" alt="subpicture 2"></a>
-        <a href="subpage3.html"><img src="../../../Web_interface/IMG/Website2.png" alt=" Web_interface"></a>
-        <a href="clean_prelematisation.html"><img src="Web_interface/IMG/sub4.png" alt="subpicture 4"></a>
-        <a href="subpage4.html"><img src="Web_interface/IMG/sub4.png" alt="subpicture 4"></a>
-      </div>
-      
-      <!-- Main image -->
-      <img class="main-image" src="../../../Web_interface/IMG/Zurich_Paul_Pipeline_tst.png" alt="Main image">
-    </div>
+    <a href="https://github.com/16thExegesisDH">Project Repository | Github</a></li></ul>
+  </aside>
+  <div class="main-wrapper">
+  <nav><button class="openbtn" onclick="openNav()" aria-label="Ouvrir le menu de navigation" aria-expanded="false"> ☰ Navigation  </button>
+  </nav> 
+ <header>
+    <h1>Digital Analysis</h1>
+  </header>
+  <main>
+    <div class="content-wrapper-index">
+    <section class="index-texte">
+      <!-- add texte here if needed --> 
+      <p> Welcome to the website for the project 16th Century Exegesis of Paul. Here you will find the workflow and script for the digital analysis of the text through co-occurrence networks and topic modeling. The results of the topic modeling will also be integrated, enabling a comparison of the epistles by verse (winter 2026).</p>
+      <!-- Subpictures -->
+    <figure class="subpictures">
+      <a href="subpage1.html"><img src="../../../Web_interface/IMG/webint.png" alt="subpicture 1"></a>
+      <a href="cleaning_data.html"><img src="../../../Web_interface/IMG/clean.svg" alt="subpicture 2"></a>
+      <a href="lemmatisation.html"><img src="../../../Web_interface/IMG/cltk-python.png" alt=" Web_interface"></a>
+       <a href="Lambertus_Network.html"><img src="../../../Web_interface/IMG/graph_mulier_R.png" alt="subpicture 4"></a>
+      <a href="topic-modeling.html"><img src="../../../Web_interface/IMG/Lavori-in-corso.png" alt="subpicture 4"></a>
+    </figure>
+    </section>     
 
+      <!-- Main image -->
+      <figure class="main-picture">
+      <img class="main-image" src="../../../Web_interface/IMG/Zurich_Paul_Pipeline_tst.png" alt="Main image"></figure>
+    </div>
+  </main>
   <!-- Footer -->
-  <div id="credits">
+  <footer>
+  <section id="credits">
      <p>
       <strong>Terms of Use and Citation</strong> The citation terms are as follows :
       "16th Century Exegesis of Paul - a Digital Library: 16th Century Exegesis of Paul, SNF207696, Universties of Geneva and Zürich, dir. Ueli Zahnd and Stefan Krauter, [date of consultation]".
      </p>
      <p>coding & design : <a href="mailto:floriane.goy@unige.ch">floriane.goy@unige.ch</a></p>
-  </div>      
-        <div id="footer">
-           <div class="logos">
-              <img class="logo" src="../../../Web_interface/IMG/ihreformation_blanc.png" alt="Logo UNIGE">
-              <img class="logo2" src="../../../Web_interface/IMG/SNF_logo_standard_web_sw_neg_e.png" alt="Logo SNF">
-              <img class="logo3" src="../../../Web_interface/IMG/uzh-logo-white.png" alt="Logo UZH">
-           </div>
-       </div>
-
+  </section>    
+   <section id="logos">
+     <figure class="logos-images"><img src="../../../Web_interface/IMG/ihreformation_blanc.png" alt="Logo UNIGE"><img src="../../../Web_interface/IMG/SNF_logo_standard_web_sw_neg_e.png" alt="Logo SNF"><img src="../../../Web_interface/IMG/uzh-logo-white.png" alt="Logo UZH"></figure>
+  </section>
+  </footer>  
+  </div>
 </body>
 </html>
