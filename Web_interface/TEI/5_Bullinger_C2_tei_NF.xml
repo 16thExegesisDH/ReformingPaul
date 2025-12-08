@@ -4298,7 +4298,7 @@
           <lb corresp="#f7325965_line_0_ligne_2"/>
           <choice>
             <orig>D TIM. CAP. II.</orig>
-            <reg type="contemporary">D TIM. CAP. II.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -4321,6 +4321,22 @@
           <reg type="contemporary">3</reg>
         </choice>
       </fw>
+     <!-- <ab corresp="#f7325965_block_0" type="MainZone-P-Continued"><!-\- ligne par défaut à supprimer si on rajouter le chapitre 1 -\->
+        <lb corresp="#f7325965_line_0_ligne_0"/>
+        <choice>
+          <orig></orig>
+          <reg type="contemporary">[explicit CAP. I]</reg>
+        </choice>
+      </ab>-->
+      <ab corresp="#f7325965_block_2a" type="MainZone-Head"><!-- titre ajouter à la main -->
+        <hi>
+          <lb corresp="#f7325965_eSc_line_3395917e_ligne_12"/>
+          <choice>
+            <orig>CAP.II.</orig>
+            <reg type="contemporary">CAP.II.</reg>
+          </choice>
+        </hi>
+      </ab>
       <ab corresp="#f7325965_block_4" type="MainZone-P-Continued">
         <lb corresp="#f7325965_line_2_ligne_2"/>
         <choice>
@@ -4399,6 +4415,8 @@
           <orig>clesiasticus.</orig>
           <reg type="contemporary">clesiasticus.</reg>
         </choice>
+        </ab>
+        <ab corresp="#f7325965_block_2b" type="MainZone-Head">
         <lb corresp="#f7325965_line_17_ligne_4"/>
         <choice>
           <orig>Adhortor igitur ut ante omnia</orig>
@@ -4439,18 +4457,13 @@
           <orig>&amp; honestate.</orig>
           <reg type="contemporary">et honestate.</reg>
         </choice>
-        <lb corresp="#f7325965_eSc_line_3395917e_ligne_12"/>
-        <choice>
-          <orig>CAP.II.</orig>
-          <reg type="contemporary">CAP.II.</reg>
-        </choice>
       </ab>
       <pb corresp="f7325966"/>
       <fw corresp="#f7325966_block_2" type="RunningTitleZone">
         <lb corresp="#f7325966_line_0_ligne_2"/>
         <choice>
           <orig>COMMENT. IN L. EPIST.</orig>
-          <reg type="contemporary">COMMENT. IN L. EPIST.</reg>
+          <reg type="contemporary">COMMENT. IN I. EPIST.</reg>
         </choice>
       </fw>
       <fw corresp="#f7325966_block_3" type="QuireMarksZone">
@@ -4619,7 +4632,7 @@
         <lb corresp="#f7325967_line_0_ligne_2"/>
         <choice>
           <orig>AD TIM, CAP. II.</orig>
-          <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+          <reg type="contemporary">AD TIM. CAP II.</reg>
         </choice>
       </fw>
       <fw corresp="#f7325967_block_0" type="NumberingZone">
@@ -4926,7 +4939,7 @@
           <lb corresp="#f7325969_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -5252,7 +5265,7 @@
         <lb corresp="#f7325971_line_0_ligne_2"/>
         <choice>
           <orig>AD TIM. CAP. II.</orig>
-          <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+          <reg type="contemporary">AD TIM. CAP II.</reg>
         </choice>
       </fw>
       <fw corresp="#f7325971_block_0" type="NumberingZone">
@@ -5593,7 +5606,7 @@
           <lb corresp="#f7325973_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -5925,7 +5938,7 @@
           <lb corresp="#f7325975_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -6246,7 +6259,7 @@
         <lb corresp="#f7325977_line_0_ligne_2"/>
         <choice>
           <orig>AD TIM. CAP. II.</orig>
-          <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+          <reg type="contemporary">AD TIM. CAP II.</reg>
         </choice>
       </fw>
       <fw corresp="#f7325977_eSc_textblock_a88b1fd4" type="NumberingZone">
@@ -6550,7 +6563,7 @@
           <lb corresp="#f7325979_line_1_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -6860,7 +6873,7 @@
           <lb corresp="#f7325981_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -7160,7 +7173,7 @@
           <lb corresp="#f7325983_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -7476,7 +7489,7 @@
           <lb corresp="#f7325985_line_1_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -7791,7 +7804,7 @@
         <lb corresp="#f7325987_line_0_ligne_2"/>
         <choice>
           <orig>AD TIM. CAP. II.</orig>
-          <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+          <reg type="contemporary">AD TIM. CAP II.</reg>
         </choice>
       </fw>
       <fw corresp="#f7325987_block_0" type="NumberingZone">
@@ -8105,7 +8118,7 @@
           <lb corresp="#f7325989_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -8419,7 +8432,7 @@
           <lb corresp="#f7325991_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
         <lb corresp="#f7325991_eSc_line_a10ae83b_ligne_3"/>
@@ -8715,7 +8728,7 @@
         <lb corresp="#f7325993_line_0_ligne_2"/>
         <choice>
           <orig>AD TIM. CAP II.</orig>
-          <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+          <reg type="contemporary">AD TIM. CAP II.</reg>
         </choice>
       </fw>
       <fw corresp="#f7325993_block_0" type="NumberingZone">
@@ -9026,7 +9039,7 @@
           <lb corresp="#f7325995_line_0_ligne_2"/>
           <choice>
             <orig>AD TIM. CAP. II.</orig>
-            <reg type="contemporary">AD I. PAVL. AD TIM.</reg>
+            <reg type="contemporary">AD TIM. CAP II.</reg>
           </choice>
         </hi>
       </fw>
@@ -9343,13 +9356,19 @@
           <reg type="contemporary">ctus hanc particulam πιςτὸς ὁ λόγος retulerunt ad</reg>
         </choice>
       </ab>
-      <note corresp="#f7325996_block_1" type="MarginTextZone-Notes">
+      <ab corresp="#f7325996_block_1" type="MainZone-Head">
         <lb corresp="#f7325996_line_25_ligne_2"/>
         <choice>
           <orig>CAP. III.</orig>
           <reg type="contemporary">CAP. III.</reg>
         </choice>
-      </note>
+      </ab><ab corresp="#f7325996_block_0" type="MainZone-P-Continued"><!-- ligne par défaut à supprimer si on rajouter le chapitre 1 -->
+        <lb corresp="#f7325965_line_0_ligne_0"/>
+        <choice>
+          <orig></orig>
+          <reg type="contemporary"></reg> <!-- ajouter le texte du chapitre III -->
+        </choice>
+      </ab>
     </body>
   </text>
 </TEI>

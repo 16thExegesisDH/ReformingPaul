@@ -1,0 +1,2334 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Stylesheet documentation for: tei2html_mdz_fini.xsl</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript"><!--
+        
+        
+        
+        var usedByBoxes= new Array('uB_T_metadataS_tei2html_mdz_fini.xsl', 
+				'uB_T_sidebarS_tei2html_mdz_fini.xsl', 
+				'uB_T_navigation-barS_tei2html_mdz_fini.xsl', 
+				'uB_T_headerS_tei2html_mdz_fini.xsl', 
+				'uB_T_text-sectionS_tei2html_mdz_fini.xsl', 
+				'uB_T_footerS_tei2html_mdz_fini.xsl');
+
+        var docBoxes= new Array('dS_tei2html_mdz_fini.xsl', 
+				'dS_M_S_tei2html_mdz_fini.xsl', 
+				'dS_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl', 
+				'dS_M_abS_tei2html_mdz_fini.xsl', 
+				'dS_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl', 
+				'dS_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl', 
+				'dS_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl', 
+				'dS_M_fwS_tei2html_mdz_fini.xsl', 
+				'dS_M_choiceS_tei2html_mdz_fini.xsl', 
+				'dS_M_noteS_tei2html_mdz_fini.xsl', 
+				'dS_T_metadataS_tei2html_mdz_fini.xsl', 
+				'dS_T_sidebarS_tei2html_mdz_fini.xsl', 
+				'dS_T_navigation-barS_tei2html_mdz_fini.xsl', 
+				'dS_T_headerS_tei2html_mdz_fini.xsl', 
+				'dS_T_text-sectionS_tei2html_mdz_fini.xsl', 
+				'dS_T_footerS_tei2html_mdz_fini.xsl', 
+				'dS_O_S_tei2html_mdz_fini.xsl');
+
+        var sourceBoxes= new Array('src_M_S_tei2html_mdz_fini.xsl', 
+				'src_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl', 
+				'src_M_abS_tei2html_mdz_fini.xsl', 
+				'src_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl', 
+				'src_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl', 
+				'src_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl', 
+				'src_M_fwS_tei2html_mdz_fini.xsl', 
+				'src_M_choiceS_tei2html_mdz_fini.xsl', 
+				'src_M_noteS_tei2html_mdz_fini.xsl', 
+				'src_T_metadataS_tei2html_mdz_fini.xsl', 
+				'src_T_sidebarS_tei2html_mdz_fini.xsl', 
+				'src_T_navigation-barS_tei2html_mdz_fini.xsl', 
+				'src_T_headerS_tei2html_mdz_fini.xsl', 
+				'src_T_text-sectionS_tei2html_mdz_fini.xsl', 
+				'src_T_footerS_tei2html_mdz_fini.xsl', 
+				'src_O_S_tei2html_mdz_fini.xsl');
+
+        
+        
+        var referencesBoxes= new Array('refs_M_S_tei2html_mdz_fini.xsl');
+
+        
+        
+        
+        
+        var button_prefix = 'bt_';
+        
+        /**
+        * Get all DIV elements with a specified class name.
+        *
+        * @param className The class name. 
+        */
+        function getElementsByClassName(className) {
+            var results = [];
+    
+             if (document.getElementsByClassName == undefined) {
+                var allElements = document.getElementsByTagName("div");
+                var element;
+                for (var i = 0; i < allElements.length; i++) {
+                    var element = allElements[i];
+                	var elementClass = element.className;
+                	if (elementClass == className) { 
+                		results.push(element);
+                	}
+                }
+             } else {
+                results = document.getElementsByClassName(className);
+             }
+    
+            return results;
+        }
+            
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+
+       /**
+        * Switch between the compact list representation and the clasic list representation.
+        */
+       function switchMode(checkBox) {
+            if (checkBox == null) {
+                // Checkbox not found
+            } else if (checkBox.checked == 1) {
+                // Compact mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "inline";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "inline";
+                    }
+                }
+            } else {
+                // Expanded mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "block";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "none";
+                    }
+                }
+            }
+        }
+
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updPT(message) {
+            top.document.title = "Stylesheet documentation for: " + message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id){
+         var selectIds = new Array('toc_group_by_location', 'toc_group_by_component_type', 'toc_group_by_namespace', 'toc_group_by_mode');
+            // Make all the tabs invisible.
+            for (i = 0; i < 4; i++){
+               var tab = getElementObject(selectIds[i]);
+               tab.style.display = 'none';
+            }
+            var selTab = getElementObject(id);
+            selTab.style.display = 'block';            
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cTL"></td>
+               <td class="rt_lT"></td>
+               <td class="rt_cTR"></td>
+            </tr>
+            <tr>
+               <td class="rt_lL"></td>
+               <td class="rt_cnt">
+                  <h3>Mode:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchMode(this);" class="control" /></span><span class="globalControlName">Compact lists</span></td>
+                     </tr>
+                  </table>
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, docBoxes);" class="control" /></span><span class="globalControlName">Documentation
+                              </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, referencesBoxes);" class="control" /></span><span class="globalControlName">References </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lR"></td>
+            </tr>
+            <tr>
+               <td class="rt_cBL"></td>
+               <td class="rt_lB"></td>
+               <td class="rt_cBR"></td>
+            </tr>
+         </table>
+      </div><a id="tei2html_mdz_fini.xsl"></a><div class="cmpT">Main stylesheet
+         <span class="qname">tei2html_mdz_fini.xsl</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p><b>Created on:</b> Dec 3, 2025</p>
+                                 
+                                 <p><b>Author:</b> Floriane Goy</p>
+                                 
+                                 <p> XSLT stylesheet that generates semantic HTML, based on the April 30, 2025 script.</p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Stylesheet version</td>
+                        <td>2.0</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_S_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">/</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_S_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_S_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_S_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Match the root node of the input document and generate the main HTML
+                                    structure. This template assembles the core page layout by invoking 
+                                    several named templates responsible for metadata, navigation elements, 
+                                    content sections, and the footer.
+                                    </p>
+                                 
+                                 <p>
+                                    The <i>div.main-wrapper</i> contains the main page content and allows 
+                                    it to move dynamically, for example, when the sidebar is opened or closed, 
+                                    supporting responsive and interactive page behavior.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    An <i>html</i> element containing the complete page structure,
+                                    including head and body elements populated through the invoked templates.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>/</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_S_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_S_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_S_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Templates</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#T_footerS_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="nRf">footer</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#T_headerS_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="nRf">header</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#T_metadataS_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="nRf">metadata</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#T_navigation-barS_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="nRf">navigation-bar</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#T_sidebarS_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="nRf">sidebar</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#T_text-sectionS_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="nRf">text-section</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_S_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_S_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_S_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"/"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;html</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;head</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"metadata"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/head&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;body</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"sidebar"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;div</span><span class="tAN"> class=</span><span class="tAV">"main-wrapper"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"navigation-bar"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"header"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"text-section"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"footer"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/div&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/body&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/html&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">teiHeader | /sourceDoc | orig</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Remove unneeded elements from the output HTML by matching and ignoring 
+                                    specific elements in the source XML.
+                                    </p>
+                                 
+                                 <p>
+                                    1. <i>teiHeader</i> – the TEI header information is excluded from 
+                                    the output, as it is not needed in the HTML rendering.
+                                    </p>
+                                 
+                                 <p>
+                                    2. <i>sourceDoc</i> – the source document wrapper element is omitted 
+                                    from the output to prevent unnecessary markup.
+                                    </p>
+                                 
+                                 <p>
+                                    3. <i>orig</i> – original source text elements are ignored, as they 
+                                    are not part of the displayed content.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    These templates produce no output for the matched elements, effectively 
+                                    removing them from the resulting HTML page while preserving the relevant 
+                                    content.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>teiHeader | /sourceDoc | orig</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_teiHeadersourceDocorigS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"teiHeader | /sourceDoc | orig"</span><span class="tXSLEl">/&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_abS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">ab</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_abS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_abS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_abS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Process <i>ab</i> (anonymous block) elements in the source TEI document, 
+                                    rendering them according to their type while skipping certain elements handled 
+                                    elsewhere.
+                                    </p>
+                                 
+                                 <p>
+                                    The template ignores <i>DropCapitalZone</i> and <i>MainZone-P</i> 
+                                    types, as these are handled by other templates.
+                                    </p>
+                                 
+                                 <p>
+                                    Rendering logic based on the <i>@type</i> attribute:
+                                    </p>
+                                 
+                                 <p>
+                                    1. <i>MainZone-Head</i> with a <i>CAP.*</i> marker:
+                                    • Generates an <i>h2</i> element for the chapter heading.
+                                    • Creates a unique <i>id</i> for the chapter based on the text of the last token in the header.
+                                    </p>
+                                 
+                                 <p>
+                                    2. <i>MainZone-Head</i> without a <i>CAP.*</i> marker:
+                                    • Generates an <i>h3</i> element for sub-sections or verses.
+                                    • Computes a unique <i>id</i> by combining the preceding chapter identifier and a sequential number.
+                                    • Also generates a short anchor based on the first three words of the text for linking.
+                                    </p>
+                                 
+                                 <p>
+                                    3. <i>MainZone-Entry</i>:
+                                    • Wraps the content in a <i>span.ab_mzEntry</i> with a bullet marker (◦).
+                                    </p>
+                                 
+                                 <p>
+                                    4. Default case:
+                                    • Wraps the content in a standard paragraph (<i>p</i>) element.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    HTML elements representing the TEI <i>ab</i> content, including 
+                                    structured headings (<i>h2</i>, <i>h3</i>), entries, and 
+                                    paragraphs<i>p</i>. Each heading and sub-section is given a unique identifier 
+                                    to allow navigation and linking within the page.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>ab</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_abS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_abS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_abS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"ab"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!-- DropCapitalZone is handled by MainZone-P, so we skip rendering it here --&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"@type != 'DropCapitalZone' and @type != 'MainZone-P'"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:choose</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tC">&lt;!-- MainZone-Head special case --&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"@type='MainZone-Head' and (choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')])"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"Chapter"</span><span class="tAN"> select=</span><span class="tAV">"translate(normalize-space(string-join(.//reg, ' ')), ' ', '_')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tC">&lt;!--&lt;/xsl:variable&gt;--&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;h2</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- ajoiuter un identifier spécifique au titre de chapitre --&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"chapter-token"</span><span class="tAN"> select=</span><span class="tAV">"tokenize(normalize-space(string-join(.//reg, ' ')), '\s+')[last()]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tAN"> select=</span><span class="tAV">"concat('C_', replace(replace($chapter-token, '^CAP\.',''), '\.$',''))"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;span</span><span class="tAN"> class=</span><span class="tAV">"ab_mzHead"</span><span class="tAN"> id=</span><span class="tAV">"{$Chapter}"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/span&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/h2&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"@type='MainZone-Head' and not(choice/reg[matches(., '^CAP')]) and not(hi/choice/reg[matches(., '^CAP')])"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;h3</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- ajouter un identifiant pour chaque verset  --&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"chapter-id"</span><span class="tAN"> select=</span><span class="tAV">"                                 concat(                                 'C_',                                 replace(                                 replace(                                 tokenize(                                 normalize-space(string-join(                                 (preceding-sibling::ab[@type='MainZone-Head'                                  and (choice/reg[matches(., '^CAP')]                                  or hi/choice/reg[matches(., '^CAP')])]                                 //reg), ' ')), '\s+')[last()],                                 '^CAP\.',''),                                 '\.$','')                                 )                                 "</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tXSLEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"concat($chapter-id, '_v')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:number</span><span class="tAN"> level=</span><span class="tAV">"any"</span><span class="tAN"> count=</span><span class="tAV">"ab[@type='MainZone-Head'                                      and not(choice/reg[matches(., '^CAP')])                                     and not(hi/choice/reg[matches(., '^CAP')])]"</span><span class="tAN"> from=</span><span class="tAV">"ab[@type='MainZone-Head'                                      and (choice/reg[matches(., '^CAP')]                                      or hi/choice/reg[matches(., '^CAP')])]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;/xsl:attribute&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;span</span><span class="tAN"> class=</span><span class="tAV">"ab_mzHead"</span><span class="tAN"> id=</span><span class="tAV">"{                             lower-case(string-join(subsequence(tokenize(replace(string-join(.//reg, ' '), '-\s+', ''), '\s+'),1, 3),'_'))}"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/span&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/h3&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"@type='MainZone-Entry'"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;span</span><span class="tAN"> class=</span><span class="tAV">"ab_mzEntry"</span><span class="tEl">&gt;</span><span class="tT">
+                            ◦  </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/span&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+      </span><span class="tC">&lt;!-- Default case --&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:otherwise</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:otherwise&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:choose&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">ab[@type='DropCapitalZone']</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>delete the DropCapital for preventing double entry</div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>ab[@type='DropCapitalZone']</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_abtypeDropCapitalZoneS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"ab[@type='DropCapitalZone']"</span><span class="tXSLEl">/&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_abtypeMainZone-PS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">ab[@type='MainZone-P']</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Handle <i>DropCapitalZone</i> and <i>MainZone-P</i> elements in the TEI document, 
+                                    ensuring proper display of drop capitals in the HTML output.
+                                    </p>
+                                 
+                                 <p>
+                                    1. <i>ab[@type='DropCapitalZone']</i> elements are deleted by default, 
+                                    preventing them from being rendered independently.
+                                    </p>
+                                 
+                                 <p>
+                                    2. <i>ab[@type='MainZone-P']</i> elements are rendered inside a paragraph 
+                                    (<i>p</i>), and the template checks if the immediately preceding sibling 
+                                    is a <i>DropCapitalZone</i>.
+                                    • If so, the text from its <i>choice/reg</i> element is extracted 
+                                    and wrapped in a <i>span.ab_Drop</i> to display the drop capital.
+                                    • Then the content of the <i>MainZone-P</i> element itself is rendered.
+                                    </p>
+                                 
+                                 <p>
+                                    This approach ensures drop capitals are shown only in the context of their 
+                                    associated main text blocks and not as standalone elements.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    A paragraph (<i>p</i>) containing the main text of the <i>MainZone-P</i> 
+                                    block, optionally preceded by a styled drop capital extracted from the 
+                                    immediately preceding <i>DropCapitalZone</i> element.
+                                    </p>
+                                 </div>
+                              <hr />
+                              <div>
+                                 <h3>Description</h3>
+                                 <pre> MainZone-P with potential DropCapitalZone integration </pre>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>ab[@type='MainZone-P']</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_abtypeMainZone-PS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"ab[@type='MainZone-P']"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tC">&lt;!-- Only show DropCapital if immediately it precede a MainZone-P --&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"preceding-sibling::*[1][self::ab[@type='DropCapitalZone']]"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;span</span><span class="tAN"> class=</span><span class="tAV">"ab_Drop"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"preceding-sibling::ab[@type='DropCapitalZone'][1]//choice/reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/span&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">fw[@type='RunningTitleZone']</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Process <i>fw</i> (front matter) elements of type <i>RunningTitleZone</i> 
+                                    in the TEI document, rendering them as headings with optional numbering.
+                                    </p>
+                                 
+                                 <p>
+                                    Rendering logic:
+                                    </p>
+                                 
+                                 <p>
+                                    1. If the immediately following sibling is a <i>fw[@type='NumberingZone']</i>:
+                                    • Extracts the text from its <i>choice/reg</i> element.
+                                    • Wraps it in a <i>span.fw_number</i> to display the number.
+                                    </p>
+                                 
+                                 <p>
+                                    2. The text of the <i>RunningTitleZone</i> itself is wrapped in 
+                                    <i>span.fw_running</i> to display the running title.
+                                    </p>
+                                 
+                                 <p>
+                                    The combined result is enclosed in an <i>h4</i> element, providing 
+                                    a clear and styled heading in the HTML output.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    An <i>h4</i> element containing the optional number (from the following 
+                                    <i>NumberingZone</i>) and the running title text, properly styled 
+                                    using <i>span</i> elements.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>fw[@type='RunningTitleZone']</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_fwtypeRunningTitleZoneS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"fw[@type='RunningTitleZone']"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;h4</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"following-sibling::*[1][self::fw[@type='NumberingZone']]"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;span</span><span class="tAN"> class=</span><span class="tAV">"fw_number"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"following-sibling::fw[@type='NumberingZone'][1]//choice/reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/span&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;span</span><span class="tAN"> class=</span><span class="tAV">"fw_running"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/span&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/h4&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_fwS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">fw</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_fwS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_fwS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_fwS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Suppress other <i>fw</i> elements that are not of type <i>RunningTitleZone</i>, 
+                                    preventing them from being rendered in the output.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    No output is produced for <i>fw</i> elements without the <i>RunningTitleZone</i> type.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>fw</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_fwS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_fwS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_fwS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"fw"</span><span class="tXSLEl">/&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_choiceS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">choice</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_choiceS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_choiceS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_choiceS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Process <i>choice</i> elements in the TEI document, rendering their 
+                                    <i>reg</i> text content and optionally adding line breaks (<i>br</i>) 
+                                    depending on the context.
+                                    </p>
+                                 
+                                 <p>
+                                    Rendering logic:
+                                    </p>
+                                 
+                                 <p>
+                                    1. If the <i>choice</i> element is inside an <i>ab[@type='DropCapitalZone']</i>:
+                                    • Only the text from <i>reg</i> is output; no line break is added.
+                                    </p>
+                                 
+                                 <p>
+                                    2. If the <i>choice</i> element is inside an <i>ab</i> of type 
+                                    <i>Main*</i> or <i>TitlePageZone</i>, or in any other context:
+                                    • The text from <i>reg</i> is output, followed by a <i>br</i> element 
+                                    to create a line break in the HTML output.
+                                    </p>
+                                 
+                                 <p>
+                                    This ensures that drop capitals are displayed inline without line breaks, 
+                                    while regular main text and title page content are properly separated visually.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    The <i>reg</i> text content of the <i>choice</i> element, optionally 
+                                    followed by a <i>br</i> element depending on the type of parent <i>ab</i> 
+                                    element.
+                                    </p>
+                                 
+                                 <p>The <i>br</i> line breaks allow the page text to correspond visually 
+                                    with the line breaks of the original text in the image.</p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>choice</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_choiceS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_choiceS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_choiceS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"choice"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:choose</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tC">&lt;!-- IF inside DropCapitalZone, NO &lt;br&gt; --&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"ab[@type='DropCapitalZone']"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"ab[@type='Main*']"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:element</span><span class="tAN"> name=</span><span class="tAV">"br"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"ab[@type='TitlePageZone']"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:element</span><span class="tAN"> name=</span><span class="tAV">"br"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:otherwise</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:element</span><span class="tAN"> name=</span><span class="tAV">"br"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:otherwise&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:choose&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_noteS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">note</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_noteS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_noteS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_noteS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Process <i>note</i> elements in the TEI document, rendering marginal 
+                                    notes and their corresponding numbers in the HTML output.
+                                    </p>
+                                 
+                                 <p>
+                                    Rendering logic based on the <i>@type</i> attribute:
+                                    </p>
+                                 
+                                 <p>
+                                    1. <i>MarginTextZone</i>:
+                                    • Represents the number contained in the marginal zone.
+                                    • The number from the <i>reg</i> element is rendered inside a 
+                                    <i>p.note-number</i> paragraph.
+                                    </p>
+                                 
+                                 <p>
+                                    2. <i>MarginTextZone-Notes</i>:
+                                    • Represents the text content of the marginal note.
+                                    • The text from the <i>reg</i> element is rendered inside a 
+                                    <i>p.note-text</i> paragraph.
+                                    </p>
+                                 
+                                 <p>
+                                    This ensures that marginal note numbers and their corresponding note texts 
+                                    are displayed clearly and semantically in the HTML output.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    Paragraph elements (<i>p.note-number</i> or <i>p.note-text</i>) 
+                                    containing the marginal note number or note text, depending on the type of 
+                                    the <i>note</i> element.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>note</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_noteS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_noteS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_noteS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"note"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:choose</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"@type='MarginTextZone'"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;p</span><span class="tAN"> class=</span><span class="tAV">"note-number"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">".//reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"@type='MarginTextZone-Notes'"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;p</span><span class="tAN"> class=</span><span class="tAV">"note-text"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">".//reg"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:choose&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_metadataS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">metadata</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_metadataS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_metadataS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_metadataS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Create the metadata section of the generated HTML document. This template 
+                                    defines the viewport configuration, extracts and sets the page title from 
+                                    the <i>titleStmt</i> element, and includes the required stylesheet 
+                                    and JavaScript resources for the interface.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    A set of metadata elements inserted into the HTML <i>head</i> 
+                                    section, including <i>meta</i>, <i>title</i>, 
+                                    <i>link</i> and <i>script</i> elements.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_metadataS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_metadataS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_metadataS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#M_S_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_metadataS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_metadataS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_metadataS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"metadata"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;meta</span><span class="tAN"> name=</span><span class="tAV">"viewport"</span><span class="tAN"> content=</span><span class="tAV">"width=device-width, initial-scale=1.0"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!-- Extract the title from short title --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;title</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"//title[parent::titleStmt]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/title&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;link</span><span class="tAN"> href=</span><span class="tAV">"../../../Web_interface/CSS/FG_stylesheet_fini.css"</span><span class="tAN"> rel=</span><span class="tAV">"stylesheet"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--&lt;link href="../../../Web_interface/CSS/FG_stylesheet_small_fini.css" rel="stylesheet"/&gt; --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;script</span><span class="tAN"> src=</span><span class="tAV">"../../../Web_interface/JS/my_function_fini.js"</span><span class="tAN"> defer=</span><span class="tAV">"defer"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_sidebarS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">sidebar</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_sidebarS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_sidebarS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_sidebarS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Create the sidebar section of the HTML interface. This template generates 
+                                    a collapsible navigation panel that includes:
+                                    </p>
+                                 
+                                 <p>
+                                    1. A close button for hiding the sidebar (<i>×</i>).
+                                    2. A link to the home page.
+                                    3. A dynamically constructed table of contents (TOC) built from elements 
+                                    with <i>MainZone-Head</i> type, grouped by chapter headers matching 
+                                    the pattern <i>^CAP.*</i>.
+                                    4. Subpoints under each chapter representing sections or verses, with 
+                                    text normalized and cleaned for anchor links.
+                                    </p>
+                                 
+                                 <p>
+                                    The TOC items are collapsible using JavaScript functions 
+                                    <i>toggleTOC()</i> and <i>toggleSubPoints()</i>, and each 
+                                    link generates a unique anchor based on the text content.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    An <i>aside</i> element representing the sidebar, including: 
+                                    a close button, home link, and a hierarchical list of navigation links. 
+                                    Chapter headers are top-level list items, and sections/verses are nested 
+                                    sub-items with automatically generated anchor links for navigation.
+                                    </p>
+                                 </div>
+                              <hr />
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Create the sidebar section of the HTML interface. This template generates 
+                                    a collapsible navigation panel that includes:
+                                    </p>
+                                 
+                                 <p>
+                                    1. A close button for hiding the sidebar (<i>×</i>).
+                                    2. A link to the home page.
+                                    3. A dynamically constructed table of contents (TOC) built from elements 
+                                    with <i>MainZone-Head</i> type, grouped by chapter headers matching 
+                                    the pattern <i>^CAP.*</i>.
+                                    4. Subpoints under each chapter representing sections or verses, with 
+                                    text normalized and cleaned for anchor links.
+                                    </p>
+                                 
+                                 <p>
+                                    The TOC items are collapsible using JavaScript functions 
+                                    <i>toggleTOC()</i> and <i>toggleSubPoints()</i>, and each 
+                                    link generates a unique anchor based on the text content.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    An <i>aside</i> element representing the sidebar, including: 
+                                    a close button, home link, and a hierarchical list of navigation links. 
+                                    Chapter headers are top-level list items, and sections/verses are nested 
+                                    sub-items with automatically generated anchor links for navigation.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_sidebarS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_sidebarS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_sidebarS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#M_S_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_sidebarS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_sidebarS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_sidebarS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"sidebar"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;aside</span><span class="tAN"> class=</span><span class="tAV">"sidebar"</span><span class="tAN"> id=</span><span class="tAV">"mySidebar"</span><span class="tAN"> aria-label=</span><span class="tAV">"Menu principal"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;a</span><span class="tAN"> class=</span><span class="tAV">"closebtn"</span><span class="tAN"> href=</span><span class="tAV">"#"</span><span class="tAN"> onclick=</span><span class="tAV">"closeNav()"</span><span class="tAN"> aria-label=</span><span class="tAV">"Fermer le menu"</span><span class="tEl">&gt;</span><span class="tT">×</span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;a</span><span class="tAN"> href=</span><span class="tAV">"../../../index.html"</span><span class="tEl">&gt;</span><span class="tT">Home</span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;div</span><span class="tAN"> id=</span><span class="tAV">"toc_container"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;a</span><span class="tAN"> class=</span><span class="tAV">"toc_title"</span><span class="tAN"> href=</span><span class="tAV">"javascript:void(0)"</span><span class="tAN"> onclick=</span><span class="tAV">"toggleTOC()"</span><span class="tEl">&gt;</span><span class="tT">&gt; Table of Content</span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;ul</span><span class="tAN"> class=</span><span class="tAV">"toc_list"</span><span class="tAN"> style=</span><span class="tAV">"display: none; padding-left: 8px;"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:for-each-group</span><span class="tAN"> select=</span><span class="tAV">"//*[@type='MainZone-Head']"</span><span class="tAN"> group-starting-with=</span><span class="tAV">"*[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]]"</span><span class="tXSLEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"FirstNode"</span><span class="tAN"> select=</span><span class="tAV">"current-group()[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"firstNodeText"</span><span class="tAN"> select=</span><span class="tAV">"string-join($FirstNode//reg, ' ')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;li</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;a</span><span class="tAN"> href=</span><span class="tAV">"#{                                 if ($FirstNode[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]])                                 then translate(normalize-space($firstNodeText), ' ', '_')                                 else 'Introduction'                                 }"</span><span class="tAN"> class=</span><span class="tAV">"point-header"</span><span class="tAN"> onclick=</span><span class="tAV">"toggleSubPoints(this)"</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"                                     if ($FirstNode[choice/reg[matches(., '^CAP.*')] or hi/choice/reg[matches(., '^CAP.*')]])                                     then concat('&gt; ', normalize-space($firstNodeText))                                     else '&gt; Introduction'"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;ul</span><span class="tAN"> style=</span><span class="tAV">"display: none; padding-left: 8px;"</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"if ($FirstNode[choice/reg[matches(., '^CAP')]] or $FirstNode[hi/choice/reg[matches(., '^CAP')]])                                      then current-group()[position() &gt; 1]                                      else current-group()"</span><span class="tXSLEl">&gt;</span><span class="tI">
+                </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"versetFixedText"</span><span class="tAN"> select=</span><span class="tAV">"replace(normalize-space(string-join(.//reg, ' ')), '-\s+', '')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+                </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"string-length($versetFixedText) &gt; 0"</span><span class="tXSLEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;li</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;a</span><span class="tAN"> href=</span><span class="tAV">"#{lower-case(string-join(subsequence(tokenize($versetFixedText, '\s+'), 1, 3),'_'))}"</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$versetFixedText"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/li&gt;</span><span class="tI">
+                </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+              </span><span class="tXSLEl">&lt;/xsl:for-each&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/ul&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/li&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;/xsl:for-each-group&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/ul&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/div&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/aside&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_navigation-barS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">navigation-bar</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_navigation-barS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_navigation-barS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_navigation-barS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Create the navigation bar section of the HTML interface. This template 
+                                    generates a top-level <i>nav</i> element containing:
+                                    </p>
+                                 
+                                 <p>
+                                    1. A button to open the sidebar menu, with an <i>aria-label</i> 
+                                    for accessibility and an <i>onclick</i> event calling the 
+                                    <i>openNav()</i> JavaScript function.
+                                    </p>
+                                 
+                                 <p>
+                                    2. A download section with links to XML-TEI and PDF versions of the 
+                                    current document. The file paths are dynamically constructed using the 
+                                    <i>xml:id</i> attribute from the root <i>TEI</i> element. 
+                                    Each link opens in a new tab (<i>target="_blank"</i>).
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    A <i>nav</i> element containing a menu toggle button and a set 
+                                    of downloadable resource links, providing easy navigation and access 
+                                    to the document files.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_navigation-barS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_navigation-barS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_navigation-barS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#M_S_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_navigation-barS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_navigation-barS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_navigation-barS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"navigation-bar"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;nav</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;button</span><span class="tAN"> class=</span><span class="tAV">"openbtn"</span><span class="tAN"> onclick=</span><span class="tAV">"openNav()"</span><span class="tAN"> aria-label=</span><span class="tAV">"Ouvrir le menu de navigation"</span><span class="tAN"> aria-expanded=</span><span class="tAV">"false"</span><span class="tEl">&gt;</span><span class="tT">☰ Navigation</span><span class="tEl">&lt;/button&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;div</span><span class="tAN"> class=</span><span class="tAV">"download"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;a</span><span class="tAN"> href=</span><span class="tAV">"{concat('../../TEI/',//TEI/@xml:id),'_tei_NF.zip'}"</span><span class="tAN"> class=</span><span class="tAV">"button"</span><span class="tAN"> target=</span><span class="tAV">"_blank"</span><span class="tEl">&gt;</span><span class="tT">[↓] XML-TEI</span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;a</span><span class="tAN"> href=</span><span class="tAV">"{concat('../../PDF/',//TEI/@xml:id,'_update.pdf')}"</span><span class="tAN"> class=</span><span class="tAV">"button"</span><span class="tAN"> target=</span><span class="tAV">"_blank"</span><span class="tEl">&gt;</span><span class="tT">[↓] PDF</span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/div&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/nav&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_headerS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">header</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_headerS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_headerS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_headerS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Create the header section of the HTML page. This template generates a 
+                                    <i>header</i> element containing a top-level heading (<i>h1</i>) 
+                                    with the title of the document.
+                                    </p>
+                                 
+                                 <p>
+                                    The title is extracted dynamically from the <i>title</i> element 
+                                    whose parent is <i>titleStmt</i> in the source XML document.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    A <i>header</i> element with an <i>h1</i> element displaying 
+                                    the document title, providing a clear, semantic page heading.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_headerS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_headerS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_headerS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#M_S_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_headerS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_headerS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_headerS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"header"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;header</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;h1</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"//title[parent::titleStmt]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/h1&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/header&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_text-sectionS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">text-section</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_text-sectionS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_text-sectionS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_text-sectionS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Generate the main text section of the HTML page. This template iterates 
+                                    over each <i>pb</i> (page break) element in the source XML document 
+                                    (/TEI/text/body/pb) and creates structured content for each page.
+                                    </p>
+                                 
+                                 <p>
+                                    For each <i>pb</i> element:
+                                    </p>
+                                 
+                                 <p>
+                                    1. Extract the page identifier from <i>@corresp</i> using 
+                                    <i>substring-after</i> to obtain a unique ID for sections and notes.
+                                    </p>
+                                 
+                                 <p>
+                                    2. Create a <i>div.content-wrapper</i> containing:
+                                    • A <i>div.text-container</i> with:
+                                     – A <i>section.text</i> containing the main text elements 
+                                    (<i>fw</i> and <i>ab</i>) that correspond to the page.
+                                     – A <i>section.note</i> containing related notes (<i>note</i>) 
+                                    linked to the page.
+                                    • A <i>figure.image-text</i> displaying the page image using 
+                                    an IIIF URL constructed from the page identifier.
+                                    </p>
+                                 
+                                 <p>
+                                    The template ensures that each text, note, and image section is uniquely 
+                                    identified using the page’s <i>@corresp</i> attribute, enabling 
+                                    navigation and linking.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    A <i>main</i> element containing all page content, with each page 
+                                    represented as a structured wrapper including text, notes, and the corresponding 
+                                    image. This allows the HTML page to display text and images in sync with 
+                                    the original TEI document structure.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_text-sectionS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_text-sectionS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_text-sectionS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#M_S_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_text-sectionS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_text-sectionS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_text-sectionS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"text-section"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;main</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"/TEI/text/body/pb"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tC">&lt;!-- Extract the relevant digit sequence from pb/@corresp --&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"pbID"</span><span class="tAN"> select=</span><span class="tAV">"substring-after(@corresp, 'fbsb')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;div</span><span class="tAN"> class=</span><span class="tAV">"content-wrapper"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;div</span><span class="tAN"> class=</span><span class="tAV">"text-container"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- Process matching text sections (fw/ab) =&gt; section --&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- Add a tag corresponding to the iiif identifier of the page --&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;section</span><span class="tAN"> class=</span><span class="tAV">"text"</span><span class="tAN"> id=</span><span class="tAV">"{substring-after(@corresp,'f')}"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"../fw[starts-with(@corresp, concat('#fbsb', $pbID))]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"../ab[starts-with(@corresp, concat('#fbsb', $pbID))]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/section&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- div tex-contenaire --&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;section</span><span class="tAN"> class=</span><span class="tAV">"note"</span><span class="tAN"> id=</span><span class="tAV">"{concat('#', substring-after(@corresp, 'fbsb'))}"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"../note[starts-with(@corresp, concat('#fbsb', $pbID))]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/section&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- div note-section --&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/div&gt;</span><span class="tI">
+        </span><span class="tC">&lt;!-- div text-container --&gt;</span><span class="tI">
+        </span><span class="tC">&lt;!-- Generate the image section after the text-container --&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;figure</span><span class="tAN"> class=</span><span class="tAV">"image-text"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tC">&lt;!-- div image-section =&gt; figure --&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;img</span><span class="tAN"> src=</span><span class="tAV">"{concat('https://api.digitale-sammlungen.de/iiif/image/v2/', substring-after(@corresp, 'f'), '/full/full/0/default.jpg')}"</span><span class="tAN"> alt=</span><span class="tAV">"{substring-after(@corresp,'f')}"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/figure&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/div&gt;</span><span class="tI">
+      </span><span class="tC">&lt;!-- div content-wrapper--&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:for-each&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/main&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_footerS_tei2html_mdz_fini.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">footer</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_footerS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_footerS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_footerS_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>
+                                    Create the footer section of the HTML page. This template generates a 
+                                    <i>footer</i> element containing two main sections:
+                                    </p>
+                                 
+                                 <p>
+                                    1. <i>credits</i> – displays terms of use and citation information 
+                                    for the digital library, as well as the coding and design contact 
+                                    information with a mailto link.
+                                    </p>
+                                 
+                                 <p>
+                                    2. <i>logos</i> – displays the logos of supporting institutions 
+                                    using <i>figure</i> and <i>img</i> elements, each with 
+                                    appropriate <i>alt</i> text for accessibility.
+                                    </p>
+                                 
+                                 <h4>Return</h4>
+                                 
+                                 <p>
+                                    A <i>footer</i> element containing structured credit information 
+                                    and institutional logos, providing page closure, attribution, and visual 
+                                    branding for the digital library.
+                                    </p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_footerS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_footerS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_footerS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="tei2html_mdz_fini0.html#M_S_tei2html_mdz_fini.xsl" target="_self" title="No namespace" onclick="updPT('tei2html_mdz_fini.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_footerS_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_footerS_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_footerS_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"footer"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;footer</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;section</span><span class="tAN"> id=</span><span class="tAV">"credits"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;strong</span><span class="tEl">&gt;</span><span class="tT">Terms of Use and Citation </span><span class="tEl">&lt;/strong&gt;</span><span class="tT">The citation terms are as follows :
+                    "16th Century Exegesis of Paul - a Digital Library: 16th Century Exegesis of Paul,
+                    SNF207696, Universties of Geneva and Zürich, dir. Ueli Zahnd and Stefan Krauter, [date
+                    of consultation]". </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tT">coding &amp; design :</span><span class="tEl">&lt;a</span><span class="tAN"> href=</span><span class="tAV">"mailto:floriane.goy@unige.ch"</span><span class="tEl">&gt;</span><span class="tT">floriane.goy@unige.ch</span><span class="tEl">&lt;/a&gt;</span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/section&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;section</span><span class="tAN"> id=</span><span class="tAV">"logos"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;figure</span><span class="tAN"> class=</span><span class="tAV">"logos-images"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;img</span><span class="tAN"> src=</span><span class="tAV">"../../../Web_interface/IMG/IHR_blanc.png"</span><span class="tAN"> alt=</span><span class="tAV">"Logo IHR"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;img</span><span class="tAN"> src=</span><span class="tAV">"../../../Web_interface/IMG/SNF_blanc.png"</span><span class="tAN"> alt=</span><span class="tAV">"Logo SNF"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;img</span><span class="tAN"> src=</span><span class="tAV">"../../../Web_interface/IMG/UZH_blanc.png"</span><span class="tAN"> alt=</span><span class="tAV">"Logo UZH"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/figure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/section&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/footer&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="O_S_tei2html_mdz_fini.xsl"></a><div class="cmpT">Output
+         <span class="qname">(default)</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_O_S_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_O_S_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_O_S_tei2html_mdz_fini.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p> 
+                                    Remove unnecessary whitespace in the input XML and generate a clean, 
+                                    properly indented HTML output</p>
+                                 </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Output properties</div>
+                           <div class="flR"><input id="bt_o_" type="image" src="img/btM.gif" value="-" onclick="switchState('o_');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="o_" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>method</th>
+                                       <th>encoding</th>
+                                       <th>indent</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td>html</td>
+                                    <td>UTF-8</td>
+                                    <td>yes</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_O_S_tei2html_mdz_fini.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_O_S_tei2html_mdz_fini.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_O_S_tei2html_mdz_fini.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tXSLEl">&lt;xsl:output</span><span class="tAN"> method=</span><span class="tAV">"html"</span><span class="tAN"> indent=</span><span class="tAV">"yes"</span><span class="tAN"> encoding=</span><span class="tAV">"UTF-8"</span><span class="tXSLEl">/&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">Stylesheet documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.</div>
+      </div><script type="text/javascript"><!--
+                    // The namespace is the selected option in the TOC combo.
+                    
+                    // The corresponding div is already visible conf. to its style attr.                     
+                    
+                            var selectToc = getElementObject('selectTOC');
+                            if(selectToc != null){
+                            // It can be null when having chunking, the combo of the TOC is in another frame.
+                            selectToc.selectedIndex = 0;
+                            }
+                        
+                    
+                    // Floats the toolbar.
+                    var globalControls = getElementObject("global_controls"); 
+                    
+                    if(globalControls != null){
+                    var browser=navigator.appName;
+                    var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+                    
+                    var IE6 = false;
+                    if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+                    IE6 = true;
+                    }
+                    
+                    //alert (IE6 + " |V| " + version);
+                    
+                    if(IE6){
+                    // On IE 6 the 'fixed' property is not supported. We must use javascript. 
+                    globalControls.style.position='absolute';                         
+                    // The global controls will do not exist in the TOC frame, when chunking.
+                    findAndFloat("global_controls", 225, 30);    
+                    } else {
+                    globalControls.style.position='fixed';                     	
+                    }
+                    
+                    globalControls.style.right='0';                       
+                    }
+                //--></script></body>
+</html>

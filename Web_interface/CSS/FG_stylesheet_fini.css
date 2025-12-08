@@ -1,0 +1,352 @@
+/* ====== CSS ====== */
+/*mise à jour pour html semantique*/
+
+htlm, body { 
+    height: 100%;
+    font-family: "Georgia", serif; 
+    line-height: 1.6; 
+    background: #f8f9fa; 
+    color: #333; 
+    margin: 0; 
+    padding: 0;  
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+/* ========================= 
+    Header 
+========================= */
+
+header { 
+    margin: 60px 5px 5px; 
+    padding: 10px 10px; 
+    font-family: 'Georgia', serif;    
+}
+
+ h1 { 
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; 
+}
+
+/* =========================
+   Text + Image Layout
+========================= */
+
+/* contenair in div element */
+
+.content-wrapper { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 5px; 
+    justify-content: space-between; 
+}
+
+.text-container { 
+    flex: 1; 
+    background: #fff; 
+    padding: 30px; 
+    margin: 0 auto; 
+    max-width: 800px; 
+   
+}
+
+
+/* Text Sections */
+.text { 
+    position: relative; 
+    margin: 0 30px 4px 150px; 
+    padding: 1px;  
+}
+
+.text p { 
+    text-align: justify; 
+    hyphens: auto;
+    text-indent: 0.7cm ;
+    font-size: 16pt; 
+    margin: auto; 
+}
+
+.note p { 
+    text-align: justify; 
+    margin-left: 180px; 
+    line-height: 0.3; 
+    font-style: oblique  ;
+}
+
+.note.note-number  p{
+    visibility:hidden
+}
+
+/* image section  */
+
+content-wrapper.figure{
+    flex: 0 0 auto; 
+    margin-left: 10px ;
+}
+
+.image-text { 
+    flex: 0 0 auto; 
+    max-width: 600px; 
+    width: 80%; 
+    margin-right: 150px; 
+    padding: 10px;
+}
+
+figure.image-text img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+/* Special Elements */
+
+
+h2{ 
+    text-indent: 3.5cm;
+    font-style: italic; 
+    font-size: 14pt;
+     }
+
+h3 {
+    text-indent: 0.7cm;
+    font-style: oblique; 
+    margin: auto;
+}
+
+.ab_mzHead, .ab_mzEntry { 
+    font-size: 16pt; 
+}
+
+.ab_mzEntry { margin-left: 30px; }
+
+.ab_Drop { 
+    
+    font-size: 1.8em; 
+    font-style: initial;
+    text-align: right; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    color: #333; 
+}
+
+/* recurrent element*/
+h4 {
+     color: darkgrey; 
+    text-align: ;
+}
+
+
+.fw_number { text-align: left; }
+
+.fw_running { 
+    text-align: left;
+    font-size: 1.1em; 
+    margin-left: 50px; 
+}
+
+
+
+/* ========================= 
+     Sidebar
+========================= */
+aside { 
+    height: 100%; 
+    width: 0;  
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background: #111; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    padding-top: 60px; 
+    font-family: 'Times New Roman', sans-serif; 
+}
+
+.sidebar a { 
+    padding: 8px 12px 8px 16px; /* Top Right Bottom Left */
+    text-decoration: none; 
+    color: #818181; 
+    display: block; 
+    transition: 0.3s; 
+}
+
+.sidebar a:hover { 
+    color: #f1f1f1; 
+}
+
+/* ========================= 
+     Table Of Content 
+========================= */
+#toc_container { 
+    display: table; 
+    font-size: 100%; 
+    margin: 0.7em 1em 40px; 
+    padding: 0; 
+    width: auto; 
+    height: auto;
+}
+
+#toc_container, #toc_container a { color: #818181; }
+#toc_container a:hover { color: #000; }
+#toc_container.active { background: #f8f9fa; }
+.toc_title { 
+    font-weight: 600; 
+    text-align: left; 
+    cursor: pointer; 
+    display: inline-block; 
+    
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li { list-style: none; }
+.point-header { 
+    cursor: pointer; 
+    display: inline-block; 
+    padding: 4px 6px; 
+    margin: 0; 
+    font-weight: 600; 
+}
+
+.toc_title:hover, .point-header:hover { 
+    background: #e2e6ea; 
+    border-radius: 4px; 
+}
+
+/* =========================
+   Navigation bar
+========================= */
+
+nav {
+    display: flex;                  
+    justify-content: space-between;  
+    align-items: center;             
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(17, 18, 18, 1) 0%, rgba(205, 212, 208, 0.36) 50%, rgba(237, 240, 242, 0.85) 100%);
+
+}
+
+/* Navigation button on left */
+.openbtn { 
+    font-size: 20px; 
+    cursor: pointer; 
+    background: #111; 
+    color: #fff; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px;
+}
+
+.openbtn:hover { 
+    background: #444; 
+}
+
+.closebtn { 
+    position: absolute; 
+    top: 0; 
+    right: 25px; 
+    font-size: 36px; 
+    margin-left: 50px; 
+}
+
+
+/* Download buttons  */
+.download {
+    display: flex;   
+    gap: 10px;       
+}
+
+.download .button {
+    display: inline-block;
+    background-color: #eee;
+    color: #222;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.download .button:hover {
+    background-color: #ddd;
+}
+
+
+/* ========================= 
+    Credits & Footers
+========================= */
+
+
+footer {     
+    text-align: center;
+    margin-top: auto; /* ensures it stays at bottom naturally */
+}
+
+#credits { 
+    background: #f9f9f9; 
+    margin: 10px 0;
+    padding: 10px 0; 
+    text-align: center; 
+    font: 14px Georgia, serif; 
+    border-top: 2px solid #ccc; 
+    width: 100%; 
+}
+
+#credits p { 
+    margin: 0; 
+    color: #555; 
+}
+
+#credits strong { 
+    color: #111; 
+}
+
+
+#logos {
+    background: #000;
+    color: #fff;
+}
+
+figure.logos-images { 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 90%; 
+    margin: 0 auto; 
+    padding: 15px; 
+}
+
+figure.logos-images img { 
+    height: 60px; 
+    object-fit: contain; 
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .download { flex-direction: column; align-items: flex-end; gap: 5px; }
+    #main { margin: 0; padding: 10px; }
+    .content-wrapper { flex-direction: column; align-items: center; }
+    .text-container, .image-section { width: 100%; max-width: 90%; }
+    .image-section { margin-bottom: 20px; }
+    .sidebar { width: 100%; }
+    .sidebar a { font-size: 16px; }
+}

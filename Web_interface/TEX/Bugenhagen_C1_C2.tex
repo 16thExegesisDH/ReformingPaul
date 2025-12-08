@@ -1,0 +1,183 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SCRIPT FOR E-RARA AND MDZ FILES     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% fini le 30.04.2025 par F. GOY            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% !TeX TS-program = lualatex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage[pdfusetitle,hidelinks]{hyperref}
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguages{latin,greek}
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+
+\usepackage{sectsty}
+\usepackage{xcolor}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\nouppercase{\leftmark}}  
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Redefine \section to remove numbering
+\usepackage{titlesec}
+\titleformat{\section}[block]{\normalfont\scshape\color{gray}}{}{0pt}{} % no number in heading
+\titleformat{\subsection}[hang]{\normalfont}{}{0pt}{} % also remove subsection number
+\titleformat{\subsubsection}[hang]{\normalfont\footnotesize\color{black}}{}{0pt}{}
+
+% Modify how section marks are stored to exclude numbers
+\makeatletter
+\renewcommand{\sectionmark}[1]{%
+	\markboth{#1}{}} % Only store the section title, without number
+\renewcommand{\subsectionmark}[1]{%
+	\markright{#1}} % Only store the subsection title, without number
+\renewcommand{\numberline}[1]{} % Hide the section number in TOC
+\makeatother
+
+\begin{document}
+
+\date{}
+        \title{Annotationes in Epistolas Pavli Ad Timotheum : [Bugenhagen, Johannes], [1524]}
+\maketitle
+\tableofcontents
+\clearpage
+\begin{pages} 
+\beginnumbering
+        ❧ IN PRIO- REM AD TIMOTHEVM EPI- stolam Annotationes Ioannis Bugen- hagii Pomerani. 
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{ARGVMENTVM. }}
+\subsection*{\textit{ARGVMENTVM. }}\pstart \huge\textbf{T}\normalsize IMOTHEVM APOSTO- lum, id est, episcopum siue praedica- torem, a se ad hoc ordinatum Paulus instruit quid doceat, nempe fidem tan- tum et charitatem, reiectis fabulis et inutilibus quae stionibus, et pugnis uerborum, et di- Jputationibus inanibus pro ambitione et auaricia ina stitutis, quae pestes sunt syncerae in Christum fidei, et in proximum charitatis: neue admittat doctrinas dae moniorum in hypocrisi loquentium mendacium, quas in nouissimis temporibus regnaturos praedicit. Haec spar- Iim in epistola, cap.2. de oratione communi instruit, et quid mulieres deceat erga uiros. In tertio, Episcopos, et Diaconos Christianos depingit cum corum uxori- bus, familia et liberis. In quinto modum monendismn- gulos praescribit, et uere uiduis prouideri uult ab ecclesia. Docet quoque Episcopos, qui laborent in- uerbo et doctrina, esse dignos, quibus uictu et ami- ctu prouideatur, et de iudicio episcopi in peccantes lubdit. In sexto docet, quod  serui, quoddiuites monendi sint?  \pend
+\section*{ANNOT. IOANNIS POMERANI }\pstart praeterea, quae de doctrina Christiana interserit:ut su- pra dictum est.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{LOCI INSIGNIORES SVNT. }}
+\subsection*{\textit{LOCI INSIGNIORES SVNT. }}\pstart Primus, quae sit doctrina Christiana, et quae pro- phana, locus maxime necessarius, ne fiducia operum legis, iustificatorem deum negemus, aut inani disputa- tione et pugna uerborum, et inutilibus quaestionibus. fidem simul laedamus et charitatem, cap.1.4.et 6. Se- cundus, quod lex iusto non est posita, sed iniustis, cap. I.id quod ad Gal.5. sic legis: Si spiritu ducimini, non estis sub lege: manifesta sunt autem opera, etc. Terti us, quod blaspemia et contumelia et persecutio con- tra Euangelium Christi, non noceant auctoribus suis, qui trrantes per hoc putant se obsequium praestare deo modo postea cognita ueritate resipiscant, ut Pau. Alii uero qui scientes contra ueritatem pugnant, et blas- phemant, peccant irremissibiliter inspiritum sanctum, ut est in euangelio. Verum hic non est nobis praecipitan- da sententia. Hic locus hodie scitu necessarius est. cap. 1. Quartus, quod pro omnibus est orandum. item pro regibus et praelatis, ut sub eis nobis quiete uiue- re liceat. Deus enim nullum statum reiicit: sed ut ex iu- fimis, ita et ex sublimibus quosdam ad sui agnitionem perducit, cap.2. Quintus, habitus mulierum, et ut sint in omnibus uiris subiectae, cap.2. Sextus, officium et shectata conuersatio Episcoporum et Diaconorum,  \pend
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.79 ]}\pstart et eorum uxoru, liberorum et familiae, cap.3. Septi- mus, doctrina daemoniorum. Satis hodie notus locus, cap.4. Octauus, pietatem ad omnia ualere, parum uero torporis exercitationem, locus magis necessarius, quam uideatur, cap, 4. Nonus, de uiduis, cap, 5. Deci- mus, quod necessaria uitae debentur doctoribus ab ipsis auditoribus, cap. 6.Vndecimus, de accusatione et iu- dicio in peccantes, cap.5. Duodecimus, quod neque  ser- ui, neque  diuites alieni sunt a regno coelorum, etiam in ipsa seruitute, et in ipsis diuitiis, modo sequantur quae Paulus monet, cap.6. Praeterea qua comitate agendum lit cum omnibus, principium cap. 5. ostendit.  \pend
+\endnumbering\beginnumbering\section{CAPVT I.}
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Paulus apostolus Iesu Christi. }}
+\subsection*{\textit{Paulus apostolus Iesu Christi. }}\pstart \huge\textbf{H}\normalsize Ac inscriptione suum uerbum commendat Ti- motheo, et omnibus lecturis epistolam, ut certi- simus hoc esse uerbum dei, non hominis: quandoquidem do- ctrinas et mandata hominum reiicit deus in Esaia, et Christus in euang. et lex non patitur aliquid addi uera- bo dei. Dicit ergo se apostolum esse Christi, et sibi com- missum esse apostolatum, id est officium euangelii prae- dicandi a deo. quasi diceret, non uenio mea referre, sed quae mihi commissa sunt a deo.  \pend\pstart Deum saluatorem uocat, quia ipse per Christum seruat, siue saluat nos: et ficut dicitur de Ephe.1.fecit nos di-  \pend
+\section*{ANNOT. IOANNIS POMERANI }\pstart lectos in dilecto filiosuo. Et Christu uocat spem no- stram, quia qui Christum non habent, in desperatione uiuunt, sicut ad Ephe.4. Qui desperant, semetipsos tra diderunt in impudicitiam etc. Hypocritae quoque  fin- gunt se sperare, sed ueniente tentatione, spem non ha- bent, quia Christum non habent. Germanum, id est uerum- nam Christum recte didicerat ex doctrina Pauli, qui se ob id eius patrem scribit. Qui germani filii in fide sint, parabola de seminante, Lucae. 8. declarat.  \pend\pstart Gratiam et miserocordiam (quae est, quod gratis no- bis donantur peccata, et haeredes simus regni absque  omni merito) necessario sequitur pax mentis et consci entiarum, quae exuperat omnem mentem. Non enim oculus uidit, nec auris audiuit, etc. Nisi uero gratiam dei, et misericordiam te consecutum credideris, nunquam pacem habebis. Consecutum inquam, non ex tuis meri- tis, iustitiae studio, etc. sed a deo, qui tantum nos dili- git in dilecto filio suo, ut pater noster non solum ap- pelletur, sed reuerasit: ut nihil trepidemus ad tantam maiestatem, qui ex misericordia eius sumus filii. Et a do- mino Iesu Christo domino nostro, sub cuius dominio et imperio totus exercitus inferorum, dei filiis, et Chri- sti seruis praeualere non potest, etc. Atque hic uides Christum non solum dominum dici, ne quis contemnat eum, quia uidet hominem factum: sed etiam dominum nostrum uocat, ut etiam agnoscas eum protectorem,  \pend
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.80 ]}\pstart imo et te dominumi, et regem in ipso, qui potens sis lupra peccatum, mortem, et infernum etc.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Ne diuersam, etc. }}
+\subsection*{\textit{Ne diuersam, etc. }}\pstart Vel ne aliam sequantur doctrinam, ut uetus habet translatio. Ne aliter doceret, praedicationi euangeli- cae siue fidei nihil uult addi, quantacumque  specie pieta- tis: id quod tum quoque  nitebantur pseudapostoli. Vnde uit ad Gal. 1. Etiam si angelus e coelis etc. Nimirum prae- sentiebat fidem Christi, doctrinis humanis abolendam, ut factum cernimus. Idcirco summe notandum, quod hic dicit, aedificationem dei esse perfidem, sentiens re- liqua omnia, quae docentur, esse destructionem. Aedi- ficatio est doctrina salutis: destructio, impia doctrina, et salutis uastatio, ut saepe uides in Paulo. Hanc fidei aedificationem duo hominum genera impediunt, uel etiam destruunt aedificata. Nam alii docent fidere in operibus legis: quia lex a deo data, non potest non esse bona et necessaria. Quibus respondet, quod usum le- gis bonae ignorent. Fidem oportet doceri, sine qua le- gis opera, quemadmodum lex exigit, fieri non possunt. eides enim spiritum impetrat, legis impletorem: ubi uero habueris fidem, iam nulla lege teneris, ut nemi- ni quicquam debeas, nisi ut proximum diligas, ad Rhoma. 12. Et hoc praestabis, non solum quia debes, quia lex iubet: sed et quia uis, nimirum sic trahente spiritu uoluntatem tuam. Hoc est quod hic dicit, lex sint. iusto non est posita, sed iniustis, qui uel puniuntur, uel  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize An sontes plectendi 
+\normalsize| 
+\section*{ANNOT. IOANNIS POMERANI }\pstart occiduntur secundum legem:ut non sit opus quaerere, an sub nouo testamento sint sontes plectendi, quum constet adulteros, fornicarios, homicidas sub nouo testamento non contineri, ad quod pertinent soli iusti per fidem,is est credentes, contra quos non est lex. Deinde cum multa ex lege praecipiant, intentionem legis et capute egregie negligunt, quae est, ut dixi, charitas in proximum, sed non foris simulato opere ostenfa:sed, ut hic definitur, ex corde puro, et conscientia bona, et fide non ficta. Vides quod ne eleemosyna quidem quantuncunque co- piosa, prosit sine fide (quicquid enim non est ex fide peccatum est) et charitatis opera quae uidentur, non esse charitatem, nisi ex corde et conscientia, quam fides purificauit, non ficta ueniant. Ii, inquit, deflexerunt ad uaniloquium, uolentes esse legis doctores, sicut et hodie operum praedicatores et doctores, non intelli- gentes quae loquuntur, nec de quibus adseuerant. Prae cepta quidem proponunt, et legem siue mandata mo- rum: sed unde tibi detur, ut sic uiuas, non docent, Inue- nies hodie qui nihil quaerant in sacris literis praeter moralia, quae deinde similia putant ethnicis, Aristote- licis, aut Senecae praescriptis: qui tamen nesciunt, quid Paulus in tota epistola ad Rhoma. uel Gal. disputex aut quid Christus uelit, dum fidem, id est fiduciam in deum ubique  praedicat: aut quid sit quod hic Paulus dicit, cha- ritas de puro corde, et conscientia bona, et fide non  \pend
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.81 ]}\pstart ficta. Nam, ut inquit, quod a talibus aberrauerunt, deflexerunt ad uaniloquium, etc. Sed de his hactenus. Alii uero docti ex sacra scriptura, sciunt non fiden- dum operibus, sed soli dei misericordiae, et quidem recte: sed curiosi et superstitiosi inania uocabula in- ueniunt, quae literae sacrae non nouerunt, et scientiam iactant, contra quos in fine epistolae dicit, deuitans pro phanas uocum inanitates. Item fabulas sequuntur, id est, alia extra sacras literas: qualia multa commenti sunt Iudaei, qualia etiam multa nostri habent quasi hi- storiam. Et praeterea genealogias quaerunt numquam finiendas, id est de quibus ex sacris literis non potes esse certus, quas alius sic, alius aliter computat, et quisque  sua praefert: quae, inqt, quaestiones et dubium ge- nerant, et nullam aedificationem. Item sunt, quorum magnus est numerus, qui magno animi negotio, nihil nisi uanas quaestiones sequuntur ex sacris literis, nus- quam non haesitantes, dum etiam nodum inscirpo quae- runt: interim uero quam certissimam uident sanam doctrinam, et apertum Euangelium, id est luce clariores: dei Christique  promissiones in utriusque  instrumenti pa- gina relinquunt. Qui in hoc periculo sunt, ut ueren- dum sit eis, ne dum pugnas sequuntur uerborum, reli- ctis illis, ex quibus aedificari possent, tandem incipiant de ueritate sacrae scripturae dubitare. Et dum umbram sequuntur, ut canis Aesopicus, ueritatem et rem ipsam:  \pend
+\section*{ANNOT. IOANNIS POMERANI }\pstart id est, fidem amittant, quorum adhuc peior est causa, si per haec sua lucra sectantes, alii aliis sese praeferre conten- dant. de quibus cap. 6. sic dicit: Si qs aliter docet, etc.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Ex corde puro. }}
+\subsection*{\textit{Ex corde puro. }}\pstart Vbi enim est fides non ficta, ibi est et cor purum: si- cut Petrus dicit: Fide purificans corda eorum. ibi est et conscientia bona. Qui enim sibi recte conscius est qui deo non ex toto corde fidit? Porro fidem non fictam dixit, id est ueram: contra illam quae hodie uulgo iacta tur, qua adsentiuntur historiae euangelicae: sicut aliis historiis, et illis quae gesta narrantur de Thurca, de Alexandro, de Iulio papa, etc. quae potius opinio est de Christo, et fides historica, uel potius ficta fides quam fides illa iustificans, quamsoli norunt credentes, Hinc fit, ut nostri libentius audiant fabulam narrari quae exempla uocant, quam textum euangelicum: quia quam fidem Euangelio habent, etiam habent illis fabu- lis non aliam, et fere minorem.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Et gratiam habeo. }}
+\subsection*{\textit{Et gratiam habeo. }}\pstart Hic locus nobis proponitur a Paulo, ne ob quan- libet etiam uitam, et quaecumque  peccata desperemus. modo ueniamus ad Christum, ut Paulus. Hic uide quam sint omnia dei, ut hic nihil praesumas, sicut illi qui stul- te putant sese posse ad Christum aditum habere quando- cunque  uolunt, contra Paulit, dicentem: Non est uolentis,  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize Rhom.9 
+\normalsize| 
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.82 ]}\pstart neque  currentis, sed etc. Primum dicit, qui me potentem, reddidit per Christum: deinde, qui me fidelem iudicauit. item, misericordiam adeptus: item, exuberauit supra mo- dum gratia etc. item: Christus uenit peccatores saluos. facere, etc. Non nobis domine non nobis, sed nomini tuo da gloriam. Super misericordia tua et ueritate tua. id quod Paulus hic sic dicit: Regi autem seculorum, etc.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{immortali regi. }}
+\subsection*{\textit{immortali regi. }}\pstart Ergo regnum eius est in aeternum. Inuisibile ergo re- gnum eius non est de hoc mundo, sed spirituale. Solisa- pienti, ergo praeter eum et extra eum omnia sunt stula- ticiae plena: ut nihil sapientiae uerae sit, ubi ipse non il- luminat: et, ut sic dicam, sapientificat. Et de Christo praedictum erat, Hiere. 23. Et regnabit rex, et sapiens erit. Ex Hebus  sanctificator erit.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Iuxta prophetias. }}
+\subsection*{\textit{Iuxta prophetias. }}\pstart Intelligunt, iuxta ea, quae spiritu prophetiae ante de hoc cognoui, quando te feci episcopum, ut secundum ea a- gas. Ego aunt et hic, et infra cap.4. intelligo prophe- tias doctrinas spiritus dei, siue reuelationem scripturae, quam a Paulo uel aliter acceperat Timotheus: sicut prophetiam accipi diximus in Esaia. Vnde ex graeco hic le- gi potest iuxta prophetias, quae ad te praecesserunt: id est ut ambules secundum doctrinam quam accepisti, et quam habes, ut eam ipsam defendas contra aliter docentes:  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize Psal.113 
+\normalsize| 
+\hspace{0.2cm}\textit{mg}
+\footnotesize vide Anno tationes e- iusdem in E- saiam. 
+\normalsize| 
+\section*{ANNOT. IOANNIS POMERANI }\pstart idquefacias in fide, et bona coscientia, quae duo separa- ri non possunt. Nam, ut inquit, qui conscientiam bonam repulerunt, id est qui audent aliud dicere, aliudquefa- cere, quam quod in corde nouerunt, unde aliquid prae caeteris uideantur, unde caeteris superiores per conten- tionem adpareant: id quod hodie multum uulgare est. Sed Paulus hic uocat blasphemiam. Hi, inquit, qui bo- nam conscientiam repulerunt, naufragium fecerunt circa fidem: id est, etiam in eo periclitati sunt, quod intus in corde sciuerunt, et tandem perdiderunt.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Hoc praeceptum }}
+\subsection*{\textit{Hoc praeceptum }}\pstart Scilicet, ut supra, ut denuncies quibusdam etc. ut com- mendes gratiam Christi peccatoribus, sicut ego, absque  operibus legis, etc. Vel potes referre ad hoc quodse- quitur:ut milites, etc.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Hymenaeus et Alexander. }}
+\subsection*{\textit{Hymenaeus et Alexander. }}\pstart Qui scientes, contra ueritatem quam sciuerunt, so- Ient contendere.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Tradidi satanae. }}
+\subsection*{\textit{Tradidi satanae. }}\pstart Sicut Corinthium, qui duxerat nouercam suam: de quo uide in annotationibus Philippi. Hanc tamen ex- communicationem, sicut et illam, ostendit esse utilem, cum dicit: Vt discant non blasphemare. Haec non est pa- pistica, quam hodie uidemus excommunicatio, ett,  \pend
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.83 ]}
+\endnumbering\beginnumbering\section{CAPVT II.}\pstart \huge\textbf{O}\normalsize Ratio est cordis desyderium pro re a deo im- petranda. Hoc desyderium si uerum est, nun- quam cessat, donec a deo quod desyderat, accipit: hoc est quod Christus dicit, Oportet semper orare, et non deficere. Qui non desyderat, nihil orat, ut maxime multiloquio aëra compleat: qui uero desyderat, etiam a uerbis quandoque  non abstinebit. Hinc fit, ut generali uocabulo orationem uocemus quamcunque  cum deo col- locutionem, etiam cum laudamus in psalmis et canti cis spiritualibus: id est, quae fiunt incordibus. Nam ut nunquam cessamus desyderare misericordiam et no- bis et proximis: ita quoque  semper, ne nostra uidea- mur quaerere, desyderamus sanctificari nomen patris nostri. In omnibus ad deum fiat uoluntas tua etc. In- struit ergo hic Paulus episcopum, quod moneat suos auditores, nempe hoc, ut in primis orent. Quomodo enim intelligent Euangelium, aut dilectionem conse- quentur in deum et in proximum, nisi postulauerint a deo spiritum bonum? Vt hac admonitione primum omnium discant omnia ex deo pendere, cum audiunt omnia a deo postulanda. Orent autem pro omnibus hominibus, etiam inimicis: id quod uera postulat cha- ritas. Nec excludant ab oratione reges et principes, licet impios. Primum, ut quam pacem eis postulamus ueniat quoque  ad nos, et sub eis uiuamus in pace, quan-  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize Oratio quod . 
+\normalsize| 
+\section*{ANNOT. IOANNIS POMERANI }\pstart tum per pietatem ad deum, et honestatem ad proxi- mum liceat. Ne intelligas propter carnis pacem, quod ad homines attinet, cedendum esse pietati et fidei, si- ue conscientiae. Deinde, quod hoc quoque  acceptum est deo, ut pro omnibus oremus sine acceptione persona- rum, siue sint iudaei siue gentes, siue serui siue |principes. Quia sicut ipse solus deus est, et omnium sine acceptio- ne dominus: ita oens homines uult ad agnitionem sui per- uenire. Quapropter nos neminem excipere debemus, ne reges quidem impios, cum ipse neminem excipiat. Sic pratur pro Nabuchodonosore, et Balthasaro, Baruch. 1.Item, quia unus est mediator inter deum et hominem, qui se dedit redemptorem pro omnibus. Ergo rursum nos neminem excludere debemus, cum oramus pro sa- lute hominum, etc. scientes hoc ipsum et deo patri, et Christo, quem pater dedit mediatorem, placere.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Deprecationes. }}
+\subsection*{\textit{Deprecationes. }}\pstart Sic distinguunt, ut deprecari sit orare, ut malum aufe- ratur, obsecrare ut bonum ueniat, interpellari, conque- ri de his quae nos laedunt: gratias agere de beneficiis acceptis: id quod fere rationes uocabulorum postulant.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Omnes uult saluos fieri. }}
+\subsection*{\textit{Omnes uult saluos fieri. }}\pstart Cunctos homines uult saluos fieri, siue seruari, et ad agnitionem ueritatis peruenire: ergo iussi sunt aposto- li praedicare Euangelium omni creaturae: Sed multi sunt uocati, pauci uero electi Quomodo autem hoc con-  \pend
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.84 ]}\pstart uenit cum eo quod Rho. 9. dicit Paulus, Cuius uult mise- retur, et quem uult indurat? Respondeo, quod unus lo- cus in scripturis obscurus, non est omnibus aliis claris obiiciendus. Tota scriptura habet impios damnari, pios siue credentes saluari: illos iudicio dei, hos miseri, cordia. Intelligendum ergo quod dicit, Vult ommes homines saluos fieri etc. De hominibus omnium statu- um, id quod hic cohaerentia textus postulat. Orate pro omnibus, etiam pro regibus etc. quia hoc placet deo: qui nullum statum mundi reiicit: quandoquidem et iu- stos reges fuisse constat:ut Dauidem, Ezechiam, etc. Omnes ergo hoïes, id est ex omnibus statibus homi- nes, et praeterea non solum Iudaeos, ut ipsi Iudaei putant: sed et gentes per totum orbem. Sic et de Christo dicit: Qui dedit semetipsum precium redemptionis pro omni- bus. Vide, si placet, annotationes. Philippi ad Rho.8.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Vnus mediator. }}
+\subsection*{\textit{Vnus mediator. }}\pstart Vnde ergo nobis tot mediatores quidam fecerunt Iine scriptura, et sine uerbo dei? quibus non occur- rit, quod Christus orat pro nobis, et intercedit, ut mediator: et solus mediator inter deum et hominem, quam solus est deus, et homo: id quod nullus aliorum sanctos- rum esse potest. Orant sancti qui sunt in terris pro se mutuo, et exaudiuntur a deo, sed per Christum media- torem, sicut ipse promittit: Si quid petieritis patrem in nomine meo, hoc faciet, etc. De defunctis sanctis,  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize Ioan.16. 
+\normalsize| 
+\section*{ANNOT. IOANNIS POMERANI }\pstart quod orent pro te, scripturam et uerbum dei non habes. Quan- do quidem scriptura Christum tibi commendat pontificem qui ingressus est in coelum, ut illic se offerat uultui patris pro nobis, ut dignissime tractat epistola ad Hebus  Qui in- terpellat pronobis, Rho.8. Quem aduocatum habemus apud patrem, qui est propiciatio pro peccatis nostris, I. Ioan.2. Et propiciatorium nostrum, ad Rho.3. Et thronus gratiae, ad Hebus 4. Et praeterea solum deum inuocandum esse tota scriptura et praecipit, et testa- tur, nec aliud exemplum inscripturis habes. Cur ergo ad illa deflectis quae nescis, relicto illo quod certum ti- bi offertur? In iniuriam certe Christi alios in coelo po- suerunt mediatores. Et Paulus aperte dicit, vnus de- us unus mediator.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Vt esset testimonium temporibus suis. }}
+\subsection*{\textit{Vt esset testimonium temporibus suis. }}\pstart Id est, ut hoc mysterium redemptiomis Christi, qua redimuntur omnes homines: id est non solum Iudei, sed etiam gentes, reuelaretur mundo, tempore a deo ordi- nato: sicut de hoc mysterio reuelando in epistola ad Ephe. et alibi scribit, et hic infra cap.3. Ad quod my- sterium reuelandum dicit Paulus se doctorem missum à deo gentibus. Doctorem inquam in fide, non doctrinis le- gis, et ueritate, non hypocrisi operum. Veritas est fides, ubi creditur non hominum doctrinis (omnis enim homo mendax) sed soli uerbo dei: qui est ipsa ueritas, etc.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Volo uiros orare. }}
+\subsection*{\textit{Volo uiros orare. }}
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.85 ]}\pstart Prosequitur quod oeperat de oratione. Vide hic quod Paulus non requirat templum adorationi: sed dicit, In omni loco, id est, ubicunque  orauerint, etc. Ne hic stru- as rursum Paulo calumniam, quod oporteat etiam in aquis, in inuiis etc. orare: quia dicit in omni loco, etc. Potueram et hoc quoque  quod supra dixi, Vult omnes homines saluos fieri: sic interpretari, id est, quotquot saluantur, eius uoluntate saluantur, sicut Ioannis I. Illu- minans omnem hominem etc. id est quotquot illuminan- tur, a deo illuminantur: sicut et hic, Volo uiros orare in omni loco:id est, ubicunque  orauerint. Si uidissem ad contextum orationis pertinere, ut uideas uel hoc loco, quod scriptura nihili facit sophisticas cauillationes. Qui credit, credat. Argutiis enim illis, deispiritus non conci- pitur. Summa ergo (ut hoc rursum ingeram) superioris loci ex contextu orationis petenda est. Orate pro omni- um hominum statu siue conditione. Nam deus nullum statum reiicit, et Christus non solum pro Iudaeis, sed etiam pro gentibus, cuiuscunque  conditionis existant, mortuus est. Aduerte, quod uiros uult orare cum pietate, mulieres ue- ro non solum cum pietate, sed et cum uestitu et opere profitentes pietatem, ut etiam ipso aspectu uideantur esse Christianae: et exemplumsint castitatis et uere- cundiae, ne auertant uirorum animos, ubi ad orationem publicam conuenitur. Nam publicam etiam orationem tum habuisse Christianos, ubi conueniebant, testatur  \pend
+\section*{ANNOT. IOANNIS POMERANI }\pstart Iocus Pauli 1.Corin. 14. Si benedixeris spiritu, qui supplet locum idiotae, quomodo dicet amen super tuam benedictionem. Opera uero bona mulierum non sunt fuperstitiones illae stultarum foeminarum, quarum mul- tas ipsae excogitarunt, multas uero a stultis confesso- ribus, quos uocant, et indoctis praedicatoribus didi- cerunt. Sed sunt illa quae scribuntur infra cap.5. Si filios educauerit, si fuit hospitalis, si sanctorum pedes lauerit, si adflictis inseruiuerit, si in omni bono opere fuerit adsidua. Et ad Titum 2. Anus similiter et c.1 Petri 3. Similiter et mulieres, etc.  \pend
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Sustollentes etc. }}
+\subsection*{\textit{Sustollentes etc. }}\pstart Habitum orantium indicat, qui nihil est nisi et cor le- uetur ad deum: sicut in psalmo dicitur: Ad te domine leuaui animam meam: id quod hic dicit, Sustollentes pu- ras manus. Quorum enim manus sanguine plenae sunt, illos non uult exaudire dominus, Esa.1. Purae manus non sunt, nisi cor purumsit, quod sine fide purum esse non potest. Fide enim, inquit Petrus, purificans corda eorum, id quod hic dicit, absque  ira et disceptatione. Duo sunt quae impediunt exauditionem. Primum ira, id est quod non dimittis proximo in te peccanti. Nam hanc conditionem in euangelio semper uides adiectam: Si re- miseris fratri, etc. Alterum disceptatio, qua disceptas tecum, et dubitas num sis exaudiendus. Hic quoque  nihil re- cipis, Iacobi. I. Vide Marci II. Credite et accipietis.  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize Bona opera mulierum. 
+\normalsize| 
+\hspace{0.2cm}\textit{mg}
+\footnotesize Duo sunt quae impe- diunt exau- ditionem. 
+\normalsize| 
+\section*{IN EPI. PAV. AD TIM. I. }
+\marginpar{[ p.86 ]}
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{Mulier in silentio, etc. }}
+\subsection*{\textit{Mulier in silentio, etc. }}\pstart Id est, non loquatur, ubi docendi gratia conuenitur, ubi audiendum est uerbum dei:nam uiris permittitur Ioqui cum doctore, imo si fuerit assidenti reuelatum, qui prius docebat, taceat, 1. Corin.14. Mulieres uero in ecclesia taceant, ut dicitur ibidem: ne sibi authorita- tem uendicent in uiros contra legem dei, quae dicit: Sub uiri potestate eris. Et praeterea, Adam est creatione prior. Item, Mulier est ruina uiri: salua tamen fiet per liberorum generationem. Quod opus haud dubie bonum, nemo hodie respicit, cum tamen hic mulier habeat uer- bum Pauli, imo dei in Paulo, et in hoc obsequitur deo, qui dicit: In labore paries, etc. Imo hic in dei opere est, qui dicit: Multiplicabo conceptus tuos, et aeru- mnas tuas, etc. Et additur: Si manserint, etc. Sic enim est in Graeco uerbum plurale, quod in ueteri transla- tione non inepte legitur in singulari, uitato Hebraismo. Hebraismus enim est, si manserint scilicet mulieres. de quibus supra dixit. Consimiliter et mulieres, etc. Hebraeos subito mutare numerum, et personas, ex prophetis notum est. Nam qui intelligunt, si perman- serint, scilicet filii, non uident quam ineptum hoc sit, quasi mulier non possit salua fieri, nisi et filii saluentur. Igitur si permanserint, inquit, mulieres in fide, et dilectione et sanctificatione, qua quotidie sanctiores fiunt, id est trescunt fide et dilectione, adiuncta castitate, id est morum integritate, quae etiam deceat coram hominibus. Aduer-  \pend
+\section*{ANNOT. IOANNIS POMERANI }\pstart e uero et mulieres prophetare, si habent uerbum, ubi uiri non sunt qui uerbum habeant. I. ad Corin.11. Mulier orans aut prophetans, etc. Iohelis 2.legis, Et prophetabunt filii uestri, et filiae uestrae. Actorum. 21. Erant Philippo quatuor filiae uirgines prophetantes. Et Maria canit Magnificat, etc.  \pend
+\endnumbering\beginnumbering\section{CAPVT III.}
+\phantomsection
+\addcontentsline{toc}{subsection}{\textit{DE EPISCOPIS ET DIACONIS. }}
+\subsection*{\textit{DE EPISCOPIS ET DIACONIS. }}\pstart \huge\textbf{E}\normalsize Piscopos esse uerbi dei praedicatores ad hoc ele- ctos, et diaconos esse sanctorum ministros, et pauperum prouisores admonui in principio epistolae ad Philip. Hi eligebantur in ciuitate a populo, uel ab Epi- scopo: id est, apostolo aliquo, siue praedicatore, qui illic populum docuerat: et manere ibi non potuit consentiem te tum et uolente populo. Eligebantur autem ex ciui- bus probatissimis, quibus erant uxor, filii, familia, domus cura, et. Sicut nunc consules eliguntur: ut hic uides. Vnde episcopatus et diaconatus officia erant, non perpetuae dignitates, ut nunc fabulantur de chara- ctere indelebili. Compone ergo nunc nostrorum dignita- tes illorum officiis, et uidebis apostolicam institutionen nostros ignorare. Igitur apostolus dat, si qui sint qui cupiunt praefici, quemadmodum hic describit. Bonum enim opus desyderant, non suam gloriam aut commodum: officia enim sunt, non dignitates. Eadem pene uides ad Titum  \pend
+\vspace{0.5cm}\noindent
+\vspace{0.2cm}\rule{1cm}{0.2pt}\\ 
+\hspace{0.2cm}\textit{mg}
+\footnotesize episcopatus officium, non dignitas est 
+\normalsize| 
+\endnumbering
+\end{pages}
+\end{document}
+        

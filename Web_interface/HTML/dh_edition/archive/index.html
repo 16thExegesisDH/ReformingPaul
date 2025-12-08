@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Édition numérique et recherche assistée dans les commentaires pauliniens</title>
+      <link href="Web_interface/CSS/style2.css" rel="stylesheet">
+      <script src="Web_interface/JS/script.js" defer="defer"></script>
+   </head>
+   <body>
+      <div id="mySidebar" class="sidebar">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+         <a href="index.html">Home</a>
+         <!-- Documents Section -->
+         <a href="#!" onclick="toggleDocumentList()">> Documents </a> <!-- Toggle -->
+         <ul id="documentList" style="display: none; padding-left: 20px;">
+            <li><a href="Web_interface/HTML/dh_edition/6_Aretius_TOC.html" target="_blank">Benedictus Aretius</a></li>
+            <li><a href="Web_interface/HTML/dh_edition/6_Bucerus_TOC.html" target="_blank">Martinus Bucerus </a></li>
+            <li><a href="Web_interface/HTML/dh_edition/6_Bullinger_TOC.html" target="_blank">Heinrich Bullinger </a></li>
+            <li><a href="Web_interface/HTML/dh_edition/6_Bugenhagen_TOC.html" target="_blank">Johannes Bugenhagen</a></li>
+            <li><a href="Web_interface/HTML/dh_edition/6_Lambertus_1245_TOC2.html" target="_blank">Lambertus Danaeus</a></li>
+            <li><a href="Web_interface/HTML/dh_edition/6_Lefevre_TOC.html" target="_blank">Jacques Lefevre </a></li>
+         </ul>
+         <a href="#!" onclick="toggleWebList()">> Digital Framework </a> 
+         <ul id="webList" style="display: none; padding-left: 20px;">
+         <li><a href="Web_interface/HTML/dh_framework/dh_architecture.html">Digital Architecture</a></li>
+         <li><a href="https://github.com/16thExegesisDH">Project Repository | GitHub</a></li>
+         </ul>
+         <a href="https://ihr-num.unige.ch/rrp/">RRP | Reformation Readings of Paul</a>
+      </div>  
+      <div id="main">
+         <button class="openbtn" onclick="openNav()">☰ Navigation</button>
+         <div class="title">16th Century Exegesis of Paul :  a Digital Library</div>
+         <div class="document">
+            <p>Welcome to the website for the project: 16th Century Exegesis of Paul. The aim of this site is to provide a digital library of the reformed commentaries on Paul's epistles in the 16th century, with access to their PDF and XML-TEI versions. The results of topic-modeling will also be integrated, enabling a comparison of the epistles by verse (summer 2025).</p>
+            <p>More information about the project on the digital portal of the SNSF project ‘16th century Pauline exegesis’ (<a href=‘https://data.snf.ch/grants/grant/207696’>→ data.snf.ch/grants/grant/207696</a>). For a description of the project's research objectives please refer to the page dedicated to it <a href=‘https://www.theologie.uzh.ch/de/faecher/neues-testament/Professur-f%C3%BCr-neutestamentliche-Wissenschaft/16th_century_exegesis_of_paul.html’>→ at the University of Zurich</a>.</p></div>
+         </div>
+     
+      <div class="image">
+       <img id="toggleImage" class="picture" src="Web_interface/IMG/183631020.png" alt="Paul in the matrix" onclick="toggleImageSource()">
+    </div>
+
+    <div id="credits">
+   <p>
+    <strong>Terms of Use and Citation</strong> The citation terms are as follows :
+    "16th Century Exegesis of Paul - a Digital Library: 16th Century Exegesis of Paul, SNF207696, Universties of Geneva and Zürich, dir. Ueli Zahnd and Stefan Krauter, [date of consultation]".
+   </p>
+   <p>coding & design : <a href="mailto:floriane.goy@unige.ch">floriane.goy@unige.ch</a></p>
+</div>      
+      <div id="footer">
+         <div class="logos">
+            <img class="logo" src="Web_interface/IMG/ihreformation_blanc.png" alt="Logo UNIGE">
+            <img class="logo2" src="Web_interface/IMG/SNF_logo_standard_web_sw_neg_e.png" alt="Logo SNF">
+            <img class="logo3" src="Web_interface/IMG/uzh-logo-white.png" alt="Logo UZH">
+         </div>
+     </div>
+   </body>
+</html>
