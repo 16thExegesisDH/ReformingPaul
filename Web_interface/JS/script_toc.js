@@ -8,7 +8,7 @@ function closeNav() {
   const main = document.getElementById("main");
   sidebar.style.width = "0";
   main.style.marginLeft = "0";
-}
+} 
 
 function toggleDocumentList() {
              const documentList = document.getElementById('documentList');
