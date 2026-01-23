@@ -222,29 +222,42 @@ figure.image {
 
   }
 
-  .subpictures {
+.subpictures {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* force all items on one line */
     gap: 40px;
     margin: 60px auto 10px;
-    max-width: 1000px;
-  }
+    max-width: 100%; /* allow container to expand */
+    overflow-x: auto; /* optional: add horizontal scroll if needed */
+}
 
-  .subpictures img {
-        background: white;
-    display: flex;
+.subpictures img {
+    background: white;
     width: 160px;
     height: 100px;
     border: 2px solid #ccc;
     transition: transform 0.2s ease;
-  }
+}
 
-  .subpictures img:hover {
-    display: flex;
+.subpictures img:hover {
     transform: scale(1.05);
     cursor: pointer;
-  }
+}
+
+.subpicture-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* caption above image */
+    align-items: center;
+}
+
+.subpicture-item figcaption {
+    margin-bottom: 8px; /* space between caption and image */
+    font-size: 0.9em;
+    color: #333;
+}
+
 
 
 /* ========================= 
