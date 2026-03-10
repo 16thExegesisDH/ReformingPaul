@@ -240,10 +240,10 @@ nav {
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
-   /* background: linear-gradient(90deg, rgba(17, 18, 18, 1) 0%, rgba(205, 212, 208, 0.36) 50%, rgba(237, 240, 242, 0.85) 100%);
-    /*Matrix GIF background, repeated */
+   background: linear-gradient(90deg, rgba(17, 18, 18, 1) 0%, rgba(205, 212, 208, 0.36) 50%, rgba(237, 240, 242, 0.85) 100%);
+    /*Matrix GIF background, repeated 
     background: url('https://upload.wikimedia.org/wikipedia/commons/a/a0/Digital_rain_animation_small_letters_shine.gif') repeat;
-    background-size: auto;  /*keep original small size */
+    background-size: auto;  /*keep original small size 
     background-position: top left;
     color: #00FF00;  /*matrix green text */
 
