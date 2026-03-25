@@ -69802,8 +69802,8 @@
             <hi>
                <lb corresp="#f844086_line_6_ligne_4"/>
                <choice>
-                  <orig>lin fide. Gratia &amp; miſericordia &amp; pax à deo patre &amp; Chriſto leſu</orig>
-                  <reg type="normalized">lin fide. Gratia et misericordia et pax a deo patre et Christo lesu</reg>
+                  <orig>in fide. Gratia &amp; miſericordia &amp; pax à deo patre &amp; Chriſto leſu</orig>
+                  <reg type="normalized">in fide. Gratia et misericordia et pax a deo patre et Christo lesu</reg>
                </choice>
             </hi>
             <hi>
@@ -82672,7 +82672,7 @@
             <lb corresp="#f844134_line_21_ligne_2"/>
             <choice>
                <orig>Hæcmeditare, in his eſto, ut profectus tuus manifeſtus ſit omnibus:</orig>
-               <reg type="normalized">Haecmeditare, in his esto, ut profectus tuus manifestus sit omnibus:</reg>
+               <reg type="normalized">Haec meditare, in his esto, ut profectus tuus manifestus sit omnibus:</reg>
             </choice>
             <lb corresp="#f844134_line_22_ligne_3"/>
             <choice>
@@ -84766,11 +84766,6 @@
             </choice>
          </ab>
          <ab corresp="#f844142_block_4" type="MainZone-Head">
-            <lb corresp="#f844142_line_18_ligne_2"/>
-            <choice>
-               <orig>8</orig>
-               <reg type="normalized">8</reg>
-            </choice>
             <lb corresp="#f844142_line_19_ligne_3"/>
             <choice>
                <orig>Simul autem &amp; otioſæ diſcũt circuire domos: non ſolum otiolæ, ſed</orig>
@@ -87132,15 +87127,10 @@
                <orig>Qui autem fideles habent dominos, non contemnant, quia fratres</orig>
                <reg type="normalized">Qui autem fideles habent dominos, non contemnant, quia fratres</reg>
             </choice>
-            <lb corresp="#f844151_line_13_ligne_3"/>
-            <choice>
-               <orig>2</orig>
-               <reg type="normalized">2</reg>
-            </choice>
             <lb corresp="#f844151_line_14_ligne_4"/>
             <choice>
                <orig>funt, ſed magis ſeruiant, quia fideles ſunt &amp; dilecti, quia beneficij partici¬</orig>
-               <reg type="normalized">funt, sed magis seruiant, quia fideles sunt et dilecti, quia beneficii partici-</reg>
+               <reg type="normalized">sunt, sed magis seruiant, quia fideles sunt et dilecti, quia beneficii partici-</reg>
             </choice>
             <lb corresp="#f844151_line_15_ligne_5"/>
             <choice>
@@ -87650,11 +87640,6 @@
             <choice>
                <orig>Ex quibus oriuntur inuidiæ, cõtentiones &amp; blaſphemiæ, ſuſpicione</orig>
                <reg type="normalized">Ex quibus oriuntur inuidiae, contentiones et blasphemiae, suspicione</reg>
-            </choice>
-            <lb corresp="#f844153_line_10_ligne_3"/>
-            <choice>
-               <orig>5</orig>
-               <reg type="normalized">5</reg>
             </choice>
             <lb corresp="#f844153_line_11_ligne_4"/>
             <choice>
@@ -88920,13 +88905,13 @@
                <reg type="normalized">culpa bis miseri, cum fide et obedientia Christi possent esse beati.</reg>
             </choice>
          </ab>
-         <ab corresp="#f844157_block_4" type="MainZone-Head">
+        <!-- <ab corresp="#f844157_block_4" type="MainZone-Head"> deplaced for xslt script
             <lb corresp="#f844157_line_50_ligne_2"/>
             <choice>
                <orig>Tu autem, o homo dei, hæc fuge, ſectare uero iuſtitiam, pietatem, fi¬</orig>
                <reg type="normalized">Tu autem, o homo dei, haec fuge, sectare uero iustitiam, pietatem, fi-</reg>
             </choice>
-         </ab>
+         </ab>-->
          <pb corresp="f844158"/>
          <fw corresp="#f844158_block_4" type="RunningTitleZone">
             <lb corresp="#f844158_line_32_ligne_2"/>
@@ -88951,6 +88936,11 @@
             </choice>
          </fw>
          <ab corresp="#f844158_block_2" type="MainZone-Head">
+            <lb corresp="#f844157_line_50_ligne_2"/>
+            <choice>
+               <orig>Tu autem, o homo dei, hæc fuge, ſectare uero iuſtitiam, pietatem, fi¬</orig>
+               <reg type="normalized">Tu autem, o homo dei, haec fuge, sectare uero iustitiam, pietatem, fi-</reg>
+            </choice>
             <lb corresp="#f844158_line_3_ligne_2"/>
             <choice>
                <orig>dem, charitatem, patientiam, manſuetudinem.</orig>
@@ -89255,11 +89245,6 @@
             <choice>
                <orig>Præcipio tibi coram deo, qui uiuificat omnia, &amp; Chriſto leſu, qui teſtiᛘ</orig>
                <reg type="normalized">Praecipio tibi coram deo, qui uiuificat omnia, et Christo lesu, qui testi-</reg>
-            </choice>
-            <lb corresp="#f844159_line_11_ligne_3"/>
-            <choice>
-               <orig>13</orig>
-               <reg type="normalized">13</reg>
             </choice>
             <lb corresp="#f844159_line_12_ligne_4"/>
             <choice>
@@ -90029,7 +90014,7 @@
             <lb corresp="#f844162_line_6_ligne_6"/>
             <choice>
                <orig>funt id quod ſunt, quem &amp; ſolũ honorari uoluiſſent, quia ſancti ſunt. Imperiũ)</orig>
-               <reg type="normalized">funt id quod sunt, quem et solum honorari uoluissent, quia sancti sunt. Imperium)</reg>
+               <reg type="normalized">sunt id quod sunt, quem et solum honorari uoluissent, quia sancti sunt. Imperium)</reg>
             </choice>
             <lb corresp="#f844162_line_7_ligne_7"/>
             <choice>
@@ -90172,11 +90157,6 @@
             </choice>
          </ab>
          <ab corresp="#f844162_block_7" type="MainZone-Head">
-            <lb corresp="#f844162_line_36_ligne_2"/>
-            <choice>
-               <orig>19</orig>
-               <reg type="normalized">19</reg>
-            </choice>
             <lb corresp="#f844162_line_37_ligne_3"/>
             <choice>
                <orig>Sed in deo uiuo, qui præſtat nobis omnia abunde ad fruendum.</orig>
@@ -90199,7 +90179,6 @@
                <orig>lius bonitas &amp; beneficium fide, conſeruatur ſpe, perficitur charitate. Nemo con¬</orig>
                <reg type="normalized">lius bonitas et beneficium fide, conseruatur spe, perficitur charitate. Nemo con-</reg>
             </choice>
-            <lb corresp="#f844162_line_41_ligne_5"/>
             <choice>
                <orig>fidat in mortuos. Sanctos non nobis deus præfecit in hac uita conſtitutis, de eis</orig>
                <reg type="normalized">fidat in mortuos. Sanctos non nobis deus praefecit in hac uita constitutis, de eis</reg>
