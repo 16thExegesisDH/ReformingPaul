@@ -67,8 +67,7 @@
                                     <surname>Heinrich</surname>
                                     <forename>Petri</forename>
                                  </persName>
-                                 <note source="Historische Lexikon der Schweiz (HLS)"
-                                       select="https://hls-dhs-dss.ch/fr/articles/041530/2010-05-10/"/>
+                                 <note source="Historische Lexikon der Schweiz (HLS)" select="https://hls-dhs-dss.ch/fr/articles/041530/2010-05-10/"/>
                               </respStmt>
                               <date cert="low">1533</date>
                            </imprint>
@@ -92982,13 +92981,12 @@
             </choice>
             <lb corresp="#f952767_line_5_ligne_6"/>
             <choice>
-               <orig>dio conscripius.</orig>
+               <orig>dio comcripius.</orig>
                <reg type="normalized">dio conscriptus.</reg>
             </choice>
          </ab>
-         <!-- add manually -->
-         <ab corresp="#f952767_textblock_2" type="MainZone-Head">
-            <lb corresp="#f952767_line_5_ligne_1"/>
+         <ab corresp="#f952767_block_2" type="MainZone-Head">
+            <lb corresp="#f952767_line_6_ligne_2"/>
             <choice>
                <orig>CAPVT I.</orig>
                <reg type="normalized">CAPVT I.</reg>
@@ -93105,7 +93103,7 @@
             <lb corresp="#f952768_line_4_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952768_block_1" type="NumberingZone">
@@ -93425,7 +93423,7 @@
             <lb corresp="#f952770_line_26_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952770_block_1" type="NumberingZone">
@@ -93733,7 +93731,7 @@
             <lb corresp="#f952772_line_5_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952772_block_1" type="NumberingZone">
@@ -94061,7 +94059,7 @@
             <lb corresp="#f952774_line_8_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952774_block_1" type="NumberingZone">
@@ -94218,7 +94216,7 @@
             <lb corresp="#f952775_line_5_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM,</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM,</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952775_block_4" type="NumberingZone">
@@ -94373,7 +94371,7 @@
             <lb corresp="#f952776_line_4_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952776_block_1" type="NumberingZone">
@@ -94534,7 +94532,7 @@
             <lb corresp="#f952777_line_12_ligne_2"/>
             <choice>
                <orig>TIMOTHEIEPISTOLAM.</orig>
-               <reg type="normalized">TIMOTHEIEPISTOLAM.</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952777_block_4" type="NumberingZone">
@@ -94689,7 +94687,7 @@
             <lb corresp="#f952778_line_14_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952778_block_1" type="NumberingZone">
@@ -95001,7 +94999,7 @@
             <lb corresp="#f952780_line_11_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952780_block_1" type="NumberingZone">
@@ -95314,7 +95312,7 @@
             <lb corresp="#f952782_line_5_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952782_block_1" type="NumberingZone">
@@ -95630,7 +95628,7 @@
             <lb corresp="#f952784_line_8_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952784_block_1" type="NumberingZone">
@@ -95944,7 +95942,7 @@
             <lb corresp="#f952786_line_5_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952786_block_1" type="NumberingZone">
@@ -96245,7 +96243,7 @@
             <lb corresp="#f952788_line_5_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952788_block_1" type="NumberingZone">
@@ -96557,7 +96555,7 @@
             <lb corresp="#f952790_line_10_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952790_block_1" type="NumberingZone">
@@ -96865,7 +96863,7 @@
             <lb corresp="#f952792_line_16_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952792_block_1" type="NumberingZone">
@@ -97173,7 +97171,7 @@
             <lb corresp="#f952794_line_9_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952794_block_1" type="NumberingZone">
@@ -97328,7 +97326,7 @@
             <lb corresp="#f952795_line_3_ligne_2"/>
             <choice>
                <orig>TIMOTHEIEPIS TOLAM.</orig>
-               <reg type="normalized">TIMOTHEIEPIS TOLAM.</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952795_block_6" type="NumberingZone">
@@ -97485,7 +97483,7 @@
             <lb corresp="#f952796_line_15_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952796_block_1" type="NumberingZone">
@@ -97791,7 +97789,7 @@
             <lb corresp="#f952798_line_4_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM¬</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952798_block_1" type="NumberingZone">
@@ -98115,7 +98113,7 @@
             <lb corresp="#f952800_line_8_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
             <lb corresp="#f952800_line_9_ligne_3"/>
             <choice>
@@ -98274,7 +98272,7 @@
             <lb corresp="#f952801_line_12_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952801_block_4" type="NumberingZone">
@@ -98439,7 +98437,7 @@
             <lb corresp="#f952802_line_6_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952802_block_1" type="NumberingZone">
@@ -98596,7 +98594,7 @@
             <lb corresp="#f952803_line_1_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952803_block_3" type="NumberingZone">
@@ -98748,7 +98746,7 @@
             <lb corresp="#f952804_line_6_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952804_block_1" type="NumberingZone">
@@ -99073,7 +99071,7 @@
             <lb corresp="#f952806_eSc_line_7eaee2e7_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952806_eSc_textblock_adc11042" type="NumberingZone">
@@ -99377,7 +99375,7 @@
             <lb corresp="#f952808_eSc_line_45111390_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952808_eSc_textblock_e2ffade7" type="NumberingZone">
@@ -99685,7 +99683,7 @@
             <lb corresp="#f952810_eSc_line_86af286c_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952810_eSc_textblock_f6091867" type="NumberingZone">
@@ -99997,7 +99995,7 @@
             <lb corresp="#f952812_eSc_line_f83897b8_ligne_2"/>
             <choice>
                <orig>COMMEM. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952812_eSc_textblock_8af823ea" type="NumberingZone">
@@ -100312,7 +100310,7 @@
             <lb corresp="#f952814_eSc_line_f322ba96_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952814_eSc_textblock_e601e00f" type="NumberingZone">
@@ -100631,7 +100629,7 @@
                <lb corresp="#f952816_eSc_line_444d024f_ligne_2"/>
                <choice>
                   <orig>COMMENT. IN PRIOREM</orig>
-                  <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+                  <reg type="normalized">COMMEN. IN PRIOREM</reg>
                </choice>
             </hi>
          </fw>
@@ -100941,7 +100939,7 @@
                <lb corresp="#f952818_eSc_line_7fe9b460_ligne_2"/>
                <choice>
                   <orig>COMMEN. IN PRIOREM</orig>
-                  <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+                  <reg type="normalized">COMMEN. IN PRIOREM</reg>
                </choice>
             </hi>
          </fw>
@@ -101261,7 +101259,7 @@
                <lb corresp="#f952820_eSc_line_c7b39d78_ligne_2"/>
                <choice>
                   <orig>COMMEN. IN PRIOREM</orig>
-                  <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+                  <reg type="normalized">COMMEN. IN PRIOREM</reg>
                </choice>
             </hi>
          </fw>
@@ -101587,7 +101585,7 @@
                <lb corresp="#f952822_eSc_line_1b3c5c22_ligne_2"/>
                <choice>
                   <orig>COMMEN. IN PRIOREM</orig>
-                  <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+                  <reg type="normalized">COMMEN. IN PRIOREM</reg>
                </choice>
             </hi>
          </fw>
@@ -101892,7 +101890,7 @@
             <lb corresp="#f952824_eSc_line_c3bca61c_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952824_eSc_textblock_8e10b721" type="NumberingZone">
@@ -102196,7 +102194,7 @@
             <lb corresp="#f952826_eSc_line_3b45db04_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952826_eSc_textblock_e0ec6d01" type="NumberingZone">
@@ -102499,7 +102497,7 @@
                <lb corresp="#f952828_eSc_line_827b22f2_ligne_2"/>
                <choice>
                   <orig>COMMEN. IN PRIOREM</orig>
-                  <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+                  <reg type="normalized">COMMEN. IN PRIOREM</reg>
                </choice>
             </hi>
          </fw>
@@ -102823,7 +102821,7 @@
             <lb corresp="#f952830_line_11_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952830_block_2" type="NumberingZone">
@@ -103123,7 +103121,7 @@
             <lb corresp="#f952832_line_27_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952832_block_1" type="NumberingZone">
@@ -103272,7 +103270,7 @@
             <lb corresp="#f952833_line_27_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM,</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM,</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952833_block_2" type="NumberingZone">
@@ -103435,7 +103433,7 @@
             <lb corresp="#f952834_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952834_block_1" type="NumberingZone">
@@ -103740,7 +103738,7 @@
             <lb corresp="#f952836_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952836_block_1" type="NumberingZone">
@@ -104047,7 +104045,7 @@
             <lb corresp="#f952838_line_17_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952838_block_1" type="NumberingZone">
@@ -104358,7 +104356,7 @@
             <lb corresp="#f952840_line_9_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952840_block_3" type="NumberingZone">
@@ -104670,7 +104668,7 @@
             <lb corresp="#f952842_line_4_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952842_block_1" type="NumberingZone">
@@ -104984,7 +104982,7 @@
             <lb corresp="#f952844_line_10_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952844_block_1" type="NumberingZone">
@@ -105299,7 +105297,7 @@
             <lb corresp="#f952846_line_6_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952846_block_1" type="NumberingZone">
@@ -105631,7 +105629,7 @@
             <lb corresp="#f952848_line_7_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952848_block_1" type="NumberingZone">
@@ -105952,7 +105950,7 @@
             <lb corresp="#f952850_line_19_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952850_block_1" type="NumberingZone">
@@ -106270,7 +106268,7 @@
             <lb corresp="#f952852_line_4_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREN</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952852_block_2" type="NumberingZone">
@@ -106598,7 +106596,7 @@
             <lb corresp="#f952854_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952854_block_1" type="NumberingZone">
@@ -106898,7 +106896,7 @@
             <lb corresp="#f952856_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952856_block_1" type="NumberingZone">
@@ -107222,7 +107220,7 @@
             <lb corresp="#f952858_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952858_block_1" type="NumberingZone">
@@ -107528,7 +107526,7 @@
             <lb corresp="#f952860_line_13_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952860_block_1" type="NumberingZone">
@@ -107842,7 +107840,7 @@
             <lb corresp="#f952862_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952862_block_1" type="NumberingZone">
@@ -108156,7 +108154,7 @@
             <lb corresp="#f952864_line_24_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952864_block_1" type="NumberingZone">
@@ -108474,7 +108472,7 @@
             <lb corresp="#f952866_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952866_block_2" type="NumberingZone">
@@ -108623,7 +108621,7 @@
             <lb corresp="#f952867_line_12_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPIS TOLAM.</orig>
-               <reg type="normalized">TIMOTHEI EPIS TOLAM.</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952867_block_4" type="NumberingZone">
@@ -108788,7 +108786,7 @@
             <lb corresp="#f952868_line_23_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952868_block_1" type="NumberingZone">
@@ -108939,7 +108937,7 @@
             <lb corresp="#f952869_line_7_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952869_block_2" type="NumberingZone">
@@ -109106,7 +109104,7 @@
             <lb corresp="#f952870_line_15_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952870_block_1" type="NumberingZone">
@@ -109414,7 +109412,7 @@
             <lb corresp="#f952872_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952872_block_1" type="NumberingZone">
@@ -109567,7 +109565,7 @@
             <lb corresp="#f952873_line_1_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952873_block_4" type="NumberingZone">
@@ -109718,7 +109716,7 @@
             <lb corresp="#f952874_line_9_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952874_block_2" type="NumberingZone">
@@ -109875,7 +109873,7 @@
             <lb corresp="#f952875_line_1_ligne_2"/>
             <choice>
                <orig>TIMOTHET EPISTOLAM.</orig>
-               <reg type="normalized">TIMOTHET EPISTOLAM.</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952875_block_5" type="NumberingZone">
@@ -110030,7 +110028,7 @@
             <lb corresp="#f952876_line_4_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952876_block_1" type="NumberingZone">
@@ -110185,7 +110183,7 @@
             <lb corresp="#f952877_line_4_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952877_block_5" type="NumberingZone">
@@ -110344,7 +110342,7 @@
             <lb corresp="#f952878_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952878_block_3" type="NumberingZone">
@@ -110669,7 +110667,7 @@
             <lb corresp="#f952880_line_4_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952880_block_1" type="NumberingZone">
@@ -110822,7 +110820,7 @@
             <lb corresp="#f952881_line_1_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM,</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM,</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952881_block_6" type="NumberingZone">
@@ -110984,7 +110982,7 @@
             <lb corresp="#f952882_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952882_block_1" type="NumberingZone">
@@ -111299,7 +111297,7 @@
             <lb corresp="#f952884_line_12_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952884_block_1" type="NumberingZone">
@@ -111609,7 +111607,7 @@
             <lb corresp="#f952886_line_12_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952886_block_1" type="NumberingZone">
@@ -111913,7 +111911,7 @@
             <lb corresp="#f952888_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952888_block_1" type="NumberingZone">
@@ -112213,7 +112211,7 @@
             <lb corresp="#f952890_line_22_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIORE M.</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952890_block_1" type="NumberingZone">
@@ -112364,7 +112362,7 @@
             <lb corresp="#f952891_line_2_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPIS TOLAM.</orig>
-               <reg type="normalized">TIMOTHEI EPIS TOLAM.</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952891_block_4" type="NumberingZone">
@@ -112519,7 +112517,7 @@
             <lb corresp="#f952892_line_10_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952892_block_2" type="NumberingZone">
@@ -112670,7 +112668,7 @@
             <lb corresp="#f952893_line_9_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM,</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM,</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952893_block_4" type="NumberingZone">
@@ -112830,7 +112828,7 @@
             <lb corresp="#f952894_line_22_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952894_block_1" type="NumberingZone">
@@ -113148,7 +113146,7 @@
             <lb corresp="#f952896_line_20_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952896_block_1" type="NumberingZone">
@@ -113464,7 +113462,7 @@
             <lb corresp="#f952898_line_8_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952898_block_2" type="NumberingZone">
@@ -113770,7 +113768,7 @@
             <lb corresp="#f952900_line_8_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952900_block_1" type="NumberingZone">
@@ -114079,7 +114077,7 @@
             <lb corresp="#f952902_line_18_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952902_block_1" type="NumberingZone">
@@ -114379,7 +114377,7 @@
             <lb corresp="#f952904_line_13_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952904_block_1" type="NumberingZone">
@@ -114683,7 +114681,7 @@
             <lb corresp="#f952906_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM.</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952906_block_1" type="NumberingZone">
@@ -114985,7 +114983,7 @@
             <lb corresp="#f952908_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952908_block_1" type="NumberingZone">
@@ -115292,7 +115290,7 @@
             <lb corresp="#f952910_line_16_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952910_block_1" type="NumberingZone">
@@ -115603,7 +115601,7 @@
             <lb corresp="#f952912_line_17_ligne_2"/>
             <choice>
                <orig>CONMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952912_block_1" type="NumberingZone">
@@ -115911,7 +115909,7 @@
             <lb corresp="#f952914_line_2_ligne_2"/>
             <choice>
                <orig>COMRIN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952914_block_1" type="NumberingZone">
@@ -116222,7 +116220,7 @@
             <lb corresp="#f952916_line_2_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952916_block_1" type="NumberingZone">
@@ -116379,7 +116377,7 @@
             <lb corresp="#f952917_line_26_ligne_2"/>
             <choice>
                <orig>TIMOTHEIEPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEIEPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952917_block_3" type="NumberingZone">
@@ -116528,7 +116526,7 @@
             <lb corresp="#f952918_line_6_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952918_block_1" type="NumberingZone">
@@ -116834,7 +116832,7 @@
             <lb corresp="#f952920_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952920_block_1" type="NumberingZone">
@@ -117142,7 +117140,7 @@
             <lb corresp="#f952922_line_13_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952922_block_2" type="NumberingZone">
@@ -117293,7 +117291,7 @@
             <lb corresp="#f952923_line_4_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPIS TOLAM.</orig>
-               <reg type="normalized">TIMOTHEI EPIS TOLAM.</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952923_block_5" type="NumberingZone">
@@ -117448,7 +117446,7 @@
             <lb corresp="#f952924_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952924_block_1" type="NumberingZone">
@@ -117603,7 +117601,7 @@
             <lb corresp="#f952925_line_26_ligne_2"/>
             <choice>
                <orig>TIMOTHEI EPISTOLAM</orig>
-               <reg type="normalized">TIMOTHEI EPISTOLAM</reg>
+               <reg type="normalized">TIMOTHEI EPISTOLAM.</reg>
             </choice>
          </fw>
          <fw corresp="#f952925_block_3" type="NumberingZone">
@@ -117752,7 +117750,7 @@
             <lb corresp="#f952926_line_9_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952926_block_1" type="NumberingZone">
@@ -118062,7 +118060,7 @@
             <lb corresp="#f952928_line_9_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952928_block_1" type="NumberingZone">
@@ -118384,7 +118382,7 @@
             <lb corresp="#f952930_line_24_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952930_block_1" type="NumberingZone">
@@ -118695,7 +118693,7 @@
             <lb corresp="#f952932_line_13_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952932_block_1" type="NumberingZone">
@@ -119014,7 +119012,7 @@
             <lb corresp="#f952934_line_5_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952934_block_1" type="NumberingZone">
@@ -119322,7 +119320,7 @@
             <lb corresp="#f952936_line_7_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952936_block_1" type="NumberingZone">
@@ -119628,7 +119626,7 @@
             <lb corresp="#f952938_line_16_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952938_block_1" type="NumberingZone">
@@ -119929,7 +119927,7 @@
             <lb corresp="#f952940_line_27_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952940_block_1" type="NumberingZone">
@@ -120229,7 +120227,7 @@
             <lb corresp="#f952942_line_2_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952942_block_1" type="NumberingZone">
@@ -120529,7 +120527,7 @@
             <lb corresp="#f952944_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN, IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952944_block_1" type="NumberingZone">
@@ -120841,7 +120839,7 @@
             <lb corresp="#f952946_line_5_ligne_2"/>
             <choice>
                <orig>COMMEN. IN IPROREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952946_block_1" type="NumberingZone">
@@ -121144,7 +121142,7 @@
             <lb corresp="#f952948_line_28_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952948_block_2" type="NumberingZone">
@@ -121454,7 +121452,7 @@
             <lb corresp="#f952950_line_4_ligne_2"/>
             <choice>
                <orig>COMMEN. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952950_block_1" type="NumberingZone">
@@ -121762,7 +121760,7 @@
             <lb corresp="#f952952_line_26_ligne_2"/>
             <choice>
                <orig>COMMENT. IN PRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952952_block_1" type="NumberingZone">
@@ -122061,7 +122059,7 @@
             <lb corresp="#f952954_line_7_ligne_2"/>
             <choice>
                <orig>COMMEN. INPRIOREM</orig>
-               <reg type="normalized">COMMENT. IN I. EPIST.</reg>
+               <reg type="normalized">COMMEN. IN PRIOREM</reg>
             </choice>
          </fw>
          <fw corresp="#f952954_block_1" type="NumberingZone">
