@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Pelican_C1-6">
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Pelican_C1-6"
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:sch="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -33,6 +38,10 @@
                <addrLine>CH-1211 Genève</addrLine>
             </address>
             <authority>Theologisches Fakultät, universität Zürich</authority>
+            <address>
+               <addrLine>Kirchgasse 9</addrLine>
+               <addrLine>8001 Zürich</addrLine>
+            </address>
             <availability status="restricted" n="CC-BY">
                <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
@@ -52,7 +61,7 @@
                      <biblStruct>
                         <monogr>
                            <author>
-                              <persName role="exegete" ref="isni:000000012129718X">
+                              <persName role="presumed_author" ref="isni:000000012129718X">
                                  <surname>Pellicanus</surname>
                                  <forename>Conrad</forename>
                               </persName>
@@ -63,12 +72,11 @@
                               <pubPlace cert="medium" ref="geonames:2657896">Zurich</pubPlace>
                               <respStmt>
                                  <resp>Imprimeur</resp>
-                                 <persName role="printer" ref="isni:0000000121270868">
+                                 <persName role="presumed_printer" ref="isni:0000000121270868">
                                     <surname>Christoph</surname>
                                     <forename>Froschauer</forename>
                                  </persName>
-                                 <note source="Historische Lexikon der Schweiz (HLS)"
-                                       select="https://hls-dhs-dss.ch/fr/articles/010612/2018-01-11/"/>
+                                 <note><ref target="https://hls-dhs-dss.ch/fr/articles/010612/2018-01-11/"></ref>Historische Lexikon der Schweiz (HLS)</note>
                               </respStmt>
                               <date cert="low">1539</date>
                            </imprint>
@@ -151,7 +159,7 @@
                <term type="segmentation_quality">gold</term>
                <term type="transcription_quality">gold</term>
                <term type="intermediary_reg_quality">not applicable</term>
-               <term type="contemporary_reg_quality">normalize with a python script</term>
+               <term type="normalized_reg_quality">normalize with a python script</term>
                <term type="ling_annotation_quality">not applicable</term>
             </keywords>
          </textClass>
@@ -61919,7 +61927,7 @@
                <line xml:id="f844157_line_51_ligne_2">4</line>
             </zone>
             <zone xml:id="f844157_line_52"
-                  type="QuireMark"
+                  type="QuireMarksZone"
                   n="3"
                   ulx="627"
                   uly="1344"

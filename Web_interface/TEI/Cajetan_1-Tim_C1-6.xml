@@ -1,5 +1,10 @@
 <?xml version="1.0" ?>
-<TEI xml:id="Cajetan_C1-6" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xml:id="Cajetan_C1-6" xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -33,6 +38,10 @@
           <addrLine>CH-1211 Genève</addrLine>
         </address>
         <authority>Theologisches Fakultät, universität Zürich</authority>
+        <address>
+          <addrLine>Kirchgasse 9</addrLine>
+          <addrLine>8001 Zürich</addrLine>
+        </address>
         <availability status="restricted" n="CC-BY">
           <licence target="https://creativecommons.org/licenses/by/4.0/"/>
           <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
@@ -52,7 +61,7 @@
               <biblStruct>
                 <monogr>
                   <author>
-                    <persName role="exegete" ref="isni:0000000118758416 ">
+                    <persName role="presumed_author" ref="isni:0000000118758416 ">
                       <surname>Cajetan</surname>
                       <forename>Thomas</forename>
                     </persName>
@@ -63,7 +72,7 @@
                     <pubPlace cert="medium" ref="geonames:3187861">Venise</pubPlace>
                     <respStmt>
                       <resp>Imprimeur</resp>
-                      <persName role="printer" ref="isni:0000000121227528">
+                      <persName role="presumed_printer" ref="isni:0000000121227528">
                         <surname>Lucantonio</surname>
                         <forename>Giunta</forename>
                       </persName>
@@ -149,7 +158,7 @@
           <term type="segmentation_quality">gold</term>
           <term type="transcription_quality">gold</term>
           <term type="intermediary_reg_quality">not applicable</term>
-          <term type="contemporary_reg_quality">normalize with a python script</term>
+          <term type="normalized_reg_quality">normalize with a python script</term>
           <term type="ling_annotation_quality">not applicable</term>
         </keywords>
       </textClass>
@@ -205,7 +214,7 @@
           <line xml:id="fbsb10143002_00302_line_9_ligne_5">MOTHEVMCOMMENTARII.</line>
         </zone>
       </zone>
-      <zone xml:id="fbsb10143002_00302_block_5" type="GraphicZone-Decoration" n="5" ulx="1302.0" uly="772.0" lrx="1449" lry="911" points="1449,772 1449,911 1302,911 1302,772 " source="1302.0,772.0,147.0,139.0/full/0/default.jpg">
+      <zone xml:id="fbsb10143002_00302_block_5" type="GraphicZone" n="5" ulx="1302.0" uly="772.0" lrx="1449" lry="911" points="1449,772 1449,911 1302,911 1302,772 " source="1302.0,772.0,147.0,139.0/full/0/default.jpg">
         <zone xml:id="fbsb10143002_00302_line_10" type="DefaultLine" n="2" ulx="1317.0" uly="847.0" lrx="1399" lry="907" points="1317,847 1317,882 1317,907 1399,907 1399,882 1399,853 1337,847 1317,847 " source="1317.0,847.0,82.0,60.0/full/0/default.jpg">
           <path n="2" xml:id="fbsb10143002_00302_line_10_baseline_2" type="baseline" points="1317,847 1317,882 1317,907 1399,907 1399,882 1399,853 1337,847 1317,847 "/>
           <line xml:id="fbsb10143002_00302_line_10_ligne_2">❧</line>
@@ -2628,7 +2637,7 @@
         </zone>
       </zone>
       <zone xml:id="fbsb10143002_00311_block_7" type="DropCapitalZone" n="7" ulx="84" uly="1407" lrx="283" lry="1610" points="283,1407 283,1610 84,1610 84,1407 " source="84,1407,199,203/full/0/default.jpg">
-        <zone xml:id="fbsb10143002_00311_line_29" type="NN" n="2" ulx="105" uly="1510" lrx="254" lry="1624" points="105,1587 105,1624 254,1624 254,1587 248,1510 189,1534 105,1516 105,1587 " source="105,1510,149,114/full/0/default.jpg">
+        <zone xml:id="fbsb10143002_00311_line_29" type="default" n="2" ulx="105" uly="1510" lrx="254" lry="1624" points="105,1587 105,1624 254,1624 254,1587 248,1510 189,1534 105,1516 105,1587 " source="105,1510,149,114/full/0/default.jpg">
           <path n="2" xml:id="fbsb10143002_00311_line_29_baseline_2" type="baseline" points="105,1587 105,1624 254,1624 254,1587 248,1510 189,1534 105,1516 105,1587 "/>
           <line xml:id="fbsb10143002_00311_line_29_ligne_2">S</line>
         </zone>
@@ -3437,7 +3446,7 @@
         </zone>
       </zone>
       <zone xml:id="fbsb10143002_00314_block_5" type="DropCapitalZone" n="5" ulx="502" uly="1617" lrx="708" lry="1810" points="708,1617 708,1810 502,1810 502,1617 " source="502,1617,206,193/full/0/default.jpg">
-        <zone xml:id="fbsb10143002_00314_line_31" type="NN" n="2" ulx="535" uly="1715" lrx="684" lry="1827" points="535,1784 535,1827 684,1827 684,1784 684,1731 535,1715 535,1784 " source="535,1715,149,112/full/0/default.jpg">
+        <zone xml:id="fbsb10143002_00314_line_31" type="default" n="2" ulx="535" uly="1715" lrx="684" lry="1827" points="535,1784 535,1827 684,1827 684,1784 684,1731 535,1715 535,1784 " source="535,1715,149,112/full/0/default.jpg">
           <path n="2" xml:id="fbsb10143002_00314_line_31_baseline_2" type="baseline" points="535,1784 535,1827 684,1827 684,1784 684,1731 535,1715 535,1784 "/>
           <line xml:id="fbsb10143002_00314_line_31_ligne_2">Q</line>
         </zone>
@@ -4351,7 +4360,7 @@
           <line xml:id="fbsb10143002_00317_line_59_ligne_3">111</line>
         </zone>
       </zone>
-      <zone xml:id="fbsb10143002_00317_block_11" type="GraphicZone-Decoration" n="11" ulx="1030" uly="2136" lrx="1170" lry="2262" points="1170,2136 1170,2262 1030,2262 1030,2136 " source="1030,2136,140,126/full/0/default.jpg"/>
+      <zone xml:id="fbsb10143002_00317_block_11" type="GraphicZone" n="11" ulx="1030" uly="2136" lrx="1170" lry="2262" points="1170,2136 1170,2262 1030,2262 1030,2136 " source="1030,2136,140,126/full/0/default.jpg"/>
       <zone xml:id="fbsb10143002_00317_block_12" type="MarginTextZone" n="12" ulx="874" uly="3107" lrx="1269" lry="3169" points="874,3112 874,3169 1269,3169 1269,3107 " source="874,3107,395,62/full/0/default.jpg"/>
     </surface>
   </sourceDoc>

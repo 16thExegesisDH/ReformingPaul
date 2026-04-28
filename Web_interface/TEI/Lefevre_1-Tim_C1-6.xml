@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Lefevre_C1-6">
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Lefevre_C1-6"
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:sch="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -33,6 +38,10 @@
                <addrLine>CH-1211 Genève</addrLine>
             </address>
             <authority>Theologisches Fakultät, universität Zürich</authority>
+            <address>
+               <addrLine>Kirchgasse 9</addrLine>
+               <addrLine>8001 Zürich</addrLine>
+            </address>
             <availability status="restricted" n="CC-BY">
                <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
@@ -52,7 +61,7 @@
                      <biblStruct>
                         <monogr>
                            <author>
-                              <persName role="exegete" ref="isni:0000000118337128">
+                              <persName role="presumed_author" ref="isni:0000000118337128">
                                  <surname>D'Etaples</surname>
                                  <forename>Lefèvre</forename>
                               </persName>
@@ -63,7 +72,7 @@
                               <pubPlace cert="medium" ref="geonames:7285161">Paris</pubPlace>
                               <respStmt>
                                  <resp>Imprimeur</resp>
-                                 <persName role="printer" ref="isni:anonymus">
+                                 <persName role="presumed_printer" ref="isni:anonymus">
                                     <surname>?</surname>
                                     <forename>?</forename>
                                  </persName>
@@ -149,7 +158,7 @@
                <term type="segmentation_quality">gold</term>
                <term type="transcription_quality">gold</term>
                <term type="intermediary_reg_quality">not applicable</term>
-               <term type="contemporary_reg_quality">normalize with a python script</term>
+               <term type="normalized_reg_quality">normalize with a python script</term>
                <term type="ling_annotation_quality">not applicable</term>
             </keywords>
          </textClass>
@@ -240,7 +249,7 @@
                points="1249,527 1249,1214 565,1214 565,527 "
                source="565,527,684,687/full/0/default.jpg">
             <zone xml:id="fbsb11059254_00490_line_4"
-                  type="NN"
+                  type="default"
                   n="2"
                   ulx="605"
                   uly="1084"
@@ -1130,7 +1139,7 @@
                points="401,298 401,361 343,361 343,298 "
                source="343,298,58,63/full/0/default.jpg">
             <zone xml:id="fbsb11059254_00490_line_62"
-                  type="NN"
+                  type="default"
                   n="2"
                   ulx="348"
                   uly="299"
@@ -1155,7 +1164,7 @@
                points="514,608 514,646 549,646 549,608 "
                source="514,608,35,38/full/0/default.jpg">
             <zone xml:id="fbsb11059254_00490_line_63"
-                  type="NN"
+                  type="default"
                   n="2"
                   ulx="529"
                   uly="640"
@@ -17641,7 +17650,7 @@
                points="11,722 79,722 79,787 11,787 11,722 "
                source="11.0,722.0,68.0,65.0/full/0/default.jpg">
             <zone xml:id="fbsb11059254_00505_line_63"
-                  type="NN"
+                  type="default"
                   n="2"
                   ulx="21"
                   uly="723"
@@ -22005,7 +22014,7 @@
             </zone>
          </zone>
          <zone xml:id="fbsb11059254_00509_block_6"
-               type="NN"
+               type="default"
                n="6"
                ulx="4"
                uly="565"
@@ -28100,7 +28109,7 @@
             </zone>
          </zone>
          <zone xml:id="fbsb11059254_00514_block_7"
-               type="NumeberingZone"
+               type="NumberingZone"
                n="7"
                ulx="429"
                uly="1940"

@@ -1,5 +1,10 @@
 <?xml version="1.0" ?>
-<TEI xml:id="Bugenhagen_1-Tim_C1-6" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xml:id="Bugenhagen_1-Tim_C1-6" xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -33,6 +38,10 @@
           <addrLine>CH-1211 Genève</addrLine>
         </address>
         <authority>Theologisches Fakultät, universität Zürich</authority>
+        <address>
+          <addrLine>Kirchgasse 9</addrLine>
+          <addrLine>8001 Zürich</addrLine>
+        </address>
         <availability status="restricted" n="CC-BY">
           <licence target="https://creativecommons.org/licenses/by/4.0/"/>
           <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
@@ -52,7 +61,7 @@
               <biblStruct>
                 <monogr>
                   <author>
-                    <persName role="exegete" ref="isni:0000000109036374">
+                    <persName role="presumed_author" ref="isni:0000000109036374">
                       <surname>Johannes</surname>
                       <forename>Bugenhagen</forename>
                     </persName>
@@ -63,11 +72,11 @@
                     <pubPlace cert="medium" ref="geonames:7285161">Basel</pubPlace>
                     <respStmt>
                       <resp>Imprimeur</resp>
-                      <persName role="printer" ref="isni:0000000116244569">
+                      <persName role="presumed_printer" ref="isni:0000000116244569">
                         <surname>Adam?</surname>
                         <forename>Petri?</forename>
                       </persName>
-                      <note source="Historische Lexikon der Schweiz (HLS)" select="https://hls-dhs-dss.ch/de/articles/021524/2010-06-03/"/>
+                      <note><ref target="https://hls-dhs-dss.ch/de/articles/021524/2010-06-03/"></ref>Historische Lexikon der Schweiz (HLS)</note> 
                     </respStmt>
                     <date cert="low">1524</date>
                   </imprint>
@@ -150,7 +159,7 @@
           <term type="segmentation_quality">gold</term>
           <term type="transcription_quality">gold</term>
           <term type="intermediary_reg_quality">not applicable</term>
-          <term type="contemporary_reg_quality">normalize with a python script</term>
+          <term type="normalized_reg_quality">normalize with a python script</term>
           <term type="ling_annotation_quality">not applicable</term>
         </keywords>
       </textClass>
@@ -2514,7 +2523,7 @@
         <lb corresp="#fbsb00027764_00155_eSc_line_2809b6d0_ligne_2"/>
         <choice>
           <orig>78</orig>
-          <reg type="contemporary">78</reg>
+          <reg type="normalized">78</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00155_block_2" type="TitlePageZone">
@@ -2522,28 +2531,28 @@
           <lb corresp="#fbsb00027764_00155_line_0_ligne_2"/>
           <choice>
             <orig>❧ IN PRIO¬</orig>
-            <reg type="contemporary">❧ IN PRIO-</reg>
+            <reg type="normalized">❧ IN PRIO-</reg>
           </choice>
         </hi>
         <hi>
           <lb corresp="#fbsb00027764_00155_line_1_ligne_3"/>
           <choice>
             <orig>REM AD TIMOTHEVM EPI¬</orig>
-            <reg type="contemporary">REM AD TIMOTHEVM EPI-</reg>
+            <reg type="normalized">REM AD TIMOTHEVM EPI-</reg>
           </choice>
         </hi>
         <hi>
           <lb corresp="#fbsb00027764_00155_line_2_ligne_4"/>
           <choice>
             <orig>ſtolam Annotationes Ioannis Bugen¬</orig>
-            <reg type="contemporary">stolam Annotationes Ioannis Bugen-</reg>
+            <reg type="normalized">stolam Annotationes Ioannis Bugen-</reg>
           </choice>
         </hi>
         <hi>
           <lb corresp="#fbsb00027764_00155_line_3_ligne_5"/>
           <choice>
             <orig>hagij Pomerani.</orig>
-            <reg type="contemporary">hagii Pomerani.</reg>
+            <reg type="normalized">hagii Pomerani.</reg>
           </choice>
         </hi>
       </ab>
@@ -2551,7 +2560,7 @@
         <lb corresp="#fbsb00027764_00155_line_4_ligne_2"/>
         <choice>
           <orig>ARGVMENTVM.</orig>
-          <reg type="contemporary">ARGVMENTVM.</reg>
+          <reg type="normalized">ARGVMENTVM.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00155_eSc_textblock_42c01dae" type="DropCapitalZone">
@@ -2559,7 +2568,7 @@
           <lb corresp="#fbsb00027764_00155_eSc_line_f04ab906_ligne_2"/>
           <choice>
             <orig>T</orig>
-            <reg type="contemporary">T</reg>
+            <reg type="normalized">T</reg>
           </choice>
         </hi>
       </ab>
@@ -2567,102 +2576,102 @@
         <lb corresp="#fbsb00027764_00155_line_5_ligne_2"/>
         <choice>
           <orig>IMOTHEVM APOSTO¬</orig>
-          <reg type="contemporary">IMOTHEVM APOSTO-</reg>
+          <reg type="normalized">IMOTHEVM APOSTO-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_6_ligne_3"/>
         <choice>
           <orig>lum, id eſt, epiſcopum ſiue prædica¬</orig>
-          <reg type="contemporary">lum, id est, episcopum siue praedica-</reg>
+          <reg type="normalized">lum, id est, episcopum siue praedica-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_7_ligne_4"/>
         <choice>
           <orig>torem, à ſe ad hoc ordinatum Paulus</orig>
-          <reg type="contemporary">torem, a se ad hoc ordinatum Paulus</reg>
+          <reg type="normalized">torem, a se ad hoc ordinatum Paulus</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_8_ligne_5"/>
         <choice>
           <orig>inſtruit quid doceat, nempe fidẽ tan¬</orig>
-          <reg type="contemporary">instruit quid doceat, nempe fidem tan-</reg>
+          <reg type="normalized">instruit quid doceat, nempe fidem tan-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_9_ligne_6"/>
         <choice>
           <orig>tum &amp; charitatem, reiectis fabulis</orig>
-          <reg type="contemporary">tum et charitatem, reiectis fabulis</reg>
+          <reg type="normalized">tum et charitatem, reiectis fabulis</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_10_ligne_7"/>
         <choice>
           <orig>&amp; inutilibus quæ ſtionibus, &amp; pugnis uerborũ, &amp; di¬</orig>
-          <reg type="contemporary">et inutilibus quae stionibus, et pugnis uerborum, et di-</reg>
+          <reg type="normalized">et inutilibus quae stionibus, et pugnis uerborum, et di-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_11_ligne_8"/>
         <choice>
           <orig>Jputationibus inanibus pro ambitione &amp; auaricia ina</orig>
-          <reg type="contemporary">Jputationibus inanibus pro ambitione et auaricia ina</reg>
+          <reg type="normalized">Jputationibus inanibus pro ambitione et auaricia ina</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_12_ligne_9"/>
         <choice>
           <orig>ſtitutis, quæ peſtes ſunt ſynceræ in Chriſtum fidei, &amp;</orig>
-          <reg type="contemporary">stitutis, quae pestes sunt syncerae in Christum fidei, et</reg>
+          <reg type="normalized">stitutis, quae pestes sunt syncerae in Christum fidei, et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_13_ligne_10"/>
         <choice>
           <orig>in proximum charitatis: néue admittat doctrinas dæ</orig>
-          <reg type="contemporary">in proximum charitatis: neue admittat doctrinas dae</reg>
+          <reg type="normalized">in proximum charitatis: neue admittat doctrinas dae</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_14_ligne_11"/>
         <choice>
           <orig>moniorum in hypocriſi loquentium mendaciũ, quas in</orig>
-          <reg type="contemporary">moniorum in hypocrisi loquentium mendacium, quas in</reg>
+          <reg type="normalized">moniorum in hypocrisi loquentium mendacium, quas in</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_15_ligne_12"/>
         <choice>
           <orig>nouiſſimis tẽporibus regnaturos prædicit. Hæc ſpar¬</orig>
-          <reg type="contemporary">nouissimis temporibus regnaturos praedicit. Haec spar-</reg>
+          <reg type="normalized">nouissimis temporibus regnaturos praedicit. Haec spar-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_16_ligne_13"/>
         <choice>
           <orig>Iim in epiſtola, cap.2. de oratione cõmuni inſtruit, &amp;</orig>
-          <reg type="contemporary">Iim in epistola, cap.2. de oratione communi instruit, et</reg>
+          <reg type="normalized">Iim in epistola, cap.2. de oratione communi instruit, et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_17_ligne_14"/>
         <choice>
           <orig>quid mulieres deceat erga uiros. In tertio, Epiſcopos,</orig>
-          <reg type="contemporary">quid mulieres deceat erga uiros. In tertio, Episcopos,</reg>
+          <reg type="normalized">quid mulieres deceat erga uiros. In tertio, Episcopos,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_18_ligne_15"/>
         <choice>
           <orig>&amp; Diaconos Chriſtianos depingit cũ corum uxori¬</orig>
-          <reg type="contemporary">et Diaconos Christianos depingit cum corum uxori-</reg>
+          <reg type="normalized">et Diaconos Christianos depingit cum corum uxori-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_19_ligne_16"/>
         <choice>
           <orig>bus, familia &amp; liberis. In quinto modum monendiſmn¬</orig>
-          <reg type="contemporary">bus, familia et liberis. In quinto modum monendismn-</reg>
+          <reg type="normalized">bus, familia et liberis. In quinto modum monendismn-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_20_ligne_17"/>
         <choice>
           <orig>gulos præſcribit, &amp; uere uiduis prouideri uult ab</orig>
-          <reg type="contemporary">gulos praescribit, et uere uiduis prouideri uult ab</reg>
+          <reg type="normalized">gulos praescribit, et uere uiduis prouideri uult ab</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_21_ligne_18"/>
         <choice>
           <orig>eccleſia. Docet quoque Epiſcopos, qui laborent in¬</orig>
-          <reg type="contemporary">ecclesia. Docet quoque Episcopos, qui laborent in-</reg>
+          <reg type="normalized">ecclesia. Docet quoque Episcopos, qui laborent in-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_22_ligne_19"/>
         <choice>
           <orig>uerbo &amp; doctrina, eſſe dignos, quibus uictu &amp; ami¬</orig>
-          <reg type="contemporary">uerbo et doctrina, esse dignos, quibus uictu et ami-</reg>
+          <reg type="normalized">uerbo et doctrina, esse dignos, quibus uictu et ami-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_23_ligne_20"/>
         <choice>
           <orig>ctu prouideatur, &amp; de iudicio epiſcopi in peccantes</orig>
-          <reg type="contemporary">ctu prouideatur, et de iudicio episcopi in peccantes</reg>
+          <reg type="normalized">ctu prouideatur, et de iudicio episcopi in peccantes</reg>
         </choice>
         <lb corresp="#fbsb00027764_00155_line_24_ligne_21"/>
         <choice>
           <orig>lubdit. In ſexto docet, ꝗd ſerui, qd diuites monẽdi ſint?</orig>
-          <reg type="contemporary">lubdit. In sexto docet, quod  serui, quoddiuites monendi sint?</reg>
+          <reg type="normalized">lubdit. In sexto docet, quod  serui, quoddiuites monendi sint?</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00156"/>
@@ -2671,7 +2680,7 @@
           <lb corresp="#fbsb00027764_00156_line_0_ligne_2"/>
           <choice>
             <orig>ANNOT. IOANNIS POMERANI</orig>
-            <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+            <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
           </choice>
         </hi>
       </fw>
@@ -2679,136 +2688,136 @@
         <lb corresp="#fbsb00027764_00156_line_1_ligne_2"/>
         <choice>
           <orig>præterea, quæ de doctrina Chriſtiana interſerit:ut ſu¬</orig>
-          <reg type="contemporary">praeterea, quae de doctrina Christiana interserit:ut su-</reg>
+          <reg type="normalized">praeterea, quae de doctrina Christiana interserit:ut su-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_2_ligne_3"/>
         <choice>
           <orig>pra dictum eſt.</orig>
-          <reg type="contemporary">pra dictum est.</reg>
+          <reg type="normalized">pra dictum est.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00156_eSc_textblock_d5493e1d" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00156_line_4_ligne_2"/>
         <choice>
           <orig>LOCI INSIGNIORES SVNT.</orig>
-          <reg type="contemporary">LOCI INSIGNIORES SVNT.</reg>
+          <reg type="normalized">LOCI INSIGNIORES SVNT.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00156_block_0" type="MainZone-P">
         <lb corresp="#fbsb00027764_00156_line_5_ligne_2"/>
         <choice>
           <orig>Primus, quæ ſit doctrina Chriſtiana, &amp; quæ pro¬</orig>
-          <reg type="contemporary">Primus, quae sit doctrina Christiana, et quae pro-</reg>
+          <reg type="normalized">Primus, quae sit doctrina Christiana, et quae pro-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_7_ligne_3"/>
         <choice>
           <orig>phana, locus maxime neceſſarius, ne fiducia operum</orig>
-          <reg type="contemporary">phana, locus maxime necessarius, ne fiducia operum</reg>
+          <reg type="normalized">phana, locus maxime necessarius, ne fiducia operum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_8_ligne_4"/>
         <choice>
           <orig>legis, iuſtificatorem deum negemus, aut inani diſputa¬</orig>
-          <reg type="contemporary">legis, iustificatorem deum negemus, aut inani disputa-</reg>
+          <reg type="normalized">legis, iustificatorem deum negemus, aut inani disputa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_10_ligne_5"/>
         <choice>
           <orig>tione &amp; pugna uerborum, &amp; inutilibus quæſtionibus.</orig>
-          <reg type="contemporary">tione et pugna uerborum, et inutilibus quaestionibus.</reg>
+          <reg type="normalized">tione et pugna uerborum, et inutilibus quaestionibus.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_11_ligne_6"/>
         <choice>
           <orig>fidẽ ſimul lædamus et charitatem, cap.1.4.&amp; 6. Se¬</orig>
-          <reg type="contemporary">fidem simul laedamus et charitatem, cap.1.4.et 6. Se-</reg>
+          <reg type="normalized">fidem simul laedamus et charitatem, cap.1.4.et 6. Se-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_14_ligne_7"/>
         <choice>
           <orig>cundus, quod lex iuſto non eſt poſita, ſed iniuſtis, cap.</orig>
-          <reg type="contemporary">cundus, quod lex iusto non est posita, sed iniustis, cap.</reg>
+          <reg type="normalized">cundus, quod lex iusto non est posita, sed iniustis, cap.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_15_ligne_8"/>
         <choice>
           <orig>I.id quod ad Gal.5. ſic legis: Si ſpiritu ducimini, non</orig>
-          <reg type="contemporary">I.id quod ad Gal.5. sic legis: Si spiritu ducimini, non</reg>
+          <reg type="normalized">I.id quod ad Gal.5. sic legis: Si spiritu ducimini, non</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_16_ligne_9"/>
         <choice>
           <orig>eſtis ſub lege: manifeſta ſunt autem opera, &amp;c. Terti</orig>
-          <reg type="contemporary">estis sub lege: manifesta sunt autem opera, etc. Terti</reg>
+          <reg type="normalized">estis sub lege: manifesta sunt autem opera, etc. Terti</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_17_ligne_10"/>
         <choice>
           <orig>us, quod blaſpemia &amp; contumelia &amp; perſecutio con¬</orig>
-          <reg type="contemporary">us, quod blaspemia et contumelia et persecutio con-</reg>
+          <reg type="normalized">us, quod blaspemia et contumelia et persecutio con-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_18_ligne_11"/>
         <choice>
           <orig>tra Euangeliũ Chriſti, nõ noceant auctoribus ſuis, qui</orig>
-          <reg type="contemporary">tra Euangelium Christi, non noceant auctoribus suis, qui</reg>
+          <reg type="normalized">tra Euangelium Christi, non noceant auctoribus suis, qui</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_19_ligne_12"/>
         <choice>
           <orig>trrantes per hoc putant ſe obſequium præſtare deo</orig>
-          <reg type="contemporary">trrantes per hoc putant se obsequium praestare deo</reg>
+          <reg type="normalized">trrantes per hoc putant se obsequium praestare deo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_20_ligne_13"/>
         <choice>
           <orig>modo poſtea cognita ueritate reſipiſcant, ut Pau. Alij</orig>
-          <reg type="contemporary">modo postea cognita ueritate resipiscant, ut Pau. Alii</reg>
+          <reg type="normalized">modo postea cognita ueritate resipiscant, ut Pau. Alii</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_21_ligne_14"/>
         <choice>
           <orig>uero qui ſcientes contra ueritatem pugnant, &amp; blaſ¬</orig>
-          <reg type="contemporary">uero qui scientes contra ueritatem pugnant, et blas-</reg>
+          <reg type="normalized">uero qui scientes contra ueritatem pugnant, et blas-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_22_ligne_15"/>
         <choice>
           <orig>phemant, peccant irremiſſibiliter inſpiritum ſanctũ,</orig>
-          <reg type="contemporary">phemant, peccant irremissibiliter inspiritum sanctum,</reg>
+          <reg type="normalized">phemant, peccant irremissibiliter inspiritum sanctum,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_23_ligne_16"/>
         <choice>
           <orig>ut eſt in euangelio. Verũ hic non eſt nobis præcipitan¬</orig>
-          <reg type="contemporary">ut est in euangelio. Verum hic non est nobis praecipitan-</reg>
+          <reg type="normalized">ut est in euangelio. Verum hic non est nobis praecipitan-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_24_ligne_17"/>
         <choice>
           <orig>da ſententia. Hic locus hodie ſcitu neceſſarius eſt. cap.</orig>
-          <reg type="contemporary">da sententia. Hic locus hodie scitu necessarius est. cap.</reg>
+          <reg type="normalized">da sententia. Hic locus hodie scitu necessarius est. cap.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_27_ligne_18"/>
         <choice>
           <orig>1. Quartus, quod pro omnibus eſt orandum. item</orig>
-          <reg type="contemporary">1. Quartus, quod pro omnibus est orandum. item</reg>
+          <reg type="normalized">1. Quartus, quod pro omnibus est orandum. item</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_29_ligne_19"/>
         <choice>
           <orig>pro regibus &amp; prælatis, ut ſub eis nobis quiete uiue¬</orig>
-          <reg type="contemporary">pro regibus et praelatis, ut sub eis nobis quiete uiue-</reg>
+          <reg type="normalized">pro regibus et praelatis, ut sub eis nobis quiete uiue-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_30_ligne_20"/>
         <choice>
           <orig>re liceat. Deus enim nullũ ſtatum reijcit: ſed ut ex iu¬</orig>
-          <reg type="contemporary">re liceat. Deus enim nullum statum reiicit: sed ut ex iu-</reg>
+          <reg type="normalized">re liceat. Deus enim nullum statum reiicit: sed ut ex iu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_31_ligne_21"/>
         <choice>
           <orig>fimis, ita &amp; ex ſublimibus quoſdam ad ſui agnitionẽ</orig>
-          <reg type="contemporary">fimis, ita et ex sublimibus quosdam ad sui agnitionem</reg>
+          <reg type="normalized">fimis, ita et ex sublimibus quosdam ad sui agnitionem</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_32_ligne_22"/>
         <choice>
           <orig>perducit, cap.2. Quintus, habitus mulierũ, &amp; ut ſint</orig>
-          <reg type="contemporary">perducit, cap.2. Quintus, habitus mulierum, et ut sint</reg>
+          <reg type="normalized">perducit, cap.2. Quintus, habitus mulierum, et ut sint</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_33_ligne_23"/>
         <choice>
           <orig>in omnibus uiris ſubiectæ, cap.2. Sextus, officium &amp;</orig>
-          <reg type="contemporary">in omnibus uiris subiectae, cap.2. Sextus, officium et</reg>
+          <reg type="normalized">in omnibus uiris subiectae, cap.2. Sextus, officium et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00156_line_34_ligne_24"/>
         <choice>
           <orig>ſhectata conuerſatio Epiſcoporum &amp; Diaconorum,</orig>
-          <reg type="contemporary">shectata conuersatio Episcoporum et Diaconorum,</reg>
+          <reg type="normalized">shectata conuersatio Episcoporum et Diaconorum,</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00157"/>
@@ -2817,7 +2826,7 @@
           <lb corresp="#fbsb00027764_00157_line_0_ligne_2"/>
           <choice>
             <orig>IN EPI. PAVLI AD TIM. I.</orig>
-            <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+            <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
           </choice>
         </hi>
       </fw>
@@ -2826,7 +2835,7 @@
           <lb corresp="#fbsb00027764_00157_eSc_line_d45392e1_ligne_2"/>
           <choice>
             <orig>79</orig>
-            <reg type="contemporary">79</reg>
+            <reg type="normalized">79</reg>
           </choice>
         </hi>
       </fw>
@@ -2834,76 +2843,76 @@
         <lb corresp="#fbsb00027764_00157_line_1_ligne_2"/>
         <choice>
           <orig>&amp; eorum uxorù, liberorum &amp; familiæ, cap.3. Septi¬</orig>
-          <reg type="contemporary">et eorum uxoru, liberorum et familiae, cap.3. Septi-</reg>
+          <reg type="normalized">et eorum uxoru, liberorum et familiae, cap.3. Septi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_2_ligne_3"/>
         <choice>
           <orig>mus, doctrina dæmoniorum. Satis hodie notus locus,</orig>
-          <reg type="contemporary">mus, doctrina daemoniorum. Satis hodie notus locus,</reg>
+          <reg type="normalized">mus, doctrina daemoniorum. Satis hodie notus locus,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_3_ligne_4"/>
         <choice>
           <orig>cap.4. Octauus, pietatẽ ad omnia ualere, parũ uero</orig>
-          <reg type="contemporary">cap.4. Octauus, pietatem ad omnia ualere, parum uero</reg>
+          <reg type="normalized">cap.4. Octauus, pietatem ad omnia ualere, parum uero</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_4_ligne_5"/>
         <choice>
           <orig>torporis exercitationem, locus magis neceſſarius,</orig>
-          <reg type="contemporary">torporis exercitationem, locus magis necessarius,</reg>
+          <reg type="normalized">torporis exercitationem, locus magis necessarius,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_5_ligne_6"/>
         <choice>
           <orig>quàm uideatur, cap, 4. Nonus, de uiduis, cap, 5. Deci¬</orig>
-          <reg type="contemporary">quam uideatur, cap, 4. Nonus, de uiduis, cap, 5. Deci-</reg>
+          <reg type="normalized">quam uideatur, cap, 4. Nonus, de uiduis, cap, 5. Deci-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_6_ligne_7"/>
         <choice>
           <orig>mus, quod neceſſaria uitæ debẽtur doctoribus ab ipſis</orig>
-          <reg type="contemporary">mus, quod necessaria uitae debentur doctoribus ab ipsis</reg>
+          <reg type="normalized">mus, quod necessaria uitae debentur doctoribus ab ipsis</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_7_ligne_8"/>
         <choice>
           <orig>auditoribus, cap. 6.Vndecimus, de accuſatione &amp; iu¬</orig>
-          <reg type="contemporary">auditoribus, cap. 6.Vndecimus, de accusatione et iu-</reg>
+          <reg type="normalized">auditoribus, cap. 6.Vndecimus, de accusatione et iu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_8_ligne_9"/>
         <choice>
           <orig>dicio in peccantes, cap.5. Duodecimus, quod ne ſer¬</orig>
-          <reg type="contemporary">dicio in peccantes, cap.5. Duodecimus, quod neque  ser-</reg>
+          <reg type="normalized">dicio in peccantes, cap.5. Duodecimus, quod neque  ser-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_9_ligne_10"/>
         <choice>
           <orig>ui, ne diuites alieni ſunt à regno cœlorum, etiam in</orig>
-          <reg type="contemporary">ui, neque  diuites alieni sunt a regno coelorum, etiam in</reg>
+          <reg type="normalized">ui, neque  diuites alieni sunt a regno coelorum, etiam in</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_10_ligne_11"/>
         <choice>
           <orig>ipſa ſeruitute, &amp; in ipſis diuitijs, modò ſequantur quæ</orig>
-          <reg type="contemporary">ipsa seruitute, et in ipsis diuitiis, modo sequantur quae</reg>
+          <reg type="normalized">ipsa seruitute, et in ipsis diuitiis, modo sequantur quae</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_11_ligne_12"/>
         <choice>
           <orig>Paulus monet, cap.6. Præterea qua comitate agendũ</orig>
-          <reg type="contemporary">Paulus monet, cap.6. Praeterea qua comitate agendum</reg>
+          <reg type="normalized">Paulus monet, cap.6. Praeterea qua comitate agendum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_12_ligne_13"/>
         <choice>
           <orig>lit cum omnibus, principium cap. 5. oſtendit.</orig>
-          <reg type="contemporary">lit cum omnibus, principium cap. 5. ostendit.</reg>
+          <reg type="normalized">lit cum omnibus, principium cap. 5. ostendit.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00157_eSc_textblock_253bfb6a" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00157_line_13_ligne_2"/>
         <choice>
           <orig>CAPVT I.</orig>
-          <reg type="contemporary">CAPVT I.</reg>
+          <reg type="normalized">CAPVT I.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00157_eSc_textblock_8765a1b6" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00157_line_14_ligne_2"/>
         <choice>
           <orig>Paulus apoſtolus Ieſu Chriſti.</orig>
-          <reg type="contemporary">Paulus apostolus Iesu Christi.</reg>
+          <reg type="normalized">Paulus apostolus Iesu Christi.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00157_eSc_textblock_022bab5d" type="DropCapitalZone">
@@ -2911,7 +2920,7 @@
           <lb corresp="#fbsb00027764_00157_line_16_ligne_2"/>
           <choice>
             <orig>H</orig>
-            <reg type="contemporary">H</reg>
+            <reg type="normalized">H</reg>
           </choice>
         </hi>
       </ab>
@@ -2919,59 +2928,59 @@
         <lb corresp="#fbsb00027764_00157_line_15_ligne_2"/>
         <choice>
           <orig>Ac inſcriptione ſuum uerbum commendat Ti¬</orig>
-          <reg type="contemporary">Ac inscriptione suum uerbum commendat Ti-</reg>
+          <reg type="normalized">Ac inscriptione suum uerbum commendat Ti-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_eSc_line_4d6fecce_ligne_3"/>
         <choice>
           <orig>motheo, &amp; omnibus lecturis epiſtolã, ut certi¬</orig>
-          <reg type="contemporary">motheo, et omnibus lecturis epistolam, ut certi-</reg>
+          <reg type="normalized">motheo, et omnibus lecturis epistolam, ut certi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_17_ligne_4"/>
         <choice>
           <orig>ſimus hoc eſſe uerbũ dei, nõ hominis: quandoquidẽ do¬</orig>
-          <reg type="contemporary">simus hoc esse uerbum dei, non hominis: quandoquidem do-</reg>
+          <reg type="normalized">simus hoc esse uerbum dei, non hominis: quandoquidem do-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_18_ligne_5"/>
         <choice>
           <orig>ctrinas et mandata hominum reijcit deus in Eſaia, &amp;</orig>
-          <reg type="contemporary">ctrinas et mandata hominum reiicit deus in Esaia, et</reg>
+          <reg type="normalized">ctrinas et mandata hominum reiicit deus in Esaia, et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_19_ligne_6"/>
         <choice>
           <orig>Chriſtus in euang. &amp; lex nõ patitur aliquid addi uera¬</orig>
-          <reg type="contemporary">Christus in euang. et lex non patitur aliquid addi uera-</reg>
+          <reg type="normalized">Christus in euang. et lex non patitur aliquid addi uera-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_20_ligne_7"/>
         <choice>
           <orig>bo dei. Dicit ergo ſe apoſtolũ eſſe Chriſti, &amp; ſibi com¬</orig>
-          <reg type="contemporary">bo dei. Dicit ergo se apostolum esse Christi, et sibi com-</reg>
+          <reg type="normalized">bo dei. Dicit ergo se apostolum esse Christi, et sibi com-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_21_ligne_8"/>
         <choice>
           <orig>miſſum eſſe apoſtolatum, id eſt officiũ euangelij præ¬</orig>
-          <reg type="contemporary">missum esse apostolatum, id est officium euangelii prae-</reg>
+          <reg type="normalized">missum esse apostolatum, id est officium euangelii prae-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_22_ligne_9"/>
         <choice>
           <orig>dicandi à deo. quaſi diceret, non uenio mea referre, ſed</orig>
-          <reg type="contemporary">dicandi a deo. quasi diceret, non uenio mea referre, sed</reg>
+          <reg type="normalized">dicandi a deo. quasi diceret, non uenio mea referre, sed</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_23_ligne_10"/>
         <choice>
           <orig>quæ mihi commiſſa ſunt à deo.</orig>
-          <reg type="contemporary">quae mihi commissa sunt a deo.</reg>
+          <reg type="normalized">quae mihi commissa sunt a deo.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00157_block_4" type="MainZone-P">
         <lb corresp="#fbsb00027764_00157_line_24_ligne_2"/>
         <choice>
           <orig>Deũ ſaluatorẽ uocat, quia ipſe per Chriſtũ ſeruat,</orig>
-          <reg type="contemporary">Deum saluatorem uocat, quia ipse per Christum seruat,</reg>
+          <reg type="normalized">Deum saluatorem uocat, quia ipse per Christum seruat,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00157_line_25_ligne_3"/>
         <choice>
           <orig>ſiue ſaluat nos: &amp; ficut dicitur de Ephe.1.fecit nos di¬</orig>
-          <reg type="contemporary">siue saluat nos: et ficut dicitur de Ephe.1.fecit nos di-</reg>
+          <reg type="normalized">siue saluat nos: et ficut dicitur de Ephe.1.fecit nos di-</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00158"/>
@@ -2980,7 +2989,7 @@
           <lb corresp="#fbsb00027764_00158_line_0_ligne_2"/>
           <choice>
             <orig>ANNOT. IOANNIS POMERANI</orig>
-            <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+            <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
           </choice>
         </hi>
       </fw>
@@ -2988,134 +2997,134 @@
         <lb corresp="#fbsb00027764_00158_line_1_ligne_2"/>
         <choice>
           <orig>lectos in dilecto filioſuo. Et Chriſtu uocat ſpem no¬</orig>
-          <reg type="contemporary">lectos in dilecto filiosuo. Et Christu uocat spem no-</reg>
+          <reg type="normalized">lectos in dilecto filiosuo. Et Christu uocat spem no-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_2_ligne_3"/>
         <choice>
           <orig>ſtram, quia qui Chriſtum non habent, in deſperatione</orig>
-          <reg type="contemporary">stram, quia qui Christum non habent, in desperatione</reg>
+          <reg type="normalized">stram, quia qui Christum non habent, in desperatione</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_3_ligne_4"/>
         <choice>
           <orig>uiuũt, ſicut ad Ephe.4. Qui deſperant, ſemetipſos tra</orig>
-          <reg type="contemporary">uiuunt, sicut ad Ephe.4. Qui desperant, semetipsos tra</reg>
+          <reg type="normalized">uiuunt, sicut ad Ephe.4. Qui desperant, semetipsos tra</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_4_ligne_5"/>
         <choice>
           <orig>diderunt in impudicitiam &amp;c. Hypocritæ quo fin¬</orig>
-          <reg type="contemporary">diderunt in impudicitiam etc. Hypocritae quoque  fin-</reg>
+          <reg type="normalized">diderunt in impudicitiam etc. Hypocritae quoque  fin-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_5_ligne_6"/>
         <choice>
           <orig>gunt ſe ſperare, ſed ueniente tentatione, ſpem nõ ha¬</orig>
-          <reg type="contemporary">gunt se sperare, sed ueniente tentatione, spem non ha-</reg>
+          <reg type="normalized">gunt se sperare, sed ueniente tentatione, spem non ha-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_6_ligne_7"/>
         <choice>
           <orig>bent, quia Chriſtũ non habent. Germanũ, id eſt uerũ¬</orig>
-          <reg type="contemporary">bent, quia Christum non habent. Germanum, id est uerum-</reg>
+          <reg type="normalized">bent, quia Christum non habent. Germanum, id est uerum-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_7_ligne_8"/>
         <choice>
           <orig>nam Chriſtũ recte didicerat ex doctrina Pauli, qui ſe</orig>
-          <reg type="contemporary">nam Christum recte didicerat ex doctrina Pauli, qui se</reg>
+          <reg type="normalized">nam Christum recte didicerat ex doctrina Pauli, qui se</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_8_ligne_9"/>
         <choice>
           <orig>ob id eius patrẽ ſcribit. Qui germani filij in fide ſint,</orig>
-          <reg type="contemporary">ob id eius patrem scribit. Qui germani filii in fide sint,</reg>
+          <reg type="normalized">ob id eius patrem scribit. Qui germani filii in fide sint,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_9_ligne_10"/>
         <choice>
           <orig>parabola de ſeminante, Lucæ. 8. declarat.</orig>
-          <reg type="contemporary">parabola de seminante, Lucae. 8. declarat.</reg>
+          <reg type="normalized">parabola de seminante, Lucae. 8. declarat.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00158_block_1" type="MainZone-P">
         <lb corresp="#fbsb00027764_00158_line_10_ligne_2"/>
         <choice>
           <orig>Gratiam &amp; miſerocordiã (quæ eſt, quod gratis no¬</orig>
-          <reg type="contemporary">Gratiam et miserocordiam (quae est, quod gratis no-</reg>
+          <reg type="normalized">Gratiam et miserocordiam (quae est, quod gratis no-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_11_ligne_3"/>
         <choice>
           <orig>bis donantur peccata, &amp; hæredes ſimus regni abſ</orig>
-          <reg type="contemporary">bis donantur peccata, et haeredes simus regni absque </reg>
+          <reg type="normalized">bis donantur peccata, et haeredes simus regni absque </reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_12_ligne_4"/>
         <choice>
           <orig>omni merito) neceſſario ſequitur pax mẽtis &amp; conſci</orig>
-          <reg type="contemporary">omni merito) necessario sequitur pax mentis et consci</reg>
+          <reg type="normalized">omni merito) necessario sequitur pax mentis et consci</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_13_ligne_5"/>
         <choice>
           <orig>entiarum, quæ exuperat omnem mentem. Non enim</orig>
-          <reg type="contemporary">entiarum, quae exuperat omnem mentem. Non enim</reg>
+          <reg type="normalized">entiarum, quae exuperat omnem mentem. Non enim</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_14_ligne_6"/>
         <choice>
           <orig>oculus uidit, nec auris audiuit, &amp;c. Niſi uero gratiam</orig>
-          <reg type="contemporary">oculus uidit, nec auris audiuit, etc. Nisi uero gratiam</reg>
+          <reg type="normalized">oculus uidit, nec auris audiuit, etc. Nisi uero gratiam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_15_ligne_7"/>
         <choice>
           <orig>dei, &amp; miſericordiã te conſecutũ credideris, nunquã</orig>
-          <reg type="contemporary">dei, et misericordiam te consecutum credideris, nunquam</reg>
+          <reg type="normalized">dei, et misericordiam te consecutum credideris, nunquam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_16_ligne_8"/>
         <choice>
           <orig>pacem habebis. Conſecutum inquam, nõ ex tuis meri¬</orig>
-          <reg type="contemporary">pacem habebis. Consecutum inquam, non ex tuis meri-</reg>
+          <reg type="normalized">pacem habebis. Consecutum inquam, non ex tuis meri-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_17_ligne_9"/>
         <choice>
           <orig>tis, iuſtitiæ ſtudio, &amp;c. ſed à deo, qui tantum nos dili¬</orig>
-          <reg type="contemporary">tis, iustitiae studio, etc. sed a deo, qui tantum nos dili-</reg>
+          <reg type="normalized">tis, iustitiae studio, etc. sed a deo, qui tantum nos dili-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_18_ligne_10"/>
         <choice>
           <orig>git in dilecto filio ſuo, ut pater noſter non ſolum ap¬</orig>
-          <reg type="contemporary">git in dilecto filio suo, ut pater noster non solum ap-</reg>
+          <reg type="normalized">git in dilecto filio suo, ut pater noster non solum ap-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_19_ligne_11"/>
         <choice>
           <orig>pelletur, ſed reueraſit: ut nihil trepidemus ad tantam</orig>
-          <reg type="contemporary">pelletur, sed reuerasit: ut nihil trepidemus ad tantam</reg>
+          <reg type="normalized">pelletur, sed reuerasit: ut nihil trepidemus ad tantam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_20_ligne_12"/>
         <choice>
           <orig>maieſtatẽ, qui ex miſericordia eius ſumus filij. Et à do¬</orig>
-          <reg type="contemporary">maiestatem, qui ex misericordia eius sumus filii. Et a do-</reg>
+          <reg type="normalized">maiestatem, qui ex misericordia eius sumus filii. Et a do-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_21_ligne_13"/>
         <choice>
           <orig>mino Ieſu Chriſto domino noſtro, ſub cuius dominio</orig>
-          <reg type="contemporary">mino Iesu Christo domino nostro, sub cuius dominio</reg>
+          <reg type="normalized">mino Iesu Christo domino nostro, sub cuius dominio</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_22_ligne_14"/>
         <choice>
           <orig>&amp; imperio totus exercitus inferorũ, dei filijs, et Chri¬</orig>
-          <reg type="contemporary">et imperio totus exercitus inferorum, dei filiis, et Chri-</reg>
+          <reg type="normalized">et imperio totus exercitus inferorum, dei filiis, et Chri-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_23_ligne_15"/>
         <choice>
           <orig>ſti ſeruis præualere non poteſt, &amp;c. Atque hic uides</orig>
-          <reg type="contemporary">sti seruis praeualere non potest, etc. Atque hic uides</reg>
+          <reg type="normalized">sti seruis praeualere non potest, etc. Atque hic uides</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_24_ligne_16"/>
         <choice>
           <orig>Chriſtum non ſolum dominum dici, ne quis contemnat</orig>
-          <reg type="contemporary">Christum non solum dominum dici, ne quis contemnat</reg>
+          <reg type="normalized">Christum non solum dominum dici, ne quis contemnat</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_25_ligne_17"/>
         <choice>
           <orig>eum, quia uidet hominem factum: ſed etiam dominum</orig>
-          <reg type="contemporary">eum, quia uidet hominem factum: sed etiam dominum</reg>
+          <reg type="normalized">eum, quia uidet hominem factum: sed etiam dominum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00158_line_26_ligne_18"/>
         <choice>
           <orig>noſtrum uocat, ut etiam agnoſcas eum protectorem,</orig>
-          <reg type="contemporary">nostrum uocat, ut etiam agnoscas eum protectorem,</reg>
+          <reg type="normalized">nostrum uocat, ut etiam agnoscas eum protectorem,</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00159"/>
@@ -3123,167 +3132,167 @@
         <lb corresp="#fbsb00027764_00159_line_0_ligne_2"/>
         <choice>
           <orig>IN EPI. PAV. AD TIM, I.</orig>
-          <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+          <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00159_eSc_textblock_829a2edd" type="NumberingZone">
         <lb corresp="#fbsb00027764_00159_eSc_line_245c7cf1_ligne_2"/>
         <choice>
           <orig>80</orig>
-          <reg type="contemporary">80</reg>
+          <reg type="normalized">80</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00159_block_4" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00159_line_1_ligne_2"/>
         <choice>
           <orig>imò &amp; te dominumi, &amp; regem in ipſo, qui potens ſis</orig>
-          <reg type="contemporary">imo et te dominumi, et regem in ipso, qui potens sis</reg>
+          <reg type="normalized">imo et te dominumi, et regem in ipso, qui potens sis</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_2_ligne_3"/>
         <choice>
           <orig>lupra peccatũ, mortem, &amp; infernum &amp;c.</orig>
-          <reg type="contemporary">lupra peccatum, mortem, et infernum etc.</reg>
+          <reg type="normalized">lupra peccatum, mortem, et infernum etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00159_eSc_textblock_393eb7b1" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00159_line_3_ligne_2"/>
         <choice>
           <orig>Ne diuerſam, &amp;c.</orig>
-          <reg type="contemporary">Ne diuersam, etc.</reg>
+          <reg type="normalized">Ne diuersam, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00159_block_1" type="MainZone-P">
         <lb corresp="#fbsb00027764_00159_line_4_ligne_2"/>
         <choice>
           <orig>Vel ne aliam ſequantur doctrinam, ut uetus habet</orig>
-          <reg type="contemporary">Vel ne aliam sequantur doctrinam, ut uetus habet</reg>
+          <reg type="normalized">Vel ne aliam sequantur doctrinam, ut uetus habet</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_5_ligne_3"/>
         <choice>
           <orig>translatio. Ne aliter doceret, prædicationi euangeli¬</orig>
-          <reg type="contemporary">translatio. Ne aliter doceret, praedicationi euangeli-</reg>
+          <reg type="normalized">translatio. Ne aliter doceret, praedicationi euangeli-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_6_ligne_4"/>
         <choice>
           <orig>cæ ſiue fidei nihil uult addi, quantacũ ſpecie pieta¬</orig>
-          <reg type="contemporary">cae siue fidei nihil uult addi, quantacumque  specie pieta-</reg>
+          <reg type="normalized">cae siue fidei nihil uult addi, quantacumque  specie pieta-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_7_ligne_5"/>
         <choice>
           <orig>tis: id quod tũ quo nitebantur pſeudapoſtoli. Vnde</orig>
-          <reg type="contemporary">tis: id quod tum quoque  nitebantur pseudapostoli. Vnde</reg>
+          <reg type="normalized">tis: id quod tum quoque  nitebantur pseudapostoli. Vnde</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_8_ligne_6"/>
         <choice>
           <orig>uit ad Gal. 1. Etiã ſi angelus è cœlis &amp;c. Nimirũ præ¬</orig>
-          <reg type="contemporary">uit ad Gal. 1. Etiam si angelus e coelis etc. Nimirum prae-</reg>
+          <reg type="normalized">uit ad Gal. 1. Etiam si angelus e coelis etc. Nimirum prae-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_9_ligne_7"/>
         <choice>
           <orig>ſentiebat fidem Chriſti, doctrinis humanis abolendã,</orig>
-          <reg type="contemporary">sentiebat fidem Christi, doctrinis humanis abolendam,</reg>
+          <reg type="normalized">sentiebat fidem Christi, doctrinis humanis abolendam,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_10_ligne_8"/>
         <choice>
           <orig>ut factum cernimus. Idcirco ſumme notandum, quod</orig>
-          <reg type="contemporary">ut factum cernimus. Idcirco summe notandum, quod</reg>
+          <reg type="normalized">ut factum cernimus. Idcirco summe notandum, quod</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_12_ligne_9"/>
         <choice>
           <orig>hic dicit, ædificationem dei eſſe perfidem, ſentiens re¬</orig>
-          <reg type="contemporary">hic dicit, aedificationem dei esse perfidem, sentiens re-</reg>
+          <reg type="normalized">hic dicit, aedificationem dei esse perfidem, sentiens re-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_13_ligne_10"/>
         <choice>
           <orig>liqua omnia, quæ docentur, eſſe deſtructionem. Aedi¬</orig>
-          <reg type="contemporary">liqua omnia, quae docentur, esse destructionem. Aedi-</reg>
+          <reg type="normalized">liqua omnia, quae docentur, esse destructionem. Aedi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_15_ligne_11"/>
         <choice>
           <orig>ficatio eſt doctrina ſalutis: deſtructio, impia doctrina,</orig>
-          <reg type="contemporary">ficatio est doctrina salutis: destructio, impia doctrina,</reg>
+          <reg type="normalized">ficatio est doctrina salutis: destructio, impia doctrina,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_16_ligne_12"/>
         <choice>
           <orig>&amp; ſalutis uaſtatio, ut ſæpe uides in Paulo. Hanc fidei</orig>
-          <reg type="contemporary">et salutis uastatio, ut saepe uides in Paulo. Hanc fidei</reg>
+          <reg type="normalized">et salutis uastatio, ut saepe uides in Paulo. Hanc fidei</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_18_ligne_13"/>
         <choice>
           <orig>ædificationem duo hominum genera impediunt, uel</orig>
-          <reg type="contemporary">aedificationem duo hominum genera impediunt, uel</reg>
+          <reg type="normalized">aedificationem duo hominum genera impediunt, uel</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_19_ligne_14"/>
         <choice>
           <orig>etiam deſtruunt ædificata. Nam alij docent fidere in</orig>
-          <reg type="contemporary">etiam destruunt aedificata. Nam alii docent fidere in</reg>
+          <reg type="normalized">etiam destruunt aedificata. Nam alii docent fidere in</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_20_ligne_15"/>
         <choice>
           <orig>operibus legis: quia lex à deo data, non poteſt nõ eſſe</orig>
-          <reg type="contemporary">operibus legis: quia lex a deo data, non potest non esse</reg>
+          <reg type="normalized">operibus legis: quia lex a deo data, non potest non esse</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_21_ligne_16"/>
         <choice>
           <orig>bona &amp; neceſſaria. Quibus reſpondet, quod uſum le¬</orig>
-          <reg type="contemporary">bona et necessaria. Quibus respondet, quod usum le-</reg>
+          <reg type="normalized">bona et necessaria. Quibus respondet, quod usum le-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_22_ligne_17"/>
         <choice>
           <orig>gis bonæ ignorent. Fidem oportet doceri, ſine qua le¬</orig>
-          <reg type="contemporary">gis bonae ignorent. Fidem oportet doceri, sine qua le-</reg>
+          <reg type="normalized">gis bonae ignorent. Fidem oportet doceri, sine qua le-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_23_ligne_18"/>
         <choice>
           <orig>gis opera, quemadmodũ lex exigit, fieri nõ poſſunt.</orig>
-          <reg type="contemporary">gis opera, quemadmodum lex exigit, fieri non possunt.</reg>
+          <reg type="normalized">gis opera, quemadmodum lex exigit, fieri non possunt.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_24_ligne_19"/>
         <choice>
           <orig>eides enim ſpiritum impetrat, legis impletorem: ubi</orig>
-          <reg type="contemporary">eides enim spiritum impetrat, legis impletorem: ubi</reg>
+          <reg type="normalized">eides enim spiritum impetrat, legis impletorem: ubi</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_25_ligne_20"/>
         <choice>
           <orig>uero habueris fidem, iam nulla lege teneris, ut nemi¬</orig>
-          <reg type="contemporary">uero habueris fidem, iam nulla lege teneris, ut nemi-</reg>
+          <reg type="normalized">uero habueris fidem, iam nulla lege teneris, ut nemi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_28_ligne_21"/>
         <choice>
           <orig>ni quicquam debeas, niſi ut proximum diligas, ad</orig>
-          <reg type="contemporary">ni quicquam debeas, nisi ut proximum diligas, ad</reg>
+          <reg type="normalized">ni quicquam debeas, nisi ut proximum diligas, ad</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_29_ligne_22"/>
         <choice>
           <orig>Rhoma. 12. Et hoc præſtabis, non ſolum quia debes,</orig>
-          <reg type="contemporary">Rhoma. 12. Et hoc praestabis, non solum quia debes,</reg>
+          <reg type="normalized">Rhoma. 12. Et hoc praestabis, non solum quia debes,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_30_ligne_23"/>
         <choice>
           <orig>quia lex iubet: ſed &amp; quia uis, nimirum ſic trahente</orig>
-          <reg type="contemporary">quia lex iubet: sed et quia uis, nimirum sic trahente</reg>
+          <reg type="normalized">quia lex iubet: sed et quia uis, nimirum sic trahente</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_31_ligne_24"/>
         <choice>
           <orig>ſpiritu uoluntatem tuam. Hoc eſt quod hic dicit, lex ſint.</orig>
-          <reg type="contemporary">spiritu uoluntatem tuam. Hoc est quod hic dicit, lex sint.</reg>
+          <reg type="normalized">spiritu uoluntatem tuam. Hoc est quod hic dicit, lex sint.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_line_32_ligne_25"/>
         <choice>
           <orig>iuſto non eſt poſita, ſed iniuſtis, qui uel puniuntur, uel</orig>
-          <reg type="contemporary">iusto non est posita, sed iniustis, qui uel puniuntur, uel</reg>
+          <reg type="normalized">iusto non est posita, sed iniustis, qui uel puniuntur, uel</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00159_eSc_textblock_d2802d25" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00159_eSc_line_3e6a9e44_ligne_2"/>
         <choice>
           <orig>An ſontes</orig>
-          <reg type="contemporary">An sontes</reg>
+          <reg type="normalized">An sontes</reg>
         </choice>
         <lb corresp="#fbsb00027764_00159_eSc_line_62562ef0_ligne_3"/>
         <choice>
           <orig>plectendi</orig>
-          <reg type="contemporary">plectendi</reg>
+          <reg type="normalized">plectendi</reg>
         </choice>
       </note>
       <pb corresp="fbsb00027764_00160"/>
@@ -3292,7 +3301,7 @@
           <lb corresp="#fbsb00027764_00160_line_0_ligne_2"/>
           <choice>
             <orig>ANNOT. IOANNIS POMERANI</orig>
-            <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+            <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
           </choice>
         </hi>
       </fw>
@@ -3300,139 +3309,139 @@
         <lb corresp="#fbsb00027764_00160_line_30_ligne_2"/>
         <choice>
           <orig>ficta.</orig>
-          <reg type="contemporary">ficta.</reg>
+          <reg type="normalized">ficta.</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00160_block_0" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00160_line_1_ligne_2"/>
         <choice>
           <orig>occiduntur ſecundum legem:ut non ſit opus quærere,</orig>
-          <reg type="contemporary">occiduntur secundum legem:ut non sit opus quaerere,</reg>
+          <reg type="normalized">occiduntur secundum legem:ut non sit opus quaerere,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_2_ligne_3"/>
         <choice>
           <orig>an ſub nouo teſtamẽto ſint ſontes plectẽdi, quũ cõſtet</orig>
-          <reg type="contemporary">an sub nouo testamento sint sontes plectendi, quum constet</reg>
+          <reg type="normalized">an sub nouo testamento sint sontes plectendi, quum constet</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_3_ligne_4"/>
         <choice>
           <orig>adulteros, fornicarios, homicidas ſub nouo teſtamẽto</orig>
-          <reg type="contemporary">adulteros, fornicarios, homicidas sub nouo testamento</reg>
+          <reg type="normalized">adulteros, fornicarios, homicidas sub nouo testamento</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_4_ligne_5"/>
         <choice>
           <orig>non contineri, ad quod pertinent ſoli iuſti per fidẽ,is</orig>
-          <reg type="contemporary">non contineri, ad quod pertinent soli iusti per fidem,is</reg>
+          <reg type="normalized">non contineri, ad quod pertinent soli iusti per fidem,is</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_5_ligne_6"/>
         <choice>
           <orig>eſt credentes, cõtra quos nõ eſt lex. Deinde cũ multa</orig>
-          <reg type="contemporary">est credentes, contra quos non est lex. Deinde cum multa</reg>
+          <reg type="normalized">est credentes, contra quos non est lex. Deinde cum multa</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_6_ligne_7"/>
         <choice>
           <orig>ex lege præcipiant, intentionẽ legis &amp; capute egregie</orig>
-          <reg type="contemporary">ex lege praecipiant, intentionem legis et capute egregie</reg>
+          <reg type="normalized">ex lege praecipiant, intentionem legis et capute egregie</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_7_ligne_8"/>
         <choice>
           <orig>negligunt, quæ eſt, ut dixi, charitas in proximum, ſed</orig>
-          <reg type="contemporary">negligunt, quae est, ut dixi, charitas in proximum, sed</reg>
+          <reg type="normalized">negligunt, quae est, ut dixi, charitas in proximum, sed</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_8_ligne_9"/>
         <choice>
           <orig>non foris ſimulato opere oſtenfa:ſed, ut hic definitur,</orig>
-          <reg type="contemporary">non foris simulato opere ostenfa:sed, ut hic definitur,</reg>
+          <reg type="normalized">non foris simulato opere ostenfa:sed, ut hic definitur,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_9_ligne_10"/>
         <choice>
           <orig>ex corde puro, &amp; conſcientia bona, &amp; fide non ficta.</orig>
-          <reg type="contemporary">ex corde puro, et conscientia bona, et fide non ficta.</reg>
+          <reg type="normalized">ex corde puro, et conscientia bona, et fide non ficta.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_10_ligne_11"/>
         <choice>
           <orig>Vides quod ne eleemoſyna quidem quantuncunq co¬</orig>
-          <reg type="contemporary">Vides quod ne eleemosyna quidem quantuncunque co-</reg>
+          <reg type="normalized">Vides quod ne eleemosyna quidem quantuncunque co-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_12_ligne_12"/>
         <choice>
           <orig>pioſa, proſit ſine fide (quicquid enim non eſt ex fide</orig>
-          <reg type="contemporary">piosa, prosit sine fide (quicquid enim non est ex fide</reg>
+          <reg type="normalized">piosa, prosit sine fide (quicquid enim non est ex fide</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_13_ligne_13"/>
         <choice>
           <orig>peccatum eſt) &amp; charitatis opera quæ uidentur, non</orig>
-          <reg type="contemporary">peccatum est) et charitatis opera quae uidentur, non</reg>
+          <reg type="normalized">peccatum est) et charitatis opera quae uidentur, non</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_14_ligne_14"/>
         <choice>
           <orig>eſſe charitatem, niſi ex corde &amp; conſcientia, quã fides</orig>
-          <reg type="contemporary">esse charitatem, nisi ex corde et conscientia, quam fides</reg>
+          <reg type="normalized">esse charitatem, nisi ex corde et conscientia, quam fides</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_16_ligne_15"/>
         <choice>
           <orig>purificauit, non ficta ueniant. Ii, inquit, deflexerunt</orig>
-          <reg type="contemporary">purificauit, non ficta ueniant. Ii, inquit, deflexerunt</reg>
+          <reg type="normalized">purificauit, non ficta ueniant. Ii, inquit, deflexerunt</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_17_ligne_16"/>
         <choice>
           <orig>ad uaniloquium, uolentes eſſe legis doctores, ſicut &amp;</orig>
-          <reg type="contemporary">ad uaniloquium, uolentes esse legis doctores, sicut et</reg>
+          <reg type="normalized">ad uaniloquium, uolentes esse legis doctores, sicut et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_18_ligne_17"/>
         <choice>
           <orig>hodie operum prædicatores &amp; doctores, non intelli¬</orig>
-          <reg type="contemporary">hodie operum praedicatores et doctores, non intelli-</reg>
+          <reg type="normalized">hodie operum praedicatores et doctores, non intelli-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_19_ligne_18"/>
         <choice>
           <orig>gentes quæ loquuntur, nec de quibus adſeuerant. Præ</orig>
-          <reg type="contemporary">gentes quae loquuntur, nec de quibus adseuerant. Prae</reg>
+          <reg type="normalized">gentes quae loquuntur, nec de quibus adseuerant. Prae</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_20_ligne_19"/>
         <choice>
           <orig>cepta quidem proponunt, &amp; legem ſiue mandata mo¬</orig>
-          <reg type="contemporary">cepta quidem proponunt, et legem siue mandata mo-</reg>
+          <reg type="normalized">cepta quidem proponunt, et legem siue mandata mo-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_21_ligne_20"/>
         <choice>
           <orig>rum: ſed unde tibi detur, ut ſic uiuas, non docent, Inue¬</orig>
-          <reg type="contemporary">rum: sed unde tibi detur, ut sic uiuas, non docent, Inue-</reg>
+          <reg type="normalized">rum: sed unde tibi detur, ut sic uiuas, non docent, Inue-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_22_ligne_21"/>
         <choice>
           <orig>nies hodie qui nihil quærant in ſacris literis præter</orig>
-          <reg type="contemporary">nies hodie qui nihil quaerant in sacris literis praeter</reg>
+          <reg type="normalized">nies hodie qui nihil quaerant in sacris literis praeter</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_23_ligne_22"/>
         <choice>
           <orig>moralia, quæ déinde ſimilia putant ethnicis, Ariſtote¬</orig>
-          <reg type="contemporary">moralia, quae deinde similia putant ethnicis, Aristote-</reg>
+          <reg type="normalized">moralia, quae deinde similia putant ethnicis, Aristote-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_25_ligne_23"/>
         <choice>
           <orig>licis, aut Senecæ præſcriptis: qui tamẽ neſciunt, quid</orig>
-          <reg type="contemporary">licis, aut Senecae praescriptis: qui tamen nesciunt, quid</reg>
+          <reg type="normalized">licis, aut Senecae praescriptis: qui tamen nesciunt, quid</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_26_ligne_24"/>
         <choice>
           <orig>Paulus in tota epiſtola ad Rhoma. uel Gal. diſputex</orig>
-          <reg type="contemporary">Paulus in tota epistola ad Rhoma. uel Gal. disputex</reg>
+          <reg type="normalized">Paulus in tota epistola ad Rhoma. uel Gal. disputex</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_27_ligne_25"/>
         <choice>
           <orig>aut quid Chriſtus uelit, dũ fidem, id eſt fiduciã in deũ</orig>
-          <reg type="contemporary">aut quid Christus uelit, dum fidem, id est fiduciam in deum</reg>
+          <reg type="normalized">aut quid Christus uelit, dum fidem, id est fiduciam in deum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_28_ligne_26"/>
         <choice>
           <orig>ubi prædicat: aut quid ſit quod hic Paulus dicit, cha¬</orig>
-          <reg type="contemporary">ubique  praedicat: aut quid sit quod hic Paulus dicit, cha-</reg>
+          <reg type="normalized">ubique  praedicat: aut quid sit quod hic Paulus dicit, cha-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00160_line_29_ligne_27"/>
         <choice>
           <orig>ritas de puro corde, &amp; conſcientia bona, &amp; fide non</orig>
-          <reg type="contemporary">ritas de puro corde, et conscientia bona, et fide non</reg>
+          <reg type="normalized">ritas de puro corde, et conscientia bona, et fide non</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00161"/>
@@ -3440,146 +3449,146 @@
         <lb corresp="#fbsb00027764_00161_line_0_ligne_2"/>
         <choice>
           <orig>IN EPI. PAV. AD TIM. PRI.</orig>
-          <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+          <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00161_eSc_textblock_42da06af" type="NumberingZone">
         <lb corresp="#fbsb00027764_00161_eSc_line_a4de323f_ligne_2"/>
         <choice>
           <orig>81</orig>
-          <reg type="contemporary">81</reg>
+          <reg type="normalized">81</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00161_block_2" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00161_line_1_ligne_2"/>
         <choice>
           <orig>ficta. Nam, ut inquit, quod à talibus aberrauerunt,</orig>
-          <reg type="contemporary">ficta. Nam, ut inquit, quod a talibus aberrauerunt,</reg>
+          <reg type="normalized">ficta. Nam, ut inquit, quod a talibus aberrauerunt,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_2_ligne_3"/>
         <choice>
           <orig>deflexerũt ad uaniloquium, &amp;c. Sed de his hactenus.</orig>
-          <reg type="contemporary">deflexerunt ad uaniloquium, etc. Sed de his hactenus.</reg>
+          <reg type="normalized">deflexerunt ad uaniloquium, etc. Sed de his hactenus.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_3_ligne_4"/>
         <choice>
           <orig>Alij uero docti ex ſacra ſcriptura, ſciunt non fiden¬</orig>
-          <reg type="contemporary">Alii uero docti ex sacra scriptura, sciunt non fiden-</reg>
+          <reg type="normalized">Alii uero docti ex sacra scriptura, sciunt non fiden-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_4_ligne_5"/>
         <choice>
           <orig>dum operibus, ſed ſoli dei miſericordiæ, &amp; quidem</orig>
-          <reg type="contemporary">dum operibus, sed soli dei misericordiae, et quidem</reg>
+          <reg type="normalized">dum operibus, sed soli dei misericordiae, et quidem</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_5_ligne_6"/>
         <choice>
           <orig>recte: ſed curioſi &amp; ſuperſtitioſi inania uocabula in¬</orig>
-          <reg type="contemporary">recte: sed curiosi et superstitiosi inania uocabula in-</reg>
+          <reg type="normalized">recte: sed curiosi et superstitiosi inania uocabula in-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_6_ligne_7"/>
         <choice>
           <orig>ueniunt, quæ literæ ſacræ non nouerunt, &amp; ſcientiam</orig>
-          <reg type="contemporary">ueniunt, quae literae sacrae non nouerunt, et scientiam</reg>
+          <reg type="normalized">ueniunt, quae literae sacrae non nouerunt, et scientiam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_7_ligne_8"/>
         <choice>
           <orig>iactant, contra quos in fine epiſtolæ dicit, deuitãs pro</orig>
-          <reg type="contemporary">iactant, contra quos in fine epistolae dicit, deuitans pro</reg>
+          <reg type="normalized">iactant, contra quos in fine epistolae dicit, deuitans pro</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_8_ligne_9"/>
         <choice>
           <orig>phanas uocum inanitates. Item fabulas ſequuntur, id</orig>
-          <reg type="contemporary">phanas uocum inanitates. Item fabulas sequuntur, id</reg>
+          <reg type="normalized">phanas uocum inanitates. Item fabulas sequuntur, id</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_9_ligne_10"/>
         <choice>
           <orig>eſt, alia extra ſacras literas: qualia multa commenti</orig>
-          <reg type="contemporary">est, alia extra sacras literas: qualia multa commenti</reg>
+          <reg type="normalized">est, alia extra sacras literas: qualia multa commenti</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_10_ligne_11"/>
         <choice>
           <orig>ſunt Iudæi, qualia etiam multa noſtri habent quaſi hi¬</orig>
-          <reg type="contemporary">sunt Iudaei, qualia etiam multa nostri habent quasi hi-</reg>
+          <reg type="normalized">sunt Iudaei, qualia etiam multa nostri habent quasi hi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_11_ligne_12"/>
         <choice>
           <orig>ſtoriam. Et præterea genealogias quærunt nũquam</orig>
-          <reg type="contemporary">storiam. Et praeterea genealogias quaerunt numquam</reg>
+          <reg type="normalized">storiam. Et praeterea genealogias quaerunt numquam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_12_ligne_13"/>
         <choice>
           <orig>finiendas, id eſt de quibus ex ſacris literis non potes</orig>
-          <reg type="contemporary">finiendas, id est de quibus ex sacris literis non potes</reg>
+          <reg type="normalized">finiendas, id est de quibus ex sacris literis non potes</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_13_ligne_14"/>
         <choice>
           <orig>eſſe certus, quas alius ſic, alius aliter computat, &amp;</orig>
-          <reg type="contemporary">esse certus, quas alius sic, alius aliter computat, et</reg>
+          <reg type="normalized">esse certus, quas alius sic, alius aliter computat, et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_14_ligne_15"/>
         <choice>
           <orig>quiſ ſua præfert: quæ, inqt, quæſtiones &amp; dubiũ ge¬</orig>
-          <reg type="contemporary">quisque  sua praefert: quae, inqt, quaestiones et dubium ge-</reg>
+          <reg type="normalized">quisque  sua praefert: quae, inqt, quaestiones et dubium ge-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_15_ligne_16"/>
         <choice>
           <orig>nerant, &amp; nullam ædificationem. Item ſunt, quorum</orig>
-          <reg type="contemporary">nerant, et nullam aedificationem. Item sunt, quorum</reg>
+          <reg type="normalized">nerant, et nullam aedificationem. Item sunt, quorum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_16_ligne_17"/>
         <choice>
           <orig>magnus eſt numerus, qui magno animi negotio, nihil</orig>
-          <reg type="contemporary">magnus est numerus, qui magno animi negotio, nihil</reg>
+          <reg type="normalized">magnus est numerus, qui magno animi negotio, nihil</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_17_ligne_18"/>
         <choice>
           <orig>niſi uanas quæſtiones ſequuntur ex ſacris literis, nuſ¬</orig>
-          <reg type="contemporary">nisi uanas quaestiones sequuntur ex sacris literis, nus-</reg>
+          <reg type="normalized">nisi uanas quaestiones sequuntur ex sacris literis, nus-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_18_ligne_19"/>
         <choice>
           <orig>quam nõ hæſitantes, dum etiam nodum inſcirpo quæ¬</orig>
-          <reg type="contemporary">quam non haesitantes, dum etiam nodum inscirpo quae-</reg>
+          <reg type="normalized">quam non haesitantes, dum etiam nodum inscirpo quae-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_19_ligne_20"/>
         <choice>
           <orig>runt: interim uero quàm certiſſimam uident ſanam</orig>
-          <reg type="contemporary">runt: interim uero quam certissimam uident sanam</reg>
+          <reg type="normalized">runt: interim uero quam certissimam uident sanam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_20_ligne_21"/>
         <choice>
           <orig>doctrinã, &amp; apertũ Euangeliũ, id eſt luce clariores:</orig>
-          <reg type="contemporary">doctrinam, et apertum Euangelium, id est luce clariores:</reg>
+          <reg type="normalized">doctrinam, et apertum Euangelium, id est luce clariores:</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_21_ligne_22"/>
         <choice>
           <orig>dei Chriſti promiſſiones in utriuſ inſtrumenti pa¬</orig>
-          <reg type="contemporary">dei Christique  promissiones in utriusque  instrumenti pa-</reg>
+          <reg type="normalized">dei Christique  promissiones in utriusque  instrumenti pa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_22_ligne_23"/>
         <choice>
           <orig>gina relinquunt. Qui in hoc periculo ſunt, ut ueren¬</orig>
-          <reg type="contemporary">gina relinquunt. Qui in hoc periculo sunt, ut ueren-</reg>
+          <reg type="normalized">gina relinquunt. Qui in hoc periculo sunt, ut ueren-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_23_ligne_24"/>
         <choice>
           <orig>dum ſit eis, ne dum pugnas ſequuntur uerborum, reli¬</orig>
-          <reg type="contemporary">dum sit eis, ne dum pugnas sequuntur uerborum, reli-</reg>
+          <reg type="normalized">dum sit eis, ne dum pugnas sequuntur uerborum, reli-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_24_ligne_25"/>
         <choice>
           <orig>ctis illis, ex quibus ædificari poſſent, tandem incipiãt</orig>
-          <reg type="contemporary">ctis illis, ex quibus aedificari possent, tandem incipiant</reg>
+          <reg type="normalized">ctis illis, ex quibus aedificari possent, tandem incipiant</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_25_ligne_26"/>
         <choice>
           <orig>de ueritate ſacræ ſcripturæ dubitare. Et dũ umbram</orig>
-          <reg type="contemporary">de ueritate sacrae scripturae dubitare. Et dum umbram</reg>
+          <reg type="normalized">de ueritate sacrae scripturae dubitare. Et dum umbram</reg>
         </choice>
         <lb corresp="#fbsb00027764_00161_line_26_ligne_27"/>
         <choice>
           <orig>ſequũtur, ut canis Aeſopicus, ueritatẽ &amp; rem ipſam:</orig>
-          <reg type="contemporary">sequuntur, ut canis Aesopicus, ueritatem et rem ipsam:</reg>
+          <reg type="normalized">sequuntur, ut canis Aesopicus, ueritatem et rem ipsam:</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00162"/>
@@ -3588,7 +3597,7 @@
           <lb corresp="#fbsb00027764_00162_line_0_ligne_2"/>
           <choice>
             <orig>ANNOT. IOANNIS POMERANI</orig>
-            <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+            <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
           </choice>
         </hi>
       </fw>
@@ -3596,142 +3605,142 @@
         <lb corresp="#fbsb00027764_00162_line_1_ligne_2"/>
         <choice>
           <orig>id eſt, fidẽ amittãt, quorũ adhuc peior eſt cauſa, ſi per</orig>
-          <reg type="contemporary">id est, fidem amittant, quorum adhuc peior est causa, si per</reg>
+          <reg type="normalized">id est, fidem amittant, quorum adhuc peior est causa, si per</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_2_ligne_3"/>
         <choice>
           <orig>hæc ſua lucra ſectantes, alij alijs ſeſe præferre conten¬</orig>
-          <reg type="contemporary">haec sua lucra sectantes, alii aliis sese praeferre conten-</reg>
+          <reg type="normalized">haec sua lucra sectantes, alii aliis sese praeferre conten-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_3_ligne_4"/>
         <choice>
           <orig>dãt. de quibus cap. 6. ſic dicit: Si qs aliter docet, &amp;c.</orig>
-          <reg type="contemporary">dant. de quibus cap. 6. sic dicit: Si qs aliter docet, etc.</reg>
+          <reg type="normalized">dant. de quibus cap. 6. sic dicit: Si qs aliter docet, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00162_eSc_textblock_5d9eb8e3" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00162_line_4_ligne_2"/>
         <choice>
           <orig>Ex corde puro.</orig>
-          <reg type="contemporary">Ex corde puro.</reg>
+          <reg type="normalized">Ex corde puro.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00162_block_1" type="MainZone-P">
         <lb corresp="#fbsb00027764_00162_line_5_ligne_2"/>
         <choice>
           <orig>Vbi enim eſt fides non ficta, ibi eſt &amp; cor purum: ſi¬</orig>
-          <reg type="contemporary">Vbi enim est fides non ficta, ibi est et cor purum: si-</reg>
+          <reg type="normalized">Vbi enim est fides non ficta, ibi est et cor purum: si-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_6_ligne_3"/>
         <choice>
           <orig>cut Petrus dicit: Fide purificans corda eorum. ibi eſt</orig>
-          <reg type="contemporary">cut Petrus dicit: Fide purificans corda eorum. ibi est</reg>
+          <reg type="normalized">cut Petrus dicit: Fide purificans corda eorum. ibi est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_7_ligne_4"/>
         <choice>
           <orig>&amp; conſcientia bona. Qui enim ſibi recte conſcius eſt</orig>
-          <reg type="contemporary">et conscientia bona. Qui enim sibi recte conscius est</reg>
+          <reg type="normalized">et conscientia bona. Qui enim sibi recte conscius est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_8_ligne_5"/>
         <choice>
           <orig>qui deo non ex toto corde fidit? Porrò fidẽ non fictam</orig>
-          <reg type="contemporary">qui deo non ex toto corde fidit? Porro fidem non fictam</reg>
+          <reg type="normalized">qui deo non ex toto corde fidit? Porro fidem non fictam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_9_ligne_6"/>
         <choice>
           <orig>dixit, id eſt ueram: cõtra illam quæ hodie uulgo iacta</orig>
-          <reg type="contemporary">dixit, id est ueram: contra illam quae hodie uulgo iacta</reg>
+          <reg type="normalized">dixit, id est ueram: contra illam quae hodie uulgo iacta</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_10_ligne_7"/>
         <choice>
           <orig>tur, qua adſentiuntur hiſtoriæ euangelicæ: ſicut alijs</orig>
-          <reg type="contemporary">tur, qua adsentiuntur historiae euangelicae: sicut aliis</reg>
+          <reg type="normalized">tur, qua adsentiuntur historiae euangelicae: sicut aliis</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_11_ligne_8"/>
         <choice>
           <orig>hiſtorijs, &amp; illis quæ geſta narrantur de Thurca, de</orig>
-          <reg type="contemporary">historiis, et illis quae gesta narrantur de Thurca, de</reg>
+          <reg type="normalized">historiis, et illis quae gesta narrantur de Thurca, de</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_12_ligne_9"/>
         <choice>
           <orig>Alexandro, de Iulio papa, &amp;c. quæ potius opinio eſt</orig>
-          <reg type="contemporary">Alexandro, de Iulio papa, etc. quae potius opinio est</reg>
+          <reg type="normalized">Alexandro, de Iulio papa, etc. quae potius opinio est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_13_ligne_10"/>
         <choice>
           <orig>de Chriſto, &amp; fides hiſtorica, uel potius ficta fides</orig>
-          <reg type="contemporary">de Christo, et fides historica, uel potius ficta fides</reg>
+          <reg type="normalized">de Christo, et fides historica, uel potius ficta fides</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_14_ligne_11"/>
         <choice>
           <orig>quàm fides illa iuſtificans, quamſoli norunt credẽtes,</orig>
-          <reg type="contemporary">quam fides illa iustificans, quamsoli norunt credentes,</reg>
+          <reg type="normalized">quam fides illa iustificans, quamsoli norunt credentes,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_15_ligne_12"/>
         <choice>
           <orig>Hinc fit, ut noſtri libentius audiant fabulam narrari</orig>
-          <reg type="contemporary">Hinc fit, ut nostri libentius audiant fabulam narrari</reg>
+          <reg type="normalized">Hinc fit, ut nostri libentius audiant fabulam narrari</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_16_ligne_13"/>
         <choice>
           <orig>quæ exempla uocãt, quàm textum euangelicum: quia</orig>
-          <reg type="contemporary">quae exempla uocant, quam textum euangelicum: quia</reg>
+          <reg type="normalized">quae exempla uocant, quam textum euangelicum: quia</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_17_ligne_14"/>
         <choice>
           <orig>quam fidem Euangelio habent, etiam habẽt illis fabu¬</orig>
-          <reg type="contemporary">quam fidem Euangelio habent, etiam habent illis fabu-</reg>
+          <reg type="normalized">quam fidem Euangelio habent, etiam habent illis fabu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_18_ligne_15"/>
         <choice>
           <orig>lis non aliam, &amp; ferè minorem.</orig>
-          <reg type="contemporary">lis non aliam, et fere minorem.</reg>
+          <reg type="normalized">lis non aliam, et fere minorem.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00162_eSc_textblock_f3020223" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00162_line_19_ligne_2"/>
         <choice>
           <orig>Et gratiam habeo.</orig>
-          <reg type="contemporary">Et gratiam habeo.</reg>
+          <reg type="normalized">Et gratiam habeo.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00162_block_0" type="MainZone-P">
         <lb corresp="#fbsb00027764_00162_line_20_ligne_2"/>
         <choice>
           <orig>Hic locus nobis proponitur à Paulo, ne ob quam¬</orig>
-          <reg type="contemporary">Hic locus nobis proponitur a Paulo, ne ob quan-</reg>
+          <reg type="normalized">Hic locus nobis proponitur a Paulo, ne ob quan-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_21_ligne_3"/>
         <choice>
           <orig>libet etiam uitam, &amp; quæcũ peccata deſperemus.</orig>
-          <reg type="contemporary">libet etiam uitam, et quaecumque  peccata desperemus.</reg>
+          <reg type="normalized">libet etiam uitam, et quaecumque  peccata desperemus.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_22_ligne_4"/>
         <choice>
           <orig>modò ueniamus ad Chriſtũ, ut Paulus. Hic uide quàm</orig>
-          <reg type="contemporary">modo ueniamus ad Christum, ut Paulus. Hic uide quam</reg>
+          <reg type="normalized">modo ueniamus ad Christum, ut Paulus. Hic uide quam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_23_ligne_5"/>
         <choice>
           <orig>ſint omnia dei, ut hic nihil præſumas, ſicut illi qui ſtul¬</orig>
-          <reg type="contemporary">sint omnia dei, ut hic nihil praesumas, sicut illi qui stul-</reg>
+          <reg type="normalized">sint omnia dei, ut hic nihil praesumas, sicut illi qui stul-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_line_24_ligne_6"/>
         <choice>
           <orig>tè putãt ſeſe poſſe ad Chriſtum aditũ habere quãdo¬</orig>
-          <reg type="contemporary">te putant sese posse ad Christum aditum habere quando-</reg>
+          <reg type="normalized">te putant sese posse ad Christum aditum habere quando-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00162_eSc_line_ee310024_ligne_7"/>
         <choice>
           <orig>cun uolunt, contra Paulit, dicentẽ: Non eſt uolẽtis,</orig>
-          <reg type="contemporary">cunque  uolunt, contra Paulit, dicentem: Non est uolentis,</reg>
+          <reg type="normalized">cunque  uolunt, contra Paulit, dicentem: Non est uolentis,</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00162_eSc_textblock_3883d011" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00162_line_25_ligne_2"/>
         <choice>
           <orig>Rhom.9</orig>
-          <reg type="contemporary">Rhom.9</reg>
+          <reg type="normalized">Rhom.9</reg>
         </choice>
       </note>
       <pb corresp="fbsb00027764_00163"/>
@@ -3740,7 +3749,7 @@
           <lb corresp="#fbsb00027764_00163_line_0_ligne_2"/>
           <choice>
             <orig>IN EPI. PAV. AD TIM. I.</orig>
-            <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+            <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
           </choice>
         </hi>
       </fw>
@@ -3748,183 +3757,183 @@
         <lb corresp="#fbsb00027764_00163_eSc_line_f0734a0e_ligne_2"/>
         <choice>
           <orig>82</orig>
-          <reg type="contemporary">82</reg>
+          <reg type="normalized">82</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00163_block_0" type="QuireMarksZone">
         <lb corresp="#fbsb00027764_00163_line_26_ligne_2"/>
         <choice>
           <orig>2</orig>
-          <reg type="contemporary">2</reg>
+          <reg type="normalized">2</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_eSc_line_c4123b10_ligne_3"/>
         <choice>
           <orig>l</orig>
-          <reg type="contemporary">l</reg>
+          <reg type="normalized">l</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00163_block_6" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00163_line_1_ligne_2"/>
         <choice>
           <orig>ne currentis, ſed &amp;c. Primum dicit, qui me potẽtem,</orig>
-          <reg type="contemporary">neque  currentis, sed etc. Primum dicit, qui me potentem,</reg>
+          <reg type="normalized">neque  currentis, sed etc. Primum dicit, qui me potentem,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_2_ligne_3"/>
         <choice>
           <orig>reddidit per Chriſtũ: déinde, qui me fidelẽ iudicauit.</orig>
-          <reg type="contemporary">reddidit per Christum: deinde, qui me fidelem iudicauit.</reg>
+          <reg type="normalized">reddidit per Christum: deinde, qui me fidelem iudicauit.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_3_ligne_4"/>
         <choice>
           <orig>item, miſericordiã adeptus: itẽ, exuberauit ſupra mo¬</orig>
-          <reg type="contemporary">item, misericordiam adeptus: item, exuberauit supra mo-</reg>
+          <reg type="normalized">item, misericordiam adeptus: item, exuberauit supra mo-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_4_ligne_5"/>
         <choice>
           <orig>dum gratia &amp;c. itẽ: Chriſtus uenit peccatores ſaluos.</orig>
-          <reg type="contemporary">dum gratia etc. item: Christus uenit peccatores saluos.</reg>
+          <reg type="normalized">dum gratia etc. item: Christus uenit peccatores saluos.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_5_ligne_6"/>
         <choice>
           <orig>facere, &amp;c. Nõ nobis domine nõ nobis, ſed nomini tuo</orig>
-          <reg type="contemporary">facere, etc. Non nobis domine non nobis, sed nomini tuo</reg>
+          <reg type="normalized">facere, etc. Non nobis domine non nobis, sed nomini tuo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_6_ligne_7"/>
         <choice>
           <orig>da gloriã. Super miſericordia tua &amp; ueritate tua. id</orig>
-          <reg type="contemporary">da gloriam. Super misericordia tua et ueritate tua. id</reg>
+          <reg type="normalized">da gloriam. Super misericordia tua et ueritate tua. id</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_7_ligne_8"/>
         <choice>
           <orig>quod Paulus hic ſic dicit: Regi autem ſeculorum, &amp;c.</orig>
-          <reg type="contemporary">quod Paulus hic sic dicit: Regi autem seculorum, etc.</reg>
+          <reg type="normalized">quod Paulus hic sic dicit: Regi autem seculorum, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00163_eSc_textblock_824019f5" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00163_line_8_ligne_2"/>
         <choice>
           <orig>immortali regi.</orig>
-          <reg type="contemporary">immortali regi.</reg>
+          <reg type="normalized">immortali regi.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00163_block_4" type="MainZone-P">
         <lb corresp="#fbsb00027764_00163_line_9_ligne_2"/>
         <choice>
           <orig>Ergo regnum eius eſt in æternũ. Inuiſibile ergo re¬</orig>
-          <reg type="contemporary">Ergo regnum eius est in aeternum. Inuisibile ergo re-</reg>
+          <reg type="normalized">Ergo regnum eius est in aeternum. Inuisibile ergo re-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_10_ligne_3"/>
         <choice>
           <orig>gnum eius non eſt de hoc mundo, ſed ſpirituale. Soliſa¬</orig>
-          <reg type="contemporary">gnum eius non est de hoc mundo, sed spirituale. Solisa-</reg>
+          <reg type="normalized">gnum eius non est de hoc mundo, sed spirituale. Solisa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_11_ligne_4"/>
         <choice>
           <orig>pienti, ergo præter eum &amp; extra eũ omnia ſunt ſtula¬</orig>
-          <reg type="contemporary">pienti, ergo praeter eum et extra eum omnia sunt stula-</reg>
+          <reg type="normalized">pienti, ergo praeter eum et extra eum omnia sunt stula-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_12_ligne_5"/>
         <choice>
           <orig>ticiæ plena: ut nihil ſapientiæ ueræ ſit, ubi ipſe non il¬</orig>
-          <reg type="contemporary">ticiae plena: ut nihil sapientiae uerae sit, ubi ipse non il-</reg>
+          <reg type="normalized">ticiae plena: ut nihil sapientiae uerae sit, ubi ipse non il-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_13_ligne_6"/>
         <choice>
           <orig>luminat: &amp;, ut ſic dicam, ſapientificat. Et de Chriſto</orig>
-          <reg type="contemporary">luminat: et, ut sic dicam, sapientificat. Et de Christo</reg>
+          <reg type="normalized">luminat: et, ut sic dicam, sapientificat. Et de Christo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_14_ligne_7"/>
         <choice>
           <orig>prædictũ erat, Hiere. 23. Et regnabit rex, &amp; ſapiens</orig>
-          <reg type="contemporary">praedictum erat, Hiere. 23. Et regnabit rex, et sapiens</reg>
+          <reg type="normalized">praedictum erat, Hiere. 23. Et regnabit rex, et sapiens</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_15_ligne_8"/>
         <choice>
           <orig>erit. Ex Heb. ſanctificator erit.</orig>
-          <reg type="contemporary">erit. Ex Hebus  sanctificator erit.</reg>
+          <reg type="normalized">erit. Ex Hebus  sanctificator erit.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00163_eSc_textblock_b4618236" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00163_line_16_ligne_2"/>
         <choice>
           <orig>Iuxta prophetias.</orig>
-          <reg type="contemporary">Iuxta prophetias.</reg>
+          <reg type="normalized">Iuxta prophetias.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00163_block_2" type="MainZone-P">
         <lb corresp="#fbsb00027764_00163_line_17_ligne_2"/>
         <choice>
           <orig>Intelligũt, iuxta ea, quæ ſpiritu prophetiæ ante de</orig>
-          <reg type="contemporary">Intelligunt, iuxta ea, quae spiritu prophetiae ante de</reg>
+          <reg type="normalized">Intelligunt, iuxta ea, quae spiritu prophetiae ante de</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_18_ligne_3"/>
         <choice>
           <orig>hoc cognoui, quando te feci epiſcopũ, ut ſecundũ ea a¬</orig>
-          <reg type="contemporary">hoc cognoui, quando te feci episcopum, ut secundum ea a-</reg>
+          <reg type="normalized">hoc cognoui, quando te feci episcopum, ut secundum ea a-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_19_ligne_4"/>
         <choice>
           <orig>gas. Ego aũt &amp; hic, &amp; infra cap.4. intelligo prophe¬</orig>
-          <reg type="contemporary">gas. Ego aunt et hic, et infra cap.4. intelligo prophe-</reg>
+          <reg type="normalized">gas. Ego aunt et hic, et infra cap.4. intelligo prophe-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_20_ligne_5"/>
         <choice>
           <orig>tias doctrinas ſpiritus dei, ſiue reuelationẽ ſcripturæ,</orig>
-          <reg type="contemporary">tias doctrinas spiritus dei, siue reuelationem scripturae,</reg>
+          <reg type="normalized">tias doctrinas spiritus dei, siue reuelationem scripturae,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_21_ligne_6"/>
         <choice>
           <orig>quam à Paulo uel aliter acceperat Timotheus: ſicut</orig>
-          <reg type="contemporary">quam a Paulo uel aliter acceperat Timotheus: sicut</reg>
+          <reg type="normalized">quam a Paulo uel aliter acceperat Timotheus: sicut</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_22_ligne_7"/>
         <choice>
           <orig>ꝓphetiã accipi diximus in Eſaia. Vnde ex græco hic le¬</orig>
-          <reg type="contemporary">prophetiam accipi diximus in Esaia. Vnde ex graeco hic le-</reg>
+          <reg type="normalized">prophetiam accipi diximus in Esaia. Vnde ex graeco hic le-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_23_ligne_8"/>
         <choice>
           <orig>gi poteſt iuxta ꝓphetias, quæ ad te præceſſerũt: id eſt</orig>
-          <reg type="contemporary">gi potest iuxta prophetias, quae ad te praecesserunt: id est</reg>
+          <reg type="normalized">gi potest iuxta prophetias, quae ad te praecesserunt: id est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_24_ligne_9"/>
         <choice>
           <orig>ut ambules ſecundũ doctrinã quã accepiſti, &amp; quam</orig>
-          <reg type="contemporary">ut ambules secundum doctrinam quam accepisti, et quam</reg>
+          <reg type="normalized">ut ambules secundum doctrinam quam accepisti, et quam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_line_25_ligne_10"/>
         <choice>
           <orig>habes, ut eam ipſam defendas cõtra aliter docentes:</orig>
-          <reg type="contemporary">habes, ut eam ipsam defendas contra aliter docentes:</reg>
+          <reg type="normalized">habes, ut eam ipsam defendas contra aliter docentes:</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00163_eSc_textblock_7d3fd126" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00163_eSc_line_8901fef3_ligne_2"/>
         <choice>
           <orig>Pſal.113</orig>
-          <reg type="contemporary">Psal.113</reg>
+          <reg type="normalized">Psal.113</reg>
         </choice>
       </note>
       <note corresp="#fbsb00027764_00163_eSc_textblock_e42bca80" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00163_eSc_line_c92b5d07_ligne_2"/>
         <choice>
           <orig>vide Anno</orig>
-          <reg type="contemporary">vide Anno</reg>
+          <reg type="normalized">vide Anno</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_eSc_line_218fa885_ligne_3"/>
         <choice>
           <orig>tationes e¬</orig>
-          <reg type="contemporary">tationes e-</reg>
+          <reg type="normalized">tationes e-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_eSc_line_21123b56_ligne_4"/>
         <choice>
           <orig>iuſdẽ in E¬</orig>
-          <reg type="contemporary">iusdem in E-</reg>
+          <reg type="normalized">iusdem in E-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00163_eSc_line_877cc2aa_ligne_5"/>
         <choice>
           <orig>ſaiam.</orig>
-          <reg type="contemporary">saiam.</reg>
+          <reg type="normalized">saiam.</reg>
         </choice>
       </note>
       <pb corresp="fbsb00027764_00164"/>
@@ -3933,7 +3942,7 @@
           <lb corresp="#fbsb00027764_00164_line_0_ligne_2"/>
           <choice>
             <orig>ANNOT. IOANNIS POMERANI</orig>
-            <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+            <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
           </choice>
         </hi>
       </fw>
@@ -3941,134 +3950,134 @@
         <lb corresp="#fbsb00027764_00164_line_1_ligne_2"/>
         <choice>
           <orig>id́ facias in fide, &amp; bona coſcientia, quæ duo ſepara¬</orig>
-          <reg type="contemporary">idquefacias in fide, et bona coscientia, quae duo separa-</reg>
+          <reg type="normalized">idquefacias in fide, et bona coscientia, quae duo separa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_2_ligne_3"/>
         <choice>
           <orig>ri non poſſunt. Nã, ut inquit, qui cõſcientiam bonam</orig>
-          <reg type="contemporary">ri non possunt. Nam, ut inquit, qui conscientiam bonam</reg>
+          <reg type="normalized">ri non possunt. Nam, ut inquit, qui conscientiam bonam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_3_ligne_4"/>
         <choice>
           <orig>repulerunt, id eſt qui audent aliud dicere, aliud́ fa¬</orig>
-          <reg type="contemporary">repulerunt, id est qui audent aliud dicere, aliudquefa-</reg>
+          <reg type="normalized">repulerunt, id est qui audent aliud dicere, aliudquefa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_4_ligne_5"/>
         <choice>
           <orig>cere, quàm quod in corde nouerunt, unde aliquid præ</orig>
-          <reg type="contemporary">cere, quam quod in corde nouerunt, unde aliquid prae</reg>
+          <reg type="normalized">cere, quam quod in corde nouerunt, unde aliquid prae</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_5_ligne_6"/>
         <choice>
           <orig>cæteris uideantur, unde cæteris ſuperiores per cõten¬</orig>
-          <reg type="contemporary">caeteris uideantur, unde caeteris superiores per conten-</reg>
+          <reg type="normalized">caeteris uideantur, unde caeteris superiores per conten-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_6_ligne_7"/>
         <choice>
           <orig>tionem adpareãt: id quod hodie multum uulgare eſt.</orig>
-          <reg type="contemporary">tionem adpareant: id quod hodie multum uulgare est.</reg>
+          <reg type="normalized">tionem adpareant: id quod hodie multum uulgare est.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_7_ligne_8"/>
         <choice>
           <orig>Sed Paulus hic uocat blaſphemiam. Hi, inquit, qui bo¬</orig>
-          <reg type="contemporary">Sed Paulus hic uocat blasphemiam. Hi, inquit, qui bo-</reg>
+          <reg type="normalized">Sed Paulus hic uocat blasphemiam. Hi, inquit, qui bo-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_8_ligne_9"/>
         <choice>
           <orig>nam conſcientiam repulerunt, naufragium fecerunt</orig>
-          <reg type="contemporary">nam conscientiam repulerunt, naufragium fecerunt</reg>
+          <reg type="normalized">nam conscientiam repulerunt, naufragium fecerunt</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_9_ligne_10"/>
         <choice>
           <orig>circa fidem: id eſt, etiam in eo periclitati ſunt, quod</orig>
-          <reg type="contemporary">circa fidem: id est, etiam in eo periclitati sunt, quod</reg>
+          <reg type="normalized">circa fidem: id est, etiam in eo periclitati sunt, quod</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_10_ligne_11"/>
         <choice>
           <orig>intus in corde ſciuerunt, &amp; tandem perdiderunt.</orig>
-          <reg type="contemporary">intus in corde sciuerunt, et tandem perdiderunt.</reg>
+          <reg type="normalized">intus in corde sciuerunt, et tandem perdiderunt.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00164_eSc_textblock_3c045fa3" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00164_line_11_ligne_2"/>
         <choice>
           <orig>Hoc præceptum</orig>
-          <reg type="contemporary">Hoc praeceptum</reg>
+          <reg type="normalized">Hoc praeceptum</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00164_block_1" type="MainZone-P">
         <lb corresp="#fbsb00027764_00164_line_12_ligne_2"/>
         <choice>
           <orig>Scilicet, ut ſupra, ut denuncies quibuſdã &amp;c. ut com¬</orig>
-          <reg type="contemporary">Scilicet, ut supra, ut denuncies quibusdam etc. ut com-</reg>
+          <reg type="normalized">Scilicet, ut supra, ut denuncies quibusdam etc. ut com-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_13_ligne_3"/>
         <choice>
           <orig>mendes gratiam Chriſti peccatoribus, ſicut ego, abſ</orig>
-          <reg type="contemporary">mendes gratiam Christi peccatoribus, sicut ego, absque </reg>
+          <reg type="normalized">mendes gratiam Christi peccatoribus, sicut ego, absque </reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_14_ligne_4"/>
         <choice>
           <orig>operibus legis, &amp;c. Vel potes referre ad hoc quodſe¬</orig>
-          <reg type="contemporary">operibus legis, etc. Vel potes referre ad hoc quodse-</reg>
+          <reg type="normalized">operibus legis, etc. Vel potes referre ad hoc quodse-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_15_ligne_5"/>
         <choice>
           <orig>quitur:ut milites, &amp;c.</orig>
-          <reg type="contemporary">quitur:ut milites, etc.</reg>
+          <reg type="normalized">quitur:ut milites, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00164_eSc_textblock_064670e8" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00164_line_16_ligne_2"/>
         <choice>
           <orig>Hymenæus &amp; Alexander.</orig>
-          <reg type="contemporary">Hymenaeus et Alexander.</reg>
+          <reg type="normalized">Hymenaeus et Alexander.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00164_block_2" type="MainZone-P">
         <lb corresp="#fbsb00027764_00164_line_17_ligne_2"/>
         <choice>
           <orig>Qui ſcientes, contra ueritatem quam ſciuerunt, ſo¬</orig>
-          <reg type="contemporary">Qui scientes, contra ueritatem quam sciuerunt, so-</reg>
+          <reg type="normalized">Qui scientes, contra ueritatem quam sciuerunt, so-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_18_ligne_3"/>
         <choice>
           <orig>Ient contendere.</orig>
-          <reg type="contemporary">Ient contendere.</reg>
+          <reg type="normalized">Ient contendere.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00164_eSc_textblock_7b3947bf" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00164_line_19_ligne_2"/>
         <choice>
           <orig>Tradidi ſatanæ.</orig>
-          <reg type="contemporary">Tradidi satanae.</reg>
+          <reg type="normalized">Tradidi satanae.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00164_block_0" type="MainZone-P">
         <lb corresp="#fbsb00027764_00164_line_20_ligne_2"/>
         <choice>
           <orig>Sicut Corinthium, qui duxerat nouercam ſuam: de</orig>
-          <reg type="contemporary">Sicut Corinthium, qui duxerat nouercam suam: de</reg>
+          <reg type="normalized">Sicut Corinthium, qui duxerat nouercam suam: de</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_21_ligne_3"/>
         <choice>
           <orig>quo uide in annotationibus Philippi. Hanc tamen ex¬</orig>
-          <reg type="contemporary">quo uide in annotationibus Philippi. Hanc tamen ex-</reg>
+          <reg type="normalized">quo uide in annotationibus Philippi. Hanc tamen ex-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_22_ligne_4"/>
         <choice>
           <orig>communicationem, ſicut &amp; illam, oſtẽdit eſſe utilem,</orig>
-          <reg type="contemporary">communicationem, sicut et illam, ostendit esse utilem,</reg>
+          <reg type="normalized">communicationem, sicut et illam, ostendit esse utilem,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_23_ligne_5"/>
         <choice>
           <orig>cum dicit: Vt diſcant nõ blaſphemare. Hæc non eſt pa¬</orig>
-          <reg type="contemporary">cum dicit: Vt discant non blasphemare. Haec non est pa-</reg>
+          <reg type="normalized">cum dicit: Vt discant non blasphemare. Haec non est pa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00164_line_24_ligne_6"/>
         <choice>
           <orig>piſtica, quam hodie uidemus excommunicatio, &amp;t,</orig>
-          <reg type="contemporary">pistica, quam hodie uidemus excommunicatio, ett,</reg>
+          <reg type="normalized">pistica, quam hodie uidemus excommunicatio, ett,</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00165"/>
@@ -4077,7 +4086,7 @@
           <lb corresp="#fbsb00027764_00165_line_0_ligne_2"/>
           <choice>
             <orig>IN EPI. PAV. AD TIM. PRI.</orig>
-            <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+            <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
           </choice>
         </hi>
       </fw>
@@ -4085,21 +4094,21 @@
         <lb corresp="#fbsb00027764_00165_eSc_line_23266248_ligne_2"/>
         <choice>
           <orig>83</orig>
-          <reg type="contemporary">83</reg>
+          <reg type="normalized">83</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00165_eSc_textblock_8cc0448c" type="QuireMarksZone">
         <lb corresp="#fbsb00027764_00165_eSc_line_feaea14e_ligne_2"/>
         <choice>
           <orig>l 3</orig>
-          <reg type="contemporary">l 3</reg>
+          <reg type="normalized">l 3</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00165_eSc_textblock_b9570500" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00165_line_1_ligne_2"/>
         <choice>
           <orig>CAPVT II.</orig>
-          <reg type="contemporary">CAPVT II.</reg>
+          <reg type="normalized">CAPVT II.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00165_eSc_textblock_3c3a653f" type="DropCapitalZone">
@@ -4107,7 +4116,7 @@
           <lb corresp="#fbsb00027764_00165_eSc_line_7fb710ba_ligne_2"/>
           <choice>
             <orig>O</orig>
-            <reg type="contemporary">O</reg>
+            <reg type="normalized">O</reg>
           </choice>
         </hi>
       </ab>
@@ -4115,134 +4124,134 @@
         <lb corresp="#fbsb00027764_00165_line_2_ligne_2"/>
         <choice>
           <orig>Ratio eſt cordis deſyderium pro re à deo im¬</orig>
-          <reg type="contemporary">Ratio est cordis desyderium pro re a deo im-</reg>
+          <reg type="normalized">Ratio est cordis desyderium pro re a deo im-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_eSc_line_e6d9c122_ligne_3"/>
         <choice>
           <orig>petranda. Hoc deſyderium ſi uerum eſt, nun¬</orig>
-          <reg type="contemporary">petranda. Hoc desyderium si uerum est, nun-</reg>
+          <reg type="normalized">petranda. Hoc desyderium si uerum est, nun-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_4_ligne_4"/>
         <choice>
           <orig>quam ceſſat, donec à deo quod deſyderat, accipit: hoc</orig>
-          <reg type="contemporary">quam cessat, donec a deo quod desyderat, accipit: hoc</reg>
+          <reg type="normalized">quam cessat, donec a deo quod desyderat, accipit: hoc</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_5_ligne_5"/>
         <choice>
           <orig>eſt quod Chriſtus dicit, Oportet ſemper orare, &amp; nõ</orig>
-          <reg type="contemporary">est quod Christus dicit, Oportet semper orare, et non</reg>
+          <reg type="normalized">est quod Christus dicit, Oportet semper orare, et non</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_6_ligne_6"/>
         <choice>
           <orig>deficere. Qui non deſyderat, nihil orat, ut maxime</orig>
-          <reg type="contemporary">deficere. Qui non desyderat, nihil orat, ut maxime</reg>
+          <reg type="normalized">deficere. Qui non desyderat, nihil orat, ut maxime</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_7_ligne_7"/>
         <choice>
           <orig>multiloquio aëra cõpleat: qui uero deſyderat, etiam</orig>
-          <reg type="contemporary">multiloquio aëra compleat: qui uero desyderat, etiam</reg>
+          <reg type="normalized">multiloquio aëra compleat: qui uero desyderat, etiam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_8_ligne_8"/>
         <choice>
           <orig>à uerbis quando nõ abſtinebit. Hinc fit, ut generali</orig>
-          <reg type="contemporary">a uerbis quandoque  non abstinebit. Hinc fit, ut generali</reg>
+          <reg type="normalized">a uerbis quandoque  non abstinebit. Hinc fit, ut generali</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_9_ligne_9"/>
         <choice>
           <orig>uocabulo orationem uocemus quamcun cũ deo col¬</orig>
-          <reg type="contemporary">uocabulo orationem uocemus quamcunque  cum deo col-</reg>
+          <reg type="normalized">uocabulo orationem uocemus quamcunque  cum deo col-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_10_ligne_10"/>
         <choice>
           <orig>locutionem, etiam cum laudamus in pſalmis &amp; canti</orig>
-          <reg type="contemporary">locutionem, etiam cum laudamus in psalmis et canti</reg>
+          <reg type="normalized">locutionem, etiam cum laudamus in psalmis et canti</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_11_ligne_11"/>
         <choice>
           <orig>cis ſpiritualibus: id eſt, quæ fiunt incordibus. Nam ut</orig>
-          <reg type="contemporary">cis spiritualibus: id est, quae fiunt incordibus. Nam ut</reg>
+          <reg type="normalized">cis spiritualibus: id est, quae fiunt incordibus. Nam ut</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_12_ligne_12"/>
         <choice>
           <orig>nunquam ceſſamus deſyderare miſericordiam &amp; no¬</orig>
-          <reg type="contemporary">nunquam cessamus desyderare misericordiam et no-</reg>
+          <reg type="normalized">nunquam cessamus desyderare misericordiam et no-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_13_ligne_13"/>
         <choice>
           <orig>bis &amp; proximis: ita quo ſemper, ne noſtra uidea¬</orig>
-          <reg type="contemporary">bis et proximis: ita quoque  semper, ne nostra uidea-</reg>
+          <reg type="normalized">bis et proximis: ita quoque  semper, ne nostra uidea-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_14_ligne_14"/>
         <choice>
           <orig>mur quærere, deſyderamus ſanctificari nomen patris</orig>
-          <reg type="contemporary">mur quaerere, desyderamus sanctificari nomen patris</reg>
+          <reg type="normalized">mur quaerere, desyderamus sanctificari nomen patris</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_15_ligne_15"/>
         <choice>
           <orig>noſtri. In omnibus ad deum fiat uoluntas tua &amp;c. In¬</orig>
-          <reg type="contemporary">nostri. In omnibus ad deum fiat uoluntas tua etc. In-</reg>
+          <reg type="normalized">nostri. In omnibus ad deum fiat uoluntas tua etc. In-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_16_ligne_16"/>
         <choice>
           <orig>ſtruit ergo hic Paulus epiſcopum, quod moneat ſuos</orig>
-          <reg type="contemporary">struit ergo hic Paulus episcopum, quod moneat suos</reg>
+          <reg type="normalized">struit ergo hic Paulus episcopum, quod moneat suos</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_17_ligne_17"/>
         <choice>
           <orig>auditores, nempe hoc, ut in primis orent. Quomodo</orig>
-          <reg type="contemporary">auditores, nempe hoc, ut in primis orent. Quomodo</reg>
+          <reg type="normalized">auditores, nempe hoc, ut in primis orent. Quomodo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_18_ligne_18"/>
         <choice>
           <orig>enim intelligent Euangelium, aut dilectionem conſe¬</orig>
-          <reg type="contemporary">enim intelligent Euangelium, aut dilectionem conse-</reg>
+          <reg type="normalized">enim intelligent Euangelium, aut dilectionem conse-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_19_ligne_19"/>
         <choice>
           <orig>quentur in deum &amp; in proximum, niſi poſtulauerint</orig>
-          <reg type="contemporary">quentur in deum et in proximum, nisi postulauerint</reg>
+          <reg type="normalized">quentur in deum et in proximum, nisi postulauerint</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_20_ligne_20"/>
         <choice>
           <orig>à deo ſpiritum bonum? Vt hac admonitione primum</orig>
-          <reg type="contemporary">a deo spiritum bonum? Vt hac admonitione primum</reg>
+          <reg type="normalized">a deo spiritum bonum? Vt hac admonitione primum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_21_ligne_21"/>
         <choice>
           <orig>omnium diſcant omnia ex deo pendere, cum audiunt</orig>
-          <reg type="contemporary">omnium discant omnia ex deo pendere, cum audiunt</reg>
+          <reg type="normalized">omnium discant omnia ex deo pendere, cum audiunt</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_22_ligne_22"/>
         <choice>
           <orig>omnia à deo poſtulanda. Orent autem pro omnibus</orig>
-          <reg type="contemporary">omnia a deo postulanda. Orent autem pro omnibus</reg>
+          <reg type="normalized">omnia a deo postulanda. Orent autem pro omnibus</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_23_ligne_23"/>
         <choice>
           <orig>hominibus, etiam inimicis: id quod uera poſtulat cha¬</orig>
-          <reg type="contemporary">hominibus, etiam inimicis: id quod uera postulat cha-</reg>
+          <reg type="normalized">hominibus, etiam inimicis: id quod uera postulat cha-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_24_ligne_24"/>
         <choice>
           <orig>ritas. Nec excludant ab oratione reges &amp; principes,</orig>
-          <reg type="contemporary">ritas. Nec excludant ab oratione reges et principes,</reg>
+          <reg type="normalized">ritas. Nec excludant ab oratione reges et principes,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_25_ligne_25"/>
         <choice>
           <orig>licet impios. Primum, ut quam pacẽ eis poſtulamus</orig>
-          <reg type="contemporary">licet impios. Primum, ut quam pacem eis postulamus</reg>
+          <reg type="normalized">licet impios. Primum, ut quam pacem eis postulamus</reg>
         </choice>
         <lb corresp="#fbsb00027764_00165_line_26_ligne_26"/>
         <choice>
           <orig>ueniat quo ad nos, &amp; ſub eis uiuamus in pace, quan¬</orig>
-          <reg type="contemporary">ueniat quoque  ad nos, et sub eis uiuamus in pace, quan-</reg>
+          <reg type="normalized">ueniat quoque  ad nos, et sub eis uiuamus in pace, quan-</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00165_eSc_textblock_10202f34" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00165_eSc_line_c7ae1d84_ligne_2"/>
         <choice>
           <orig>Oratio ꝗd.</orig>
-          <reg type="contemporary">Oratio quod .</reg>
+          <reg type="normalized">Oratio quod .</reg>
         </choice>
       </note>
       <pb corresp="fbsb00027764_00166"/>
@@ -4251,7 +4260,7 @@
           <lb corresp="#fbsb00027764_00166_line_0_ligne_2"/>
           <choice>
             <orig>ANNOT. IOANNIS POMERANI</orig>
-            <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+            <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
           </choice>
         </hi>
       </fw>
@@ -4259,140 +4268,140 @@
         <lb corresp="#fbsb00027764_00166_line_1_ligne_2"/>
         <choice>
           <orig>tum per pietatem ad deum, &amp; honeſtatem ad proxi¬</orig>
-          <reg type="contemporary">tum per pietatem ad deum, et honestatem ad proxi-</reg>
+          <reg type="normalized">tum per pietatem ad deum, et honestatem ad proxi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_2_ligne_3"/>
         <choice>
           <orig>mum liceat. Ne intelligas propter carnis pacẽ, quod</orig>
-          <reg type="contemporary">mum liceat. Ne intelligas propter carnis pacem, quod</reg>
+          <reg type="normalized">mum liceat. Ne intelligas propter carnis pacem, quod</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_3_ligne_4"/>
         <choice>
           <orig>ad homines attinet, cedendum eſſe pietati &amp; fidei, ſi¬</orig>
-          <reg type="contemporary">ad homines attinet, cedendum esse pietati et fidei, si-</reg>
+          <reg type="normalized">ad homines attinet, cedendum esse pietati et fidei, si-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_4_ligne_5"/>
         <choice>
           <orig>ue conſcientiæ. Déinde, quod hoc quo acceptum eſt</orig>
-          <reg type="contemporary">ue conscientiae. Deinde, quod hoc quoque  acceptum est</reg>
+          <reg type="normalized">ue conscientiae. Deinde, quod hoc quoque  acceptum est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_5_ligne_6"/>
         <choice>
           <orig>deo, ut pro omnibus oremus ſine acceptione perſona¬</orig>
-          <reg type="contemporary">deo, ut pro omnibus oremus sine acceptione persona-</reg>
+          <reg type="normalized">deo, ut pro omnibus oremus sine acceptione persona-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_6_ligne_7"/>
         <choice>
           <orig>rũ, ſiue ſint iudæi ſiue gẽtes, ſiue ſerui ſiue |principes.</orig>
-          <reg type="contemporary">rum, siue sint iudaei siue gentes, siue serui siue |principes.</reg>
+          <reg type="normalized">rum, siue sint iudaei siue gentes, siue serui siue |principes.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_7_ligne_8"/>
         <choice>
           <orig>Quia ſicut ipſe ſolus deus eſt, &amp; omniũ ſine acceptio¬</orig>
-          <reg type="contemporary">Quia sicut ipse solus deus est, et omnium sine acceptio-</reg>
+          <reg type="normalized">Quia sicut ipse solus deus est, et omnium sine acceptio-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_8_ligne_9"/>
         <choice>
           <orig>ne dominus: ita oẽs homines uult ad agnitionẽ ſui per¬</orig>
-          <reg type="contemporary">ne dominus: ita oens homines uult ad agnitionem sui per-</reg>
+          <reg type="normalized">ne dominus: ita oens homines uult ad agnitionem sui per-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_9_ligne_10"/>
         <choice>
           <orig>uenire. Quapropter nos neminẽ excipere debemus,</orig>
-          <reg type="contemporary">uenire. Quapropter nos neminem excipere debemus,</reg>
+          <reg type="normalized">uenire. Quapropter nos neminem excipere debemus,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_10_ligne_11"/>
         <choice>
           <orig>ne reges quidẽ impios, cum ipſe neminẽ excipiat. Sic</orig>
-          <reg type="contemporary">ne reges quidem impios, cum ipse neminem excipiat. Sic</reg>
+          <reg type="normalized">ne reges quidem impios, cum ipse neminem excipiat. Sic</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_11_ligne_12"/>
         <choice>
           <orig>pratur ꝓ Nabuchodonoſore, &amp; Balthaſaro, Baruch.</orig>
-          <reg type="contemporary">pratur pro Nabuchodonosore, et Balthasaro, Baruch.</reg>
+          <reg type="normalized">pratur pro Nabuchodonosore, et Balthasaro, Baruch.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_12_ligne_13"/>
         <choice>
           <orig>1.Itẽ, quia unus eſt mediator inter deũ &amp; hominem,</orig>
-          <reg type="contemporary">1.Item, quia unus est mediator inter deum et hominem,</reg>
+          <reg type="normalized">1.Item, quia unus est mediator inter deum et hominem,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_13_ligne_14"/>
         <choice>
           <orig>qui ſe dedit redemptorem pro omnibus. Ergo rurſum</orig>
-          <reg type="contemporary">qui se dedit redemptorem pro omnibus. Ergo rursum</reg>
+          <reg type="normalized">qui se dedit redemptorem pro omnibus. Ergo rursum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_14_ligne_15"/>
         <choice>
           <orig>nos neminem excludere debemus, cum oramus pro ſa¬</orig>
-          <reg type="contemporary">nos neminem excludere debemus, cum oramus pro sa-</reg>
+          <reg type="normalized">nos neminem excludere debemus, cum oramus pro sa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_16_ligne_16"/>
         <choice>
           <orig>lute hominum, &amp;c. ſcientes hoc ipſum &amp; deo patri,</orig>
-          <reg type="contemporary">lute hominum, etc. scientes hoc ipsum et deo patri,</reg>
+          <reg type="normalized">lute hominum, etc. scientes hoc ipsum et deo patri,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_17_ligne_17"/>
         <choice>
           <orig>&amp; Chriſto, quem pater dedit mediatorem, placere.</orig>
-          <reg type="contemporary">et Christo, quem pater dedit mediatorem, placere.</reg>
+          <reg type="normalized">et Christo, quem pater dedit mediatorem, placere.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00166_eSc_textblock_42fa8a53" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00166_line_18_ligne_2"/>
         <choice>
           <orig>Deprecationes.</orig>
-          <reg type="contemporary">Deprecationes.</reg>
+          <reg type="normalized">Deprecationes.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00166_block_1" type="MainZone-P">
         <lb corresp="#fbsb00027764_00166_line_19_ligne_2"/>
         <choice>
           <orig>Sic diſtinguũt, ut deprecari ſit orare, ut malũ aufe¬</orig>
-          <reg type="contemporary">Sic distinguunt, ut deprecari sit orare, ut malum aufe-</reg>
+          <reg type="normalized">Sic distinguunt, ut deprecari sit orare, ut malum aufe-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_20_ligne_3"/>
         <choice>
           <orig>ratur, obſecrare ut bonũ ueniat, interpellari, conque¬</orig>
-          <reg type="contemporary">ratur, obsecrare ut bonum ueniat, interpellari, conque-</reg>
+          <reg type="normalized">ratur, obsecrare ut bonum ueniat, interpellari, conque-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_21_ligne_4"/>
         <choice>
           <orig>ri de his quæ nos lædunt: gratias agere de beneficijs</orig>
-          <reg type="contemporary">ri de his quae nos laedunt: gratias agere de beneficiis</reg>
+          <reg type="normalized">ri de his quae nos laedunt: gratias agere de beneficiis</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_22_ligne_5"/>
         <choice>
           <orig>acceptis: id quod ferè rationes uocabulorũ poſtulãt.</orig>
-          <reg type="contemporary">acceptis: id quod fere rationes uocabulorum postulant.</reg>
+          <reg type="normalized">acceptis: id quod fere rationes uocabulorum postulant.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00166_eSc_textblock_02e0858e" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00166_line_23_ligne_2"/>
         <choice>
           <orig>Omnes uult ſaluos fieri.</orig>
-          <reg type="contemporary">Omnes uult saluos fieri.</reg>
+          <reg type="normalized">Omnes uult saluos fieri.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00166_block_2" type="MainZone-P">
         <lb corresp="#fbsb00027764_00166_line_24_ligne_2"/>
         <choice>
           <orig>Cũctos homines uult ſaluos fieri, ſiue ſeruari, &amp; ad</orig>
-          <reg type="contemporary">Cunctos homines uult saluos fieri, siue seruari, et ad</reg>
+          <reg type="normalized">Cunctos homines uult saluos fieri, siue seruari, et ad</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_26_ligne_3"/>
         <choice>
           <orig>agnitionẽ ueritatis peruenire: ergo iuſſi ſunt apoſto¬</orig>
-          <reg type="contemporary">agnitionem ueritatis peruenire: ergo iussi sunt aposto-</reg>
+          <reg type="normalized">agnitionem ueritatis peruenire: ergo iussi sunt aposto-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_27_ligne_4"/>
         <choice>
           <orig>li prædicare Euangelium omni creaturæ: Sed multi</orig>
-          <reg type="contemporary">li praedicare Euangelium omni creaturae: Sed multi</reg>
+          <reg type="normalized">li praedicare Euangelium omni creaturae: Sed multi</reg>
         </choice>
         <lb corresp="#fbsb00027764_00166_line_28_ligne_5"/>
         <choice>
           <orig>ſunt uocati, pauci uero electi Quomodo autẽ hoc con¬</orig>
-          <reg type="contemporary">sunt uocati, pauci uero electi Quomodo autem hoc con-</reg>
+          <reg type="normalized">sunt uocati, pauci uero electi Quomodo autem hoc con-</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00167"/>
@@ -4400,169 +4409,169 @@
         <lb corresp="#fbsb00027764_00167_line_0_ligne_2"/>
         <choice>
           <orig>IN EPI. PAV. AD TIM. I.</orig>
-          <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+          <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00167_eSc_textblock_5cf8ad92" type="NumberingZone">
         <lb corresp="#fbsb00027764_00167_eSc_line_1e9a4823_ligne_2"/>
         <choice>
           <orig>84</orig>
-          <reg type="contemporary">84</reg>
+          <reg type="normalized">84</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00167_block_0" type="QuireMarksZone">
         <lb corresp="#fbsb00027764_00167_eSc_line_74f2aee4_ligne_2"/>
         <choice>
           <orig>l</orig>
-          <reg type="contemporary">l</reg>
+          <reg type="normalized">l</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_27_ligne_3"/>
         <choice>
           <orig>4</orig>
-          <reg type="contemporary">4</reg>
+          <reg type="normalized">4</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00167_block_1" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00167_line_1_ligne_2"/>
         <choice>
           <orig>uenit cũ eo quod Rho. 9. dicit Paulus, Cuius uult miſe¬</orig>
-          <reg type="contemporary">uenit cum eo quod Rho. 9. dicit Paulus, Cuius uult mise-</reg>
+          <reg type="normalized">uenit cum eo quod Rho. 9. dicit Paulus, Cuius uult mise-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_2_ligne_3"/>
         <choice>
           <orig>retur, &amp; quem uult indurat? Reſpõdeo, quod unus lo¬</orig>
-          <reg type="contemporary">retur, et quem uult indurat? Respondeo, quod unus lo-</reg>
+          <reg type="normalized">retur, et quem uult indurat? Respondeo, quod unus lo-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_3_ligne_4"/>
         <choice>
           <orig>cus in ſcripturis obſcurus, non eſt omnibus alijs claris</orig>
-          <reg type="contemporary">cus in scripturis obscurus, non est omnibus aliis claris</reg>
+          <reg type="normalized">cus in scripturis obscurus, non est omnibus aliis claris</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_4_ligne_5"/>
         <choice>
           <orig>obijciendus. Tota ſcriptura habet impios damnari,</orig>
-          <reg type="contemporary">obiiciendus. Tota scriptura habet impios damnari,</reg>
+          <reg type="normalized">obiiciendus. Tota scriptura habet impios damnari,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_5_ligne_6"/>
         <choice>
           <orig>pios ſiue credentes ſaluari: illos iudicio dei, hos miſeri,</orig>
-          <reg type="contemporary">pios siue credentes saluari: illos iudicio dei, hos miseri,</reg>
+          <reg type="normalized">pios siue credentes saluari: illos iudicio dei, hos miseri,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_6_ligne_7"/>
         <choice>
           <orig>cordia. Intelligendum ergo quod dicit, Vult ommes</orig>
-          <reg type="contemporary">cordia. Intelligendum ergo quod dicit, Vult ommes</reg>
+          <reg type="normalized">cordia. Intelligendum ergo quod dicit, Vult ommes</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_7_ligne_8"/>
         <choice>
           <orig>homines ſaluos fieri &amp;c. De hominibus omniũ ſtatu¬</orig>
-          <reg type="contemporary">homines saluos fieri etc. De hominibus omnium statu-</reg>
+          <reg type="normalized">homines saluos fieri etc. De hominibus omnium statu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_8_ligne_9"/>
         <choice>
           <orig>um, id quod hic cohærẽtia textus poſtulat. Orate pro</orig>
-          <reg type="contemporary">um, id quod hic cohaerentia textus postulat. Orate pro</reg>
+          <reg type="normalized">um, id quod hic cohaerentia textus postulat. Orate pro</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_9_ligne_10"/>
         <choice>
           <orig>omnibus, etiam pro regibus &amp;c. quia hoc placet deo:</orig>
-          <reg type="contemporary">omnibus, etiam pro regibus etc. quia hoc placet deo:</reg>
+          <reg type="normalized">omnibus, etiam pro regibus etc. quia hoc placet deo:</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_10_ligne_11"/>
         <choice>
           <orig>qui nullum ſtatum mundi reijcit: quandoquidẽ &amp; iu¬</orig>
-          <reg type="contemporary">qui nullum statum mundi reiicit: quandoquidem et iu-</reg>
+          <reg type="normalized">qui nullum statum mundi reiicit: quandoquidem et iu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_11_ligne_12"/>
         <choice>
           <orig>ſtos reges fuiſſe conſtat:ut Dauidem, Ezechiam, &amp;c.</orig>
-          <reg type="contemporary">stos reges fuisse constat:ut Dauidem, Ezechiam, etc.</reg>
+          <reg type="normalized">stos reges fuisse constat:ut Dauidem, Ezechiam, etc.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_12_ligne_13"/>
         <choice>
           <orig>Omnes ergo hoïes, id eſt ex omnibus ſtatibus homi¬</orig>
-          <reg type="contemporary">Omnes ergo hoïes, id est ex omnibus statibus homi-</reg>
+          <reg type="normalized">Omnes ergo hoïes, id est ex omnibus statibus homi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_13_ligne_14"/>
         <choice>
           <orig>nes, &amp; præterea nõ ſolũ Iudæos, ut ipſi Iudæi putãt:</orig>
-          <reg type="contemporary">nes, et praeterea non solum Iudaeos, ut ipsi Iudaei putant:</reg>
+          <reg type="normalized">nes, et praeterea non solum Iudaeos, ut ipsi Iudaei putant:</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_14_ligne_15"/>
         <choice>
           <orig>ſed &amp; gẽtes per totũ orbem. Sic &amp; de Chriſto dicit:</orig>
-          <reg type="contemporary">sed et gentes per totum orbem. Sic et de Christo dicit:</reg>
+          <reg type="normalized">sed et gentes per totum orbem. Sic et de Christo dicit:</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_15_ligne_16"/>
         <choice>
           <orig>Qui dedit ſemetipſum preciũ redẽptionis pro omni¬</orig>
-          <reg type="contemporary">Qui dedit semetipsum precium redemptionis pro omni-</reg>
+          <reg type="normalized">Qui dedit semetipsum precium redemptionis pro omni-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_16_ligne_17"/>
         <choice>
           <orig>bus. Vide, ſi placet, annotationes. Philippi ad Rho.8.</orig>
-          <reg type="contemporary">bus. Vide, si placet, annotationes. Philippi ad Rho.8.</reg>
+          <reg type="normalized">bus. Vide, si placet, annotationes. Philippi ad Rho.8.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00167_eSc_textblock_c017df6d" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00167_line_17_ligne_2"/>
         <choice>
           <orig>Vnus mediator.</orig>
-          <reg type="contemporary">Vnus mediator.</reg>
+          <reg type="normalized">Vnus mediator.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00167_block_3" type="MainZone-P">
         <lb corresp="#fbsb00027764_00167_line_18_ligne_2"/>
         <choice>
           <orig>Vnde ergo nobis tot mediatores quidam fecerunt</orig>
-          <reg type="contemporary">Vnde ergo nobis tot mediatores quidam fecerunt</reg>
+          <reg type="normalized">Vnde ergo nobis tot mediatores quidam fecerunt</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_19_ligne_3"/>
         <choice>
           <orig>Iine ſcriptura, &amp; ſine uerbo dei? quibus non occur¬</orig>
-          <reg type="contemporary">Iine scriptura, et sine uerbo dei? quibus non occur-</reg>
+          <reg type="normalized">Iine scriptura, et sine uerbo dei? quibus non occur-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_20_ligne_4"/>
         <choice>
           <orig>rit, quod Chriſtus orat pro nobis, &amp; intercedit, ut</orig>
-          <reg type="contemporary">rit, quod Christus orat pro nobis, et intercedit, ut</reg>
+          <reg type="normalized">rit, quod Christus orat pro nobis, et intercedit, ut</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_21_ligne_5"/>
         <choice>
           <orig>mediator: &amp; ſolus mediator inter deũ &amp; hominẽ, ꝗa</orig>
-          <reg type="contemporary">mediator: et solus mediator inter deum et hominem, quam</reg>
+          <reg type="normalized">mediator: et solus mediator inter deum et hominem, quam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_22_ligne_6"/>
         <choice>
           <orig>ſolus eſt deus, &amp; homo: id quod nullus aliorũ ſanctos¬</orig>
-          <reg type="contemporary">solus est deus, et homo: id quod nullus aliorum sanctos-</reg>
+          <reg type="normalized">solus est deus, et homo: id quod nullus aliorum sanctos-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_23_ligne_7"/>
         <choice>
           <orig>rum eſſe poteſt. Orant ſancti qui ſunt in terris pro ſe</orig>
-          <reg type="contemporary">rum esse potest. Orant sancti qui sunt in terris pro se</reg>
+          <reg type="normalized">rum esse potest. Orant sancti qui sunt in terris pro se</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_24_ligne_8"/>
         <choice>
           <orig>mutuò, &amp; exaudiũtur à deo, ſed per Chriſtũ media¬</orig>
-          <reg type="contemporary">mutuo, et exaudiuntur a deo, sed per Christum media-</reg>
+          <reg type="normalized">mutuo, et exaudiuntur a deo, sed per Christum media-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_25_ligne_9"/>
         <choice>
           <orig>torem, ſicut ipſe promittit: Si quid petieritis patrem</orig>
-          <reg type="contemporary">torem, sicut ipse promittit: Si quid petieritis patrem</reg>
+          <reg type="normalized">torem, sicut ipse promittit: Si quid petieritis patrem</reg>
         </choice>
         <lb corresp="#fbsb00027764_00167_line_26_ligne_10"/>
         <choice>
           <orig>in nomine meo, hoc faciet, &amp;c. De defunctis ſanctis,</orig>
-          <reg type="contemporary">in nomine meo, hoc faciet, etc. De defunctis sanctis,</reg>
+          <reg type="normalized">in nomine meo, hoc faciet, etc. De defunctis sanctis,</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00167_block_6" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00167_line_29_ligne_2"/>
         <choice>
           <orig>Ioan.16.</orig>
-          <reg type="contemporary">Ioan.16.</reg>
+          <reg type="normalized">Ioan.16.</reg>
         </choice>
       </note>
       <pb corresp="fbsb00027764_00168"/>
@@ -4570,152 +4579,152 @@
         <lb corresp="#fbsb00027764_00168_line_0_ligne_2"/>
         <choice>
           <orig>ANNOT. IOANNIS POMERANI</orig>
-          <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+          <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00168_block_0" type="QuireMarksZone">
         <lb corresp="#fbsb00027764_00168_line_35_ligne_2"/>
         <choice>
           <orig>Proſequitur</orig>
-          <reg type="contemporary">Prosequitur</reg>
+          <reg type="normalized">Prosequitur</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00168_block_1" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00168_line_1_ligne_2"/>
         <choice>
           <orig>qd’orẽt ꝓ te, ſcripturã &amp; uerbũ dei nõ habes. Quan¬</orig>
-          <reg type="contemporary">quod orent pro te, scripturam et uerbum dei non habes. Quan-</reg>
+          <reg type="normalized">quod orent pro te, scripturam et uerbum dei non habes. Quan-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_3_ligne_3"/>
         <choice>
           <orig>do quidẽ ſcriptura Chriſtũ tibi cõmendat põtificẽ qui</orig>
-          <reg type="contemporary">do quidem scriptura Christum tibi commendat pontificem qui</reg>
+          <reg type="normalized">do quidem scriptura Christum tibi commendat pontificem qui</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_4_ligne_4"/>
         <choice>
           <orig>ingreſſus eſt in cœlũ, ut illic ſe offerat uultui patris ꝓ</orig>
-          <reg type="contemporary">ingressus est in coelum, ut illic se offerat uultui patris pro</reg>
+          <reg type="normalized">ingressus est in coelum, ut illic se offerat uultui patris pro</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_5_ligne_5"/>
         <choice>
           <orig>nobis, ut digniſſime tractat epiſtola ad Heb. Qui in¬</orig>
-          <reg type="contemporary">nobis, ut dignissime tractat epistola ad Hebus  Qui in-</reg>
+          <reg type="normalized">nobis, ut dignissime tractat epistola ad Hebus  Qui in-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_7_ligne_6"/>
         <choice>
           <orig>terpellat pronobis, Rho.8. Quẽ aduocatũ habemus</orig>
-          <reg type="contemporary">terpellat pronobis, Rho.8. Quem aduocatum habemus</reg>
+          <reg type="normalized">terpellat pronobis, Rho.8. Quem aduocatum habemus</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_8_ligne_7"/>
         <choice>
           <orig>apud patrẽ, qui eſt propiciatio pro peccatis noſtris,</orig>
-          <reg type="contemporary">apud patrem, qui est propiciatio pro peccatis nostris,</reg>
+          <reg type="normalized">apud patrem, qui est propiciatio pro peccatis nostris,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_9_ligne_8"/>
         <choice>
           <orig>I. Ioan.2. Et propiciatorium noſtrum, ad Rho.3. Et</orig>
-          <reg type="contemporary">I. Ioan.2. Et propiciatorium nostrum, ad Rho.3. Et</reg>
+          <reg type="normalized">I. Ioan.2. Et propiciatorium nostrum, ad Rho.3. Et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_12_ligne_9"/>
         <choice>
           <orig>thronus gratiæ, ad Heb.4. Et præterea ſolum deum</orig>
-          <reg type="contemporary">thronus gratiae, ad Hebus 4. Et praeterea solum deum</reg>
+          <reg type="normalized">thronus gratiae, ad Hebus 4. Et praeterea solum deum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_13_ligne_10"/>
         <choice>
           <orig>inuocandum eſſe tota ſcriptura &amp; præcipit, &amp; teſta¬</orig>
-          <reg type="contemporary">inuocandum esse tota scriptura et praecipit, et testa-</reg>
+          <reg type="normalized">inuocandum esse tota scriptura et praecipit, et testa-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_14_ligne_11"/>
         <choice>
           <orig>tur, nec aliud exẽplum inſcripturis habes. Cur ergo</orig>
-          <reg type="contemporary">tur, nec aliud exemplum inscripturis habes. Cur ergo</reg>
+          <reg type="normalized">tur, nec aliud exemplum inscripturis habes. Cur ergo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_15_ligne_12"/>
         <choice>
           <orig>ad illa deflectis quæ neſcis, relicto illo quod certum ti¬</orig>
-          <reg type="contemporary">ad illa deflectis quae nescis, relicto illo quod certum ti-</reg>
+          <reg type="normalized">ad illa deflectis quae nescis, relicto illo quod certum ti-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_16_ligne_13"/>
         <choice>
           <orig>bi offertur? In iniuriam certe Chriſti alios in cœlo po¬</orig>
-          <reg type="contemporary">bi offertur? In iniuriam certe Christi alios in coelo po-</reg>
+          <reg type="normalized">bi offertur? In iniuriam certe Christi alios in coelo po-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_17_ligne_14"/>
         <choice>
           <orig>ſuerunt mediatores. Et Paulus aperte dicit, vnus de¬</orig>
-          <reg type="contemporary">suerunt mediatores. Et Paulus aperte dicit, vnus de-</reg>
+          <reg type="normalized">suerunt mediatores. Et Paulus aperte dicit, vnus de-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_18_ligne_15"/>
         <choice>
           <orig>us unus mediator.</orig>
-          <reg type="contemporary">us unus mediator.</reg>
+          <reg type="normalized">us unus mediator.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00168_block_4" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00168_line_19_ligne_2"/>
         <choice>
           <orig>Vt eſſet testimoniũ tẽporibus ſuis.</orig>
-          <reg type="contemporary">Vt esset testimonium temporibus suis.</reg>
+          <reg type="normalized">Vt esset testimonium temporibus suis.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00168_block_3" type="MainZone-P">
         <lb corresp="#fbsb00027764_00168_line_21_ligne_2"/>
         <choice>
           <orig>Id eſt, ut hoc myſterium redemptiomis Chriſti, qua</orig>
-          <reg type="contemporary">Id est, ut hoc mysterium redemptiomis Christi, qua</reg>
+          <reg type="normalized">Id est, ut hoc mysterium redemptiomis Christi, qua</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_22_ligne_3"/>
         <choice>
           <orig>redimuntur omnes homines: id eſt non ſolũ Iudei, ſed</orig>
-          <reg type="contemporary">redimuntur omnes homines: id est non solum Iudei, sed</reg>
+          <reg type="normalized">redimuntur omnes homines: id est non solum Iudei, sed</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_23_ligne_4"/>
         <choice>
           <orig>etiam gentes, reuelaretur mũdo, tempore à deo ordi¬</orig>
-          <reg type="contemporary">etiam gentes, reuelaretur mundo, tempore a deo ordi-</reg>
+          <reg type="normalized">etiam gentes, reuelaretur mundo, tempore a deo ordi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_24_ligne_5"/>
         <choice>
           <orig>nato: ſicut de hoc myſterio reuelando in epiſtola ad</orig>
-          <reg type="contemporary">nato: sicut de hoc mysterio reuelando in epistola ad</reg>
+          <reg type="normalized">nato: sicut de hoc mysterio reuelando in epistola ad</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_27_ligne_6"/>
         <choice>
           <orig>Ephe. &amp; alibi ſcribit, &amp; hic infra cap.3. Ad quod my¬</orig>
-          <reg type="contemporary">Ephe. et alibi scribit, et hic infra cap.3. Ad quod my-</reg>
+          <reg type="normalized">Ephe. et alibi scribit, et hic infra cap.3. Ad quod my-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_28_ligne_7"/>
         <choice>
           <orig>ſterium reuelandum dicit Paulus ſe doctorẽ miſſum à</orig>
-          <reg type="contemporary">sterium reuelandum dicit Paulus se doctorem missum à</reg>
+          <reg type="normalized">sterium reuelandum dicit Paulus se doctorem missum à</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_30_ligne_8"/>
         <choice>
           <orig>deo gẽtibus. Doctorẽ inquam in fide, nõ doctrinis le¬</orig>
-          <reg type="contemporary">deo gentibus. Doctorem inquam in fide, non doctrinis le-</reg>
+          <reg type="normalized">deo gentibus. Doctorem inquam in fide, non doctrinis le-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_31_ligne_9"/>
         <choice>
           <orig>gis, &amp; ueritate, nõ hypocriſi operũ. Veritas eſt fides,</orig>
-          <reg type="contemporary">gis, et ueritate, non hypocrisi operum. Veritas est fides,</reg>
+          <reg type="normalized">gis, et ueritate, non hypocrisi operum. Veritas est fides,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_32_ligne_10"/>
         <choice>
           <orig>ubi creditur non hominũ doctrinis (omnis enim homo</orig>
-          <reg type="contemporary">ubi creditur non hominum doctrinis (omnis enim homo</reg>
+          <reg type="normalized">ubi creditur non hominum doctrinis (omnis enim homo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00168_line_33_ligne_11"/>
         <choice>
           <orig>mendax) ſed ſoli uerbo dei: qui eſt ipſa ueritas, &amp;c.</orig>
-          <reg type="contemporary">mendax) sed soli uerbo dei: qui est ipsa ueritas, etc.</reg>
+          <reg type="normalized">mendax) sed soli uerbo dei: qui est ipsa ueritas, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00168_eSc_textblock_d6327d74" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00168_line_34_ligne_2"/>
         <choice>
           <orig>Volo uiros orare.</orig>
-          <reg type="contemporary">Volo uiros orare.</reg>
+          <reg type="normalized">Volo uiros orare.</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00169"/>
@@ -4723,158 +4732,158 @@
         <lb corresp="#fbsb00027764_00169_line_0_ligne_2"/>
         <choice>
           <orig>IN EPI. PAVLI AD TIM. I.</orig>
-          <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+          <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00169_eSc_textblock_63b025eb" type="NumberingZone">
         <lb corresp="#fbsb00027764_00169_eSc_line_08cd8a0d_ligne_2"/>
         <choice>
           <orig>85</orig>
-          <reg type="contemporary">85</reg>
+          <reg type="normalized">85</reg>
         </choice>
       </fw>
       <fw corresp="#fbsb00027764_00169_eSc_textblock_eee3c717" type="QuireMarksZone">
         <lb corresp="#fbsb00027764_00169_eSc_line_15bb43a6_ligne_2"/>
         <choice>
           <orig>l</orig>
-          <reg type="contemporary">l</reg>
+          <reg type="normalized">l</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_eSc_line_5b40241c_ligne_3"/>
         <choice>
           <orig>5</orig>
-          <reg type="contemporary">5</reg>
+          <reg type="normalized">5</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00169_block_1" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00169_line_1_ligne_2"/>
         <choice>
           <orig>Proſequitur qd’œperat de oratione. Vide hic quod</orig>
-          <reg type="contemporary">Prosequitur quod oeperat de oratione. Vide hic quod</reg>
+          <reg type="normalized">Prosequitur quod oeperat de oratione. Vide hic quod</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_2_ligne_3"/>
         <choice>
           <orig>Paulus non requirat templum adorationi: ſed dicit, In</orig>
-          <reg type="contemporary">Paulus non requirat templum adorationi: sed dicit, In</reg>
+          <reg type="normalized">Paulus non requirat templum adorationi: sed dicit, In</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_3_ligne_4"/>
         <choice>
           <orig>omni loco, id eſt, ubicun orauerint, &amp;c. Ne hic ſtru¬</orig>
-          <reg type="contemporary">omni loco, id est, ubicunque  orauerint, etc. Ne hic stru-</reg>
+          <reg type="normalized">omni loco, id est, ubicunque  orauerint, etc. Ne hic stru-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_4_ligne_5"/>
         <choice>
           <orig>as rurſum Paulo calumniam, quod oporteat etiam in</orig>
-          <reg type="contemporary">as rursum Paulo calumniam, quod oporteat etiam in</reg>
+          <reg type="normalized">as rursum Paulo calumniam, quod oporteat etiam in</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_5_ligne_6"/>
         <choice>
           <orig>aquis, in inuijs &amp;c. orare: quia dicit in omni loco, &amp;c.</orig>
-          <reg type="contemporary">aquis, in inuiis etc. orare: quia dicit in omni loco, etc.</reg>
+          <reg type="normalized">aquis, in inuiis etc. orare: quia dicit in omni loco, etc.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_6_ligne_7"/>
         <choice>
           <orig>Potuerã &amp; hoc quo quod ſupra dixi, Vult omnes</orig>
-          <reg type="contemporary">Potueram et hoc quoque  quod supra dixi, Vult omnes</reg>
+          <reg type="normalized">Potueram et hoc quoque  quod supra dixi, Vult omnes</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_7_ligne_8"/>
         <choice>
           <orig>homines ſaluos fieri: ſic interpretari, id eſt, quotquot</orig>
-          <reg type="contemporary">homines saluos fieri: sic interpretari, id est, quotquot</reg>
+          <reg type="normalized">homines saluos fieri: sic interpretari, id est, quotquot</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_8_ligne_9"/>
         <choice>
           <orig>ſaluãtur, eius uolũtate ſaluantur, ſicut Ioannis I. Illu¬</orig>
-          <reg type="contemporary">saluantur, eius uoluntate saluantur, sicut Ioannis I. Illu-</reg>
+          <reg type="normalized">saluantur, eius uoluntate saluantur, sicut Ioannis I. Illu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_9_ligne_10"/>
         <choice>
           <orig>minans omnẽ hominẽ &amp;c. id eſt quotquot illuminan¬</orig>
-          <reg type="contemporary">minans omnem hominem etc. id est quotquot illuminan-</reg>
+          <reg type="normalized">minans omnem hominem etc. id est quotquot illuminan-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_10_ligne_11"/>
         <choice>
           <orig>tur, à deo illuminantur: ſicut &amp; hic, Volo uiros orare</orig>
-          <reg type="contemporary">tur, a deo illuminantur: sicut et hic, Volo uiros orare</reg>
+          <reg type="normalized">tur, a deo illuminantur: sicut et hic, Volo uiros orare</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_11_ligne_12"/>
         <choice>
           <orig>in omni loco:id eſt, ubicun orauerint. Si uidiſſem ad</orig>
-          <reg type="contemporary">in omni loco:id est, ubicunque  orauerint. Si uidissem ad</reg>
+          <reg type="normalized">in omni loco:id est, ubicunque  orauerint. Si uidissem ad</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_eSc_line_0f92c450_ligne_13"/>
         <choice>
           <orig>contextũ orationis pertinere, ut uideas uel hoc loco,</orig>
-          <reg type="contemporary">contextum orationis pertinere, ut uideas uel hoc loco,</reg>
+          <reg type="normalized">contextum orationis pertinere, ut uideas uel hoc loco,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_12_ligne_14"/>
         <choice>
           <orig>qd’ſcriptura nihili facit ſophiſticas cauillationes. Qui</orig>
-          <reg type="contemporary">quod scriptura nihili facit sophisticas cauillationes. Qui</reg>
+          <reg type="normalized">quod scriptura nihili facit sophisticas cauillationes. Qui</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_13_ligne_15"/>
         <choice>
           <orig>credit, credat. Argutijs enim illis, deiſpiritus nõ conci¬</orig>
-          <reg type="contemporary">credit, credat. Argutiis enim illis, deispiritus non conci-</reg>
+          <reg type="normalized">credit, credat. Argutiis enim illis, deispiritus non conci-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_14_ligne_16"/>
         <choice>
           <orig>pitur. Summa ergo (ut hoc rurſum ingerã) ſuperioris</orig>
-          <reg type="contemporary">pitur. Summa ergo (ut hoc rursum ingeram) superioris</reg>
+          <reg type="normalized">pitur. Summa ergo (ut hoc rursum ingeram) superioris</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_15_ligne_17"/>
         <choice>
           <orig>loci ex cõtextu orationis petẽda eſt. Orate pro omni¬</orig>
-          <reg type="contemporary">loci ex contextu orationis petenda est. Orate pro omni-</reg>
+          <reg type="normalized">loci ex contextu orationis petenda est. Orate pro omni-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_16_ligne_18"/>
         <choice>
           <orig>um hominũ ſtatu ſiue cõditione. Nã deus nullũ ſtatum</orig>
-          <reg type="contemporary">um hominum statu siue conditione. Nam deus nullum statum</reg>
+          <reg type="normalized">um hominum statu siue conditione. Nam deus nullum statum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_17_ligne_19"/>
         <choice>
           <orig>reijcit, &amp; Chriſtus non ſolũ pro Iudæis, ſed etiam pro</orig>
-          <reg type="contemporary">reiicit, et Christus non solum pro Iudaeis, sed etiam pro</reg>
+          <reg type="normalized">reiicit, et Christus non solum pro Iudaeis, sed etiam pro</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_18_ligne_20"/>
         <choice>
           <orig>gentibus, cuiuſcun cõditionis exiſtant, mortuus eſt.</orig>
-          <reg type="contemporary">gentibus, cuiuscunque  conditionis existant, mortuus est.</reg>
+          <reg type="normalized">gentibus, cuiuscunque  conditionis existant, mortuus est.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_19_ligne_21"/>
         <choice>
           <orig>Aduerte, qd’uiros uult orare cũ pietate, mulieres ue¬</orig>
-          <reg type="contemporary">Aduerte, quod uiros uult orare cum pietate, mulieres ue-</reg>
+          <reg type="normalized">Aduerte, quod uiros uult orare cum pietate, mulieres ue-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_20_ligne_22"/>
         <choice>
           <orig>ro nõ ſolum cum pietate, ſed &amp; cum ueſtitu &amp; opere</orig>
-          <reg type="contemporary">ro non solum cum pietate, sed et cum uestitu et opere</reg>
+          <reg type="normalized">ro non solum cum pietate, sed et cum uestitu et opere</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_21_ligne_23"/>
         <choice>
           <orig>profitentes pietatem, ut etiam ipſo aſpectu uideãtur</orig>
-          <reg type="contemporary">profitentes pietatem, ut etiam ipso aspectu uideantur</reg>
+          <reg type="normalized">profitentes pietatem, ut etiam ipso aspectu uideantur</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_22_ligne_24"/>
         <choice>
           <orig>eſſe Chriſtianæ: &amp; exemplumſint caſtitatis &amp; uere¬</orig>
-          <reg type="contemporary">esse Christianae: et exemplumsint castitatis et uere-</reg>
+          <reg type="normalized">esse Christianae: et exemplumsint castitatis et uere-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_23_ligne_25"/>
         <choice>
           <orig>cundiæ, ne auertant uirorum animos, ubi ad orationẽ</orig>
-          <reg type="contemporary">cundiae, ne auertant uirorum animos, ubi ad orationem</reg>
+          <reg type="normalized">cundiae, ne auertant uirorum animos, ubi ad orationem</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_24_ligne_26"/>
         <choice>
           <orig>publicam cõuenitur. Nam publicam etiam orationem</orig>
-          <reg type="contemporary">publicam conuenitur. Nam publicam etiam orationem</reg>
+          <reg type="normalized">publicam conuenitur. Nam publicam etiam orationem</reg>
         </choice>
         <lb corresp="#fbsb00027764_00169_line_25_ligne_27"/>
         <choice>
           <orig>tum habuiſſe Chriſtianos, ubi conueniebant, teſtatur</orig>
-          <reg type="contemporary">tum habuisse Christianos, ubi conueniebant, testatur</reg>
+          <reg type="normalized">tum habuisse Christianos, ubi conueniebant, testatur</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00170"/>
@@ -4882,177 +4891,177 @@
         <lb corresp="#fbsb00027764_00170_line_2_ligne_2"/>
         <choice>
           <orig>ANNOTAT. IOANNIS POM.</orig>
-          <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+          <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00170_block_1" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00170_line_3_ligne_2"/>
         <choice>
           <orig>Iocus Pauli 1.Corin. 14. Si benedixeris ſpiritu, qui</orig>
-          <reg type="contemporary">Iocus Pauli 1.Corin. 14. Si benedixeris spiritu, qui</reg>
+          <reg type="normalized">Iocus Pauli 1.Corin. 14. Si benedixeris spiritu, qui</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_4_ligne_3"/>
         <choice>
           <orig>ſupplet locum idiotæ, quomodo dicet amen ſuper tuã</orig>
-          <reg type="contemporary">supplet locum idiotae, quomodo dicet amen super tuam</reg>
+          <reg type="normalized">supplet locum idiotae, quomodo dicet amen super tuam</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_5_ligne_4"/>
         <choice>
           <orig>benedictionem. Opera uero bona mulierum non ſunt</orig>
-          <reg type="contemporary">benedictionem. Opera uero bona mulierum non sunt</reg>
+          <reg type="normalized">benedictionem. Opera uero bona mulierum non sunt</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_6_ligne_5"/>
         <choice>
           <orig>fuperſtitiones illæ ſtultarum fœminarum, quarũ mul¬</orig>
-          <reg type="contemporary">fuperstitiones illae stultarum foeminarum, quarum mul-</reg>
+          <reg type="normalized">fuperstitiones illae stultarum foeminarum, quarum mul-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_7_ligne_6"/>
         <choice>
           <orig>tas ipſæ excogitarunt, multas uero à ſtultis confeſſo¬</orig>
-          <reg type="contemporary">tas ipsae excogitarunt, multas uero a stultis confesso-</reg>
+          <reg type="normalized">tas ipsae excogitarunt, multas uero a stultis confesso-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_8_ligne_7"/>
         <choice>
           <orig>ribus, quos uocant, &amp; indoctis prædicatoribus didi¬</orig>
-          <reg type="contemporary">ribus, quos uocant, et indoctis praedicatoribus didi-</reg>
+          <reg type="normalized">ribus, quos uocant, et indoctis praedicatoribus didi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_9_ligne_8"/>
         <choice>
           <orig>cerũt. Sed ſunt illa quæ ſcribũtur infra cap.5. Si filios</orig>
-          <reg type="contemporary">cerunt. Sed sunt illa quae scribuntur infra cap.5. Si filios</reg>
+          <reg type="normalized">cerunt. Sed sunt illa quae scribuntur infra cap.5. Si filios</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_10_ligne_9"/>
         <choice>
           <orig>educauerit, ſi fuit hoſpitalis, ſi ſanctorũ pedes lauerit,</orig>
-          <reg type="contemporary">educauerit, si fuit hospitalis, si sanctorum pedes lauerit,</reg>
+          <reg type="normalized">educauerit, si fuit hospitalis, si sanctorum pedes lauerit,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_11_ligne_10"/>
         <choice>
           <orig>ſi adflictis inſeruiuerit, ſi in omni bono opere fuerit</orig>
-          <reg type="contemporary">si adflictis inseruiuerit, si in omni bono opere fuerit</reg>
+          <reg type="normalized">si adflictis inseruiuerit, si in omni bono opere fuerit</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_12_ligne_11"/>
         <choice>
           <orig>adſidua. Et ad Titum 2. Anus ſimiliter &amp; c.1 Petri 3.</orig>
-          <reg type="contemporary">adsidua. Et ad Titum 2. Anus similiter et c.1 Petri 3.</reg>
+          <reg type="normalized">adsidua. Et ad Titum 2. Anus similiter et c.1 Petri 3.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_13_ligne_12"/>
         <choice>
           <orig>Similiter &amp; mulieres, &amp;c.</orig>
-          <reg type="contemporary">Similiter et mulieres, etc.</reg>
+          <reg type="normalized">Similiter et mulieres, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00170_eSc_textblock_b82513f2" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00170_line_14_ligne_2"/>
         <choice>
           <orig>Suſtollentes &amp;c.</orig>
-          <reg type="contemporary">Sustollentes etc.</reg>
+          <reg type="normalized">Sustollentes etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00170_block_3" type="MainZone-P">
         <lb corresp="#fbsb00027764_00170_line_15_ligne_2"/>
         <choice>
           <orig>Habitũ orantium indicat, qui nihil eſt niſi &amp; cor le¬</orig>
-          <reg type="contemporary">Habitum orantium indicat, qui nihil est nisi et cor le-</reg>
+          <reg type="normalized">Habitum orantium indicat, qui nihil est nisi et cor le-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_16_ligne_3"/>
         <choice>
           <orig>uetur ad deum: ſicut in pſalmo dicitur: Ad te domine</orig>
-          <reg type="contemporary">uetur ad deum: sicut in psalmo dicitur: Ad te domine</reg>
+          <reg type="normalized">uetur ad deum: sicut in psalmo dicitur: Ad te domine</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_17_ligne_4"/>
         <choice>
           <orig>leuaui animã meam: id quod hic dicit, Suſtollentes pu¬</orig>
-          <reg type="contemporary">leuaui animam meam: id quod hic dicit, Sustollentes pu-</reg>
+          <reg type="normalized">leuaui animam meam: id quod hic dicit, Sustollentes pu-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_18_ligne_5"/>
         <choice>
           <orig>ras manus. Quorũ enim manus ſanguine plenæ ſunt,</orig>
-          <reg type="contemporary">ras manus. Quorum enim manus sanguine plenae sunt,</reg>
+          <reg type="normalized">ras manus. Quorum enim manus sanguine plenae sunt,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_19_ligne_6"/>
         <choice>
           <orig>illos non uult exaudire dominus, Eſa.1. Puræ manus</orig>
-          <reg type="contemporary">illos non uult exaudire dominus, Esa.1. Purae manus</reg>
+          <reg type="normalized">illos non uult exaudire dominus, Esa.1. Purae manus</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_20_ligne_7"/>
         <choice>
           <orig>non ſunt, niſi cor purumſit, quod ſine fide purum eſſe</orig>
-          <reg type="contemporary">non sunt, nisi cor purumsit, quod sine fide purum esse</reg>
+          <reg type="normalized">non sunt, nisi cor purumsit, quod sine fide purum esse</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_21_ligne_8"/>
         <choice>
           <orig>non poteſt. Fide enim, inquit Petrus, purificans corda</orig>
-          <reg type="contemporary">non potest. Fide enim, inquit Petrus, purificans corda</reg>
+          <reg type="normalized">non potest. Fide enim, inquit Petrus, purificans corda</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_22_ligne_9"/>
         <choice>
           <orig>eorũ, id quod hic dicit, abſ ira &amp; diſceptatiõe. Duo</orig>
-          <reg type="contemporary">eorum, id quod hic dicit, absque  ira et disceptatione. Duo</reg>
+          <reg type="normalized">eorum, id quod hic dicit, absque  ira et disceptatione. Duo</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_23_ligne_10"/>
         <choice>
           <orig>ſunt quæ impediunt exauditionem. Primũ ira, id eſt</orig>
-          <reg type="contemporary">sunt quae impediunt exauditionem. Primum ira, id est</reg>
+          <reg type="normalized">sunt quae impediunt exauditionem. Primum ira, id est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_24_ligne_11"/>
         <choice>
           <orig>quod non dimittis proximo in te peccanti. Nam hanc</orig>
-          <reg type="contemporary">quod non dimittis proximo in te peccanti. Nam hanc</reg>
+          <reg type="normalized">quod non dimittis proximo in te peccanti. Nam hanc</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_25_ligne_12"/>
         <choice>
           <orig>conditionẽ in euangelio ſemper uides adiectam: Si re¬</orig>
-          <reg type="contemporary">conditionem in euangelio semper uides adiectam: Si re-</reg>
+          <reg type="normalized">conditionem in euangelio semper uides adiectam: Si re-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_26_ligne_13"/>
         <choice>
           <orig>miſeris fratri, &amp;c. Alterũ diſceptatio, qua diſceptas</orig>
-          <reg type="contemporary">miseris fratri, etc. Alterum disceptatio, qua disceptas</reg>
+          <reg type="normalized">miseris fratri, etc. Alterum disceptatio, qua disceptas</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_27_ligne_14"/>
         <choice>
           <orig>tecũ, et dubitas nũ ſis exaudiẽdus. Hic quoq; nihil re¬</orig>
-          <reg type="contemporary">tecum, et dubitas num sis exaudiendus. Hic quoque  nihil re-</reg>
+          <reg type="normalized">tecum, et dubitas num sis exaudiendus. Hic quoque  nihil re-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_28_ligne_15"/>
         <choice>
           <orig>cipis, Iacobi. I. Vide Marci II. Credite &amp; accipietis.</orig>
-          <reg type="contemporary">cipis, Iacobi. I. Vide Marci II. Credite et accipietis.</reg>
+          <reg type="normalized">cipis, Iacobi. I. Vide Marci II. Credite et accipietis.</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00170_block_6" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00170_line_0_ligne_2"/>
         <choice>
           <orig>Bona oꝑa</orig>
-          <reg type="contemporary">Bona opera</reg>
+          <reg type="normalized">Bona opera</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_1_ligne_3"/>
         <choice>
           <orig>mulierũ.</orig>
-          <reg type="contemporary">mulierum.</reg>
+          <reg type="normalized">mulierum.</reg>
         </choice>
       </note>
       <note corresp="#fbsb00027764_00170_block_7" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00170_line_29_ligne_2"/>
         <choice>
           <orig>Duo ſunt</orig>
-          <reg type="contemporary">Duo sunt</reg>
+          <reg type="normalized">Duo sunt</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_30_ligne_3"/>
         <choice>
           <orig>quæ impe¬</orig>
-          <reg type="contemporary">quae impe-</reg>
+          <reg type="normalized">quae impe-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_31_ligne_4"/>
         <choice>
           <orig>diunt exau¬</orig>
-          <reg type="contemporary">diunt exau-</reg>
+          <reg type="normalized">diunt exau-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00170_line_32_ligne_5"/>
         <choice>
           <orig>ditionem.</orig>
-          <reg type="contemporary">ditionem.</reg>
+          <reg type="normalized">ditionem.</reg>
         </choice>
       </note>
       <pb corresp="fbsb00027764_00171"/>
@@ -5061,7 +5070,7 @@
           <lb corresp="#fbsb00027764_00171_line_0_ligne_2"/>
           <choice>
             <orig>IN EPI. PAV. AD TIM. I.</orig>
-            <reg type="contemporary">IN EPI. PAV. AD TIM. I.</reg>
+            <reg type="normalized">IN EPI. PAV. AD TIM. I.</reg>
           </choice>
         </hi>
       </fw>
@@ -5069,146 +5078,146 @@
         <lb corresp="#fbsb00027764_00171_eSc_line_2648757c_ligne_2"/>
         <choice>
           <orig>86</orig>
-          <reg type="contemporary">86</reg>
+          <reg type="normalized">86</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00171_eSc_textblock_df512b5a" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00171_line_1_ligne_2"/>
         <choice>
           <orig>Mulier in ſilentio, &amp;c.</orig>
-          <reg type="contemporary">Mulier in silentio, etc.</reg>
+          <reg type="normalized">Mulier in silentio, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00171_block_0" type="MainZone-P">
         <lb corresp="#fbsb00027764_00171_line_2_ligne_2"/>
         <choice>
           <orig>Id eſt, non loquatur, ubi docendi gratia conuenitur,</orig>
-          <reg type="contemporary">Id est, non loquatur, ubi docendi gratia conuenitur,</reg>
+          <reg type="normalized">Id est, non loquatur, ubi docendi gratia conuenitur,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_3_ligne_3"/>
         <choice>
           <orig>ubi audiendum eſt uerbum dei:nam uiris permittitur</orig>
-          <reg type="contemporary">ubi audiendum est uerbum dei:nam uiris permittitur</reg>
+          <reg type="normalized">ubi audiendum est uerbum dei:nam uiris permittitur</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_4_ligne_4"/>
         <choice>
           <orig>Ioqui cum doctore, imò ſi fuerit aſſidenti reuelatum,</orig>
-          <reg type="contemporary">Ioqui cum doctore, imo si fuerit assidenti reuelatum,</reg>
+          <reg type="normalized">Ioqui cum doctore, imo si fuerit assidenti reuelatum,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_5_ligne_5"/>
         <choice>
           <orig>qui prius docebat, taceat, 1. Corin.14. Mulieres uero</orig>
-          <reg type="contemporary">qui prius docebat, taceat, 1. Corin.14. Mulieres uero</reg>
+          <reg type="normalized">qui prius docebat, taceat, 1. Corin.14. Mulieres uero</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_6_ligne_6"/>
         <choice>
           <orig>in eccleſia taceant, ut dicitur ibidẽ: ne ſibi authorita¬</orig>
-          <reg type="contemporary">in ecclesia taceant, ut dicitur ibidem: ne sibi authorita-</reg>
+          <reg type="normalized">in ecclesia taceant, ut dicitur ibidem: ne sibi authorita-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_7_ligne_7"/>
         <choice>
           <orig>tem uendicent in uiros contra legẽ dei, quæ dicit: Sub</orig>
-          <reg type="contemporary">tem uendicent in uiros contra legem dei, quae dicit: Sub</reg>
+          <reg type="normalized">tem uendicent in uiros contra legem dei, quae dicit: Sub</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_8_ligne_8"/>
         <choice>
           <orig>uiri poteſtate eris. Et præterea, Adam eſt creatione</orig>
-          <reg type="contemporary">uiri potestate eris. Et praeterea, Adam est creatione</reg>
+          <reg type="normalized">uiri potestate eris. Et praeterea, Adam est creatione</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_9_ligne_9"/>
         <choice>
           <orig>prior. Item, Mulier eſt ruina uiri: ſalua tamen fiet per</orig>
-          <reg type="contemporary">prior. Item, Mulier est ruina uiri: salua tamen fiet per</reg>
+          <reg type="normalized">prior. Item, Mulier est ruina uiri: salua tamen fiet per</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_10_ligne_10"/>
         <choice>
           <orig>liberorũ generationẽ. Quod opus haud dubie bonũ,</orig>
-          <reg type="contemporary">liberorum generationem. Quod opus haud dubie bonum,</reg>
+          <reg type="normalized">liberorum generationem. Quod opus haud dubie bonum,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_11_ligne_11"/>
         <choice>
           <orig>nemo hodie reſpicit, cũ tamen hic mulier habeat uer¬</orig>
-          <reg type="contemporary">nemo hodie respicit, cum tamen hic mulier habeat uer-</reg>
+          <reg type="normalized">nemo hodie respicit, cum tamen hic mulier habeat uer-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_12_ligne_12"/>
         <choice>
           <orig>bum Pauli, imò dei in Paulo, &amp; in hoc obſequitur deo,</orig>
-          <reg type="contemporary">bum Pauli, imo dei in Paulo, et in hoc obsequitur deo,</reg>
+          <reg type="normalized">bum Pauli, imo dei in Paulo, et in hoc obsequitur deo,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_13_ligne_13"/>
         <choice>
           <orig>qui dicit: In labore paries, &amp;c. Imò hic in dei opere</orig>
-          <reg type="contemporary">qui dicit: In labore paries, etc. Imo hic in dei opere</reg>
+          <reg type="normalized">qui dicit: In labore paries, etc. Imo hic in dei opere</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_14_ligne_14"/>
         <choice>
           <orig>eſt, qui dicit: Multiplicabo conceptus tuos, &amp; æru¬</orig>
-          <reg type="contemporary">est, qui dicit: Multiplicabo conceptus tuos, et aeru-</reg>
+          <reg type="normalized">est, qui dicit: Multiplicabo conceptus tuos, et aeru-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_15_ligne_15"/>
         <choice>
           <orig>mnas tuas, &amp;c. Et additur: Si mãſerint, &amp;c. Sic enim</orig>
-          <reg type="contemporary">mnas tuas, etc. Et additur: Si manserint, etc. Sic enim</reg>
+          <reg type="normalized">mnas tuas, etc. Et additur: Si manserint, etc. Sic enim</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_16_ligne_16"/>
         <choice>
           <orig>eſt in Græco uerbum plurale, quod in ueteri transla¬</orig>
-          <reg type="contemporary">est in Graeco uerbum plurale, quod in ueteri transla-</reg>
+          <reg type="normalized">est in Graeco uerbum plurale, quod in ueteri transla-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_17_ligne_17"/>
         <choice>
           <orig>tiõe nõ inepte legitur in ſingulari, uitato Hebraiſmo.</orig>
-          <reg type="contemporary">tione non inepte legitur in singulari, uitato Hebraismo.</reg>
+          <reg type="normalized">tione non inepte legitur in singulari, uitato Hebraismo.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_18_ligne_18"/>
         <choice>
           <orig>Hebraiſmus enim eſt, ſi manſerint ſcilicet mulieres. de</orig>
-          <reg type="contemporary">Hebraismus enim est, si manserint scilicet mulieres. de</reg>
+          <reg type="normalized">Hebraismus enim est, si manserint scilicet mulieres. de</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_19_ligne_19"/>
         <choice>
           <orig>quibus ſupra dixit. Conſimiliter &amp; mulieres, &amp;c.</orig>
-          <reg type="contemporary">quibus supra dixit. Consimiliter et mulieres, etc.</reg>
+          <reg type="normalized">quibus supra dixit. Consimiliter et mulieres, etc.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_20_ligne_20"/>
         <choice>
           <orig>Hebræos ſubitò mutare numerum, &amp; perſonas, ex</orig>
-          <reg type="contemporary">Hebraeos subito mutare numerum, et personas, ex</reg>
+          <reg type="normalized">Hebraeos subito mutare numerum, et personas, ex</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_21_ligne_21"/>
         <choice>
           <orig>prophetis notum eſt. Nam qui intelligunt, ſi perman¬</orig>
-          <reg type="contemporary">prophetis notum est. Nam qui intelligunt, si perman-</reg>
+          <reg type="normalized">prophetis notum est. Nam qui intelligunt, si perman-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_22_ligne_22"/>
         <choice>
           <orig>ſerint, ſcilicet filij, nõ uidẽt quàm ineptũ hoc ſit, quaſi</orig>
-          <reg type="contemporary">serint, scilicet filii, non uident quam ineptum hoc sit, quasi</reg>
+          <reg type="normalized">serint, scilicet filii, non uident quam ineptum hoc sit, quasi</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_23_ligne_23"/>
         <choice>
           <orig>mulier nõ poſſit ſalua fieri, niſi &amp; filij ſaluẽtur. Igitur</orig>
-          <reg type="contemporary">mulier non possit salua fieri, nisi et filii saluentur. Igitur</reg>
+          <reg type="normalized">mulier non possit salua fieri, nisi et filii saluentur. Igitur</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_24_ligne_24"/>
         <choice>
           <orig>ſi permanſerint, inquit, mulieres in fide, &amp; dilectione</orig>
-          <reg type="contemporary">si permanserint, inquit, mulieres in fide, et dilectione</reg>
+          <reg type="normalized">si permanserint, inquit, mulieres in fide, et dilectione</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_25_ligne_25"/>
         <choice>
           <orig>&amp; ſanctificatione, qua quotidie ſanctiores fiũt, id eſt</orig>
-          <reg type="contemporary">et sanctificatione, qua quotidie sanctiores fiunt, id est</reg>
+          <reg type="normalized">et sanctificatione, qua quotidie sanctiores fiunt, id est</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_26_ligne_26"/>
         <choice>
           <orig>treſcũt fide et dilectione, adiũcta caſtitate, id eſt morũ</orig>
-          <reg type="contemporary">trescunt fide et dilectione, adiuncta castitate, id est morum</reg>
+          <reg type="normalized">trescunt fide et dilectione, adiuncta castitate, id est morum</reg>
         </choice>
         <lb corresp="#fbsb00027764_00171_line_27_ligne_27"/>
         <choice>
           <orig>integritate, quæ etiã deceat corã hominibus. Aduer¬</orig>
-          <reg type="contemporary">integritate, quae etiam deceat coram hominibus. Aduer-</reg>
+          <reg type="normalized">integritate, quae etiam deceat coram hominibus. Aduer-</reg>
         </choice>
       </ab>
       <pb corresp="fbsb00027764_00172"/>
@@ -5216,53 +5225,53 @@
         <lb corresp="#fbsb00027764_00172_line_0_ligne_2"/>
         <choice>
           <orig>ANNOT. IOANNIS POMERANT</orig>
-          <reg type="contemporary">ANNOT. IOANNIS POMERANI</reg>
+          <reg type="normalized">ANNOT. IOANNIS POMERANI</reg>
         </choice>
       </fw>
       <ab corresp="#fbsb00027764_00172_block_3" type="MainZone-P-Continued">
         <lb corresp="#fbsb00027764_00172_line_1_ligne_2"/>
         <choice>
           <orig>e uero &amp; mulieres prophetare, ſi habent uerbum,</orig>
-          <reg type="contemporary">e uero et mulieres prophetare, si habent uerbum,</reg>
+          <reg type="normalized">e uero et mulieres prophetare, si habent uerbum,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_2_ligne_3"/>
         <choice>
           <orig>ubi uiri nõ ſunt qui uerbum habeant. I. ad Corin.11.</orig>
-          <reg type="contemporary">ubi uiri non sunt qui uerbum habeant. I. ad Corin.11.</reg>
+          <reg type="normalized">ubi uiri non sunt qui uerbum habeant. I. ad Corin.11.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_3_ligne_4"/>
         <choice>
           <orig>Mulier orãs aut prophetans, &amp;c. Iohelis 2.legis, Et</orig>
-          <reg type="contemporary">Mulier orans aut prophetans, etc. Iohelis 2.legis, Et</reg>
+          <reg type="normalized">Mulier orans aut prophetans, etc. Iohelis 2.legis, Et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_4_ligne_5"/>
         <choice>
           <orig>prophetabunt filij ueſtri, &amp; filiæ ueſtræ. Actorũ. 21.</orig>
-          <reg type="contemporary">prophetabunt filii uestri, et filiae uestrae. Actorum. 21.</reg>
+          <reg type="normalized">prophetabunt filii uestri, et filiae uestrae. Actorum. 21.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_5_ligne_6"/>
         <choice>
           <orig>Erant Philippo quatuor filiæ uirgines prophetantes.</orig>
-          <reg type="contemporary">Erant Philippo quatuor filiae uirgines prophetantes.</reg>
+          <reg type="normalized">Erant Philippo quatuor filiae uirgines prophetantes.</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_6_ligne_7"/>
         <choice>
           <orig>Et Maria canit Magnificat, &amp;c.</orig>
-          <reg type="contemporary">Et Maria canit Magnificat, etc.</reg>
+          <reg type="normalized">Et Maria canit Magnificat, etc.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00172_eSc_textblock_8c4ac83f" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00172_line_7_ligne_2"/>
         <choice>
           <orig>CAPVT III.</orig>
-          <reg type="contemporary">CAPVT III.</reg>
+          <reg type="normalized">CAPVT III.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00172_eSc_textblock_31b76e5d" type="MainZone-Head">
         <lb corresp="#fbsb00027764_00172_line_8_ligne_2"/>
         <choice>
           <orig>DE EPISCOPIS ET DIACONIS.</orig>
-          <reg type="contemporary">DE EPISCOPIS ET DIACONIS.</reg>
+          <reg type="normalized">DE EPISCOPIS ET DIACONIS.</reg>
         </choice>
       </ab>
       <ab corresp="#fbsb00027764_00172_eSc_textblock_34c2bded" type="DropCapitalZone">
@@ -5270,7 +5279,7 @@
           <lb corresp="#fbsb00027764_00172_eSc_line_9ab48070_ligne_2"/>
           <choice>
             <orig>E</orig>
-            <reg type="contemporary">E</reg>
+            <reg type="normalized">E</reg>
           </choice>
         </hi>
       </ab>
@@ -5278,104 +5287,104 @@
         <lb corresp="#fbsb00027764_00172_line_9_ligne_2"/>
         <choice>
           <orig>Piſcopos eſſe uerbi dei prædicatores ad hoc ele¬</orig>
-          <reg type="contemporary">Piscopos esse uerbi dei praedicatores ad hoc ele-</reg>
+          <reg type="normalized">Piscopos esse uerbi dei praedicatores ad hoc ele-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_10_ligne_3"/>
         <choice>
           <orig>ctos, &amp; diaconos eſſe ſanctorum miniſtros, &amp;</orig>
-          <reg type="contemporary">ctos, et diaconos esse sanctorum ministros, et</reg>
+          <reg type="normalized">ctos, et diaconos esse sanctorum ministros, et</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_11_ligne_4"/>
         <choice>
           <orig>pauperũ prouiſores admonui in principio epiſtolæ ad</orig>
-          <reg type="contemporary">pauperum prouisores admonui in principio epistolae ad</reg>
+          <reg type="normalized">pauperum prouisores admonui in principio epistolae ad</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_12_ligne_5"/>
         <choice>
           <orig>Philip. Hi eligebantur in ciuitate à populo, uel ab Epi¬</orig>
-          <reg type="contemporary">Philip. Hi eligebantur in ciuitate a populo, uel ab Epi-</reg>
+          <reg type="normalized">Philip. Hi eligebantur in ciuitate a populo, uel ab Epi-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_13_ligne_6"/>
         <choice>
           <orig>ſcopo: id eſt, apoſtolo aliquo, ſiue prædicatore, ꝗ illic</orig>
-          <reg type="contemporary">scopo: id est, apostolo aliquo, siue praedicatore, qui illic</reg>
+          <reg type="normalized">scopo: id est, apostolo aliquo, siue praedicatore, qui illic</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_14_ligne_7"/>
         <choice>
           <orig>populũ docuerat: &amp; manere ibi non potuit conſentiẽ</orig>
-          <reg type="contemporary">populum docuerat: et manere ibi non potuit consentiem</reg>
+          <reg type="normalized">populum docuerat: et manere ibi non potuit consentiem</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_15_ligne_8"/>
         <choice>
           <orig>te tum &amp; uolente populo. Eligebantur autem ex ciui¬</orig>
-          <reg type="contemporary">te tum et uolente populo. Eligebantur autem ex ciui-</reg>
+          <reg type="normalized">te tum et uolente populo. Eligebantur autem ex ciui-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_16_ligne_9"/>
         <choice>
           <orig>bus probatiſſimis, quibus erant uxor, filij, familia,</orig>
-          <reg type="contemporary">bus probatissimis, quibus erant uxor, filii, familia,</reg>
+          <reg type="normalized">bus probatissimis, quibus erant uxor, filii, familia,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_17_ligne_10"/>
         <choice>
           <orig>domus cura, &amp;. Sicut nunc conſules eliguntur: ut hic</orig>
-          <reg type="contemporary">domus cura, et. Sicut nunc consules eliguntur: ut hic</reg>
+          <reg type="normalized">domus cura, et. Sicut nunc consules eliguntur: ut hic</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_18_ligne_11"/>
         <choice>
           <orig>uides. Vnde epiſcopatus &amp; diaconatus officia erant,</orig>
-          <reg type="contemporary">uides. Vnde episcopatus et diaconatus officia erant,</reg>
+          <reg type="normalized">uides. Vnde episcopatus et diaconatus officia erant,</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_19_ligne_12"/>
         <choice>
           <orig>non perpetuæ dignitates, ut nunc fabulantur de chara¬</orig>
-          <reg type="contemporary">non perpetuae dignitates, ut nunc fabulantur de chara-</reg>
+          <reg type="normalized">non perpetuae dignitates, ut nunc fabulantur de chara-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_20_ligne_13"/>
         <choice>
           <orig>ctere indelebili. Compone ergo nũc noſtrorũ dignita¬</orig>
-          <reg type="contemporary">ctere indelebili. Compone ergo nunc nostrorum dignita-</reg>
+          <reg type="normalized">ctere indelebili. Compone ergo nunc nostrorum dignita-</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_22_ligne_14"/>
         <choice>
           <orig>tes illorũ officijs, et uidebis apoſtolicã inſtitutionen</orig>
-          <reg type="contemporary">tes illorum officiis, et uidebis apostolicam institutionen</reg>
+          <reg type="normalized">tes illorum officiis, et uidebis apostolicam institutionen</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_23_ligne_15"/>
         <choice>
           <orig>noſtros ignorare. Igitur apoſtolus dat, ſi qui ſint qui</orig>
-          <reg type="contemporary">nostros ignorare. Igitur apostolus dat, si qui sint qui</reg>
+          <reg type="normalized">nostros ignorare. Igitur apostolus dat, si qui sint qui</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_24_ligne_16"/>
         <choice>
           <orig>cupiunt præfici, quẽadmodũ hic deſcribit. Bonũ enim</orig>
-          <reg type="contemporary">cupiunt praefici, quemadmodum hic describit. Bonum enim</reg>
+          <reg type="normalized">cupiunt praefici, quemadmodum hic describit. Bonum enim</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_25_ligne_17"/>
         <choice>
           <orig>opus deſyderant, non ſuam gloriã aut cõmodũ: officia</orig>
-          <reg type="contemporary">opus desyderant, non suam gloriam aut commodum: officia</reg>
+          <reg type="normalized">opus desyderant, non suam gloriam aut commodum: officia</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_26_ligne_18"/>
         <choice>
           <orig>enim ſunt, non dignitates. Eadem penè uides ad Titũ</orig>
-          <reg type="contemporary">enim sunt, non dignitates. Eadem pene uides ad Titum</reg>
+          <reg type="normalized">enim sunt, non dignitates. Eadem pene uides ad Titum</reg>
         </choice>
       </ab>
       <note corresp="#fbsb00027764_00172_block_5" type="MarginTextZone-Notes">
         <lb corresp="#fbsb00027764_00172_line_27_ligne_2"/>
         <choice>
           <orig>epiſcopatus</orig>
-          <reg type="contemporary">episcopatus</reg>
+          <reg type="normalized">episcopatus</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_28_ligne_3"/>
         <choice>
           <orig>officiũ, nõ</orig>
-          <reg type="contemporary">officium, non</reg>
+          <reg type="normalized">officium, non</reg>
         </choice>
         <lb corresp="#fbsb00027764_00172_line_29_ligne_4"/>
         <choice>
           <orig>dignitas eſt</orig>
-          <reg type="contemporary">dignitas est</reg>
+          <reg type="normalized">dignitas est</reg>
         </choice>
       </note>
 

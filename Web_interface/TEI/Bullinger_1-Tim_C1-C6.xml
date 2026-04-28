@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Bullinger_1-Tim_C1-6">
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model "file:/home/floriane/Documents/16thExegesisDH/ReformingPaul/schema/odd-exegesis.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schema/odd-exegesis.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Bullinger_1-Tim_C1-6"
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:sch="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -33,6 +38,10 @@
                <addrLine>CH-1211 Genève</addrLine>
             </address>
             <authority>Theologisches Fakultät, universität Zürich</authority>
+            <address>
+               <addrLine>Kirchgasse 9</addrLine>
+               <addrLine>8001 Zürich</addrLine>
+            </address>
             <availability status="restricted" n="CC-BY">
                <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
@@ -52,7 +61,7 @@
                      <biblStruct>
                         <monogr>
                            <author>
-                              <persName role="exegete" ref="isni:0000000109036374">
+                              <persName role="presumed_author" ref="isni:0000000109036374">
                                  <surname>Heinrich</surname>
                                  <forename>Bullinger</forename>
                               </persName>
@@ -63,7 +72,7 @@
                               <pubPlace cert="medium" ref="geonames:2657896">Zürich</pubPlace>
                               <respStmt>
                                  <resp>Imprimeur</resp>
-                                 <persName role="printer" ref="isni:0000000121270868">
+                                 <persName role="presumed_printer" ref="isni:0000000121270868">
                                     <surname>Froschauer</surname>
                                     <forename>Christoph</forename>
                                  </persName>
@@ -149,7 +158,7 @@
                <term type="segmentation_quality">gold</term>
                <term type="transcription_quality">gold</term>
                <term type="intermediary_reg_quality">not applicable</term>
-               <term type="contemporary_reg_quality">not applicable</term>
+               <term type="normalized_reg_quality">not applicable</term>
                <term type="ling_annotation_quality">not applicable</term>
             </keywords>
          </textClass>
@@ -14366,7 +14375,7 @@
             </zone>
          </zone>
          <zone xml:id="f7325963_block_5"
-               type="NN"
+               type="default"
                n="5"
                ulx="NaN"
                uly="NaN"
@@ -81266,7 +81275,7 @@
                points="445,1122 445,1166 297,1166 297,1122 "
                source="297,1122,148,44/full/0/default.jpg"/>
          <zone xml:id="f7326099_block_5"
-               type="NN"
+               type="default"
                n="5"
                ulx="NaN"
                uly="NaN"
