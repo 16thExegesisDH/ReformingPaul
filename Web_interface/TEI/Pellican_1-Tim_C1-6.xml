@@ -8,7 +8,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Commentarium in epistolam D Pauli Apostoli ad Timotheum primam : [Pellicanus Conrad], [1539]</title>
+            <title> Commentarium in epistolam divi Pauli apostoli ad Timotheum primam. Pellikan, Konrad. Zürich: Christoph Froschauer, 1539</title>
             <respStmt>
                <resp>FNS Paul exegesis projet.</resp>
                <persName xml:id="UZ">
@@ -23,6 +23,13 @@
                   <forename>Floriane</forename>
                   <surname>Goy</surname>
                   <ptr type="orcid" target="0009-0005-9944-035X"/>
+               </persName>
+            </respStmt>
+            <respStmt>
+               <resp>correction of OCR transcription, conversion to TEI, metadata encoding.</resp>
+               <persName xml:id="BD">
+                  <forename>Béatrice</forename>
+                  <surname>Dupuis</surname>
                </persName>
             </respStmt>
          </titleStmt>
@@ -65,9 +72,10 @@
                         <monogr>
                            <author>
                               <persName ref="isni:000000012129718X">
-                                 <surname>Pellicanus</surname>
-                                 <forename>Conrad</forename>
+                                 <surname>Pellikan</surname>
+                                 <forename>Konrad</forename>
                               </persName>
+                              <note><ref target="https://hls-dhs-dss.ch/de/articles/010781/2009-11-25/"></ref>Historische Lexikon der Schweiz (HLS)</note>
                            </author>
                            <title type="book_title">In omnes apostolicas epistolas, Pauli, Petri, Iacobi, Ioannis et Iudae commentarii</title>
                            <title type="commentary_title">Commentarium in epistolam divi Pauli Apostoli ad Timotheum primam</title>
@@ -100,6 +108,7 @@
                   <surrogates>
                      <bibl>
                         <ref target="https://doi.org/10.3931/e-rara-2604"/>
+                        <ptr target="https://www.e-rara.ch/i3f/v20/843605/manifest"/>
                         <relatedItem type="original">
                            <ref target="#ZB_III_B_14">e-rara</ref>
                         </relatedItem>
@@ -108,7 +117,7 @@
                   <listBibl>
                      <bibl>
                         <ref target="https://d-nb.info/gnd/118739867">
-                           <orgName>gnd</orgName>
+                           <orgName>d-nb gnd</orgName>
                            <idno>118739867</idno>
                         </ref>
                      </bibl>
@@ -125,18 +134,18 @@
       </fileDesc>
       <encodingDesc>
          <projectDesc>
-            <p>This digital corpus is part of the 16th Century Exegesis of Paul project, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF.</p>
+            <p>This digital corpus is part of the 16th Century Exegesis of Paul project <ref target="https://www.unige.ch/ihr/fr/recherche/projets/exegese-paulinienne/"/>, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF <ref target="https://data.snf.ch/grants/grant/207696"></ref>.</p>
          </projectDesc>
          <editorialDecl>
             <correction>
-               <p>The segmentation was corrected manually and the transcription from the OCR was corrected. See the OCR construction project:  </p>
+               <p>The segmentation was corrected manually, and the OCR transcription was fully or partially corrected depending on the dataset.</p>
             </correction>
             <normalization>
                <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
             </normalization>
          </editorialDecl>
          <appInfo>
-            <application ident="Kraken" version="4.1">
+            <application ident="Kraken" version="5.3.0">
                <label>Kraken</label>
                <ptr target="https://github.com/mittagessen/kraken"/>
             </application>
@@ -144,7 +153,7 @@
          <appInfo>
             <application ident="FoNDUE" version="0.1">
                <label>FoNDUE</label>
-               <ptr target="https://test2.fondue.unige.ch/"/>
+               <ptr target="https://fondue.unige.ch/"/>
             </application>
          </appInfo>
          <classDecl>
@@ -160,7 +169,7 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="frm">Latin from 16e centuary</language>
+            <language ident="lat">Latin from 16th century</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -168,13 +177,12 @@
                <term type="segmentation_quality">gold</term>
                <term type="transcription_quality">gold</term>
                <term type="intermediary_reg_quality">not applicable</term>
-               <term type="normalized_reg_quality">normalize with a python script</term>
-               <term type="ling_annotation_quality">not applicable</term>
+               <term type="normalized_reg_quality">normalize with a python script<ref target="https://github.com/16thExegesisDH/PipeLineThm/tree/main/PYTHON/normalisation"></ref></term>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2023-10-18" who="#FG">Création du fichier TEI P5.</change>
+         <change when="2026-04-29" who="#FG">Création du fichier TEI P5.</change>
       </revisionDesc>
    </teiHeader>
    <sourceDoc>

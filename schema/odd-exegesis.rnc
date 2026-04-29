@@ -1128,10 +1128,13 @@ measure =
     attribute unit {
       
       ##
-      "total_images"
+      "total_images_book"
       | 
         ##
-        "processed_images"
+        "total_images_commentary"
+      | 
+        ##
+        "processed_images_commentary"
     }?,
     empty
   }
@@ -1302,10 +1305,10 @@ note =
       "MarginTextZone"
       | 
         ##
-        "MarginTextZone:ManuscriptAddendum"
+        "MarginTextZone-ManuscriptAddendum"
       | 
         ##
-        "MarginTextZone:handwrittenAddition"
+        "MarginTextZone-handwrittenAddition"
       | 
         ##
         "MarginTextZone-Notes"
@@ -1564,10 +1567,10 @@ title =
     attribute type {
       
       ##
-      "complete_title"
+      "book_title"
       | 
         ##
-        "short_title"
+        "commentary_title"
     }?,
     (
      ## indicates one or more systems or calendars to which the date represented by the content of this element belongs.
@@ -1627,8 +1630,8 @@ publisher =
            "\x{a}" ~
            "               "
            sch:assert [
-             test = "contains(.,'Projet SETAF')"
-             'The publisher is "Projet SETAF"'
+             test = "contains(.,'16th Century Exegesis of Paul')"
+             'The publisher is "16th Century Exegesis of Paul"'
            ]
            "\x{a}" ~
            "            "
@@ -1966,7 +1969,13 @@ publicationStmt =
   
   ## (publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description]
   element publicationStmt {
-    (publisher, authority, address, availability, date),
+    (publisher,
+     authority,
+     address,
+     authority,
+     address,
+     availability,
+     date),
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.change.attribute.change,
@@ -2583,6 +2592,9 @@ ab =
       | 
         ##
         "MainZone-Continued"
+      | 
+        ##
+        "MainZone-Entry"
       | 
         ##
         "MainZone-P"
@@ -3429,6 +3441,9 @@ zone =
         "MainZone-Continued"
       | 
         ##
+        "MainZone-Entry"
+      | 
+        ##
         "MainZone-Head"
       | 
         ##
@@ -3441,10 +3456,10 @@ zone =
         "MarginTextZone"
       | 
         ##
-        "MarginTextZone:ManuscriptAddendum"
+        "MarginTextZone-ManuscriptAddendum"
       | 
         ##
-        "MarginTextZone:handwrittenAddition"
+        "MarginTextZone-handwrittenAddition"
       | 
         ##
         "MarginTextZone-Notes"
@@ -3466,6 +3481,9 @@ zone =
       | 
         ##
         "TitlePageZone"
+      | 
+        ##
+        "segmontoLine"
     }?,
     [
       a:defaultValue = "0"
