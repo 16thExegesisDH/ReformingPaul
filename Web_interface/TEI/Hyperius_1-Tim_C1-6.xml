@@ -8,7 +8,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Commentarii in epistolas D. Pauli ad Timotheum: [Hyperius Andreae],[Ed. Mylius, Johannes], [1582]</title>
+         <title>Epistolae D. Pauli prioris ad Timotheum argumentum. Andreas, Hyperius.Zürich : Christoph Froschauer, 1582.</title>
         <respStmt>
           <resp>FNS Paul exegesis projet.</resp>
           <persName xml:id="UZ">
@@ -26,9 +26,10 @@
           </persName>
         </respStmt>
       </titleStmt>
-      <extent>
-        <measure unit="total_images" n="48"/>
-        <measure unit="processed_images" n="16"/>
+      <extent>    
+         <measure unit="total_images_book" n="676"/>
+         <measure unit="total_images_commentary" n="134"/>
+         <measure unit="processed_images_commentary" n="134"/>
       </extent>
       <publicationStmt>
         <publisher>16th Century Exegesis of Paul</publisher>
@@ -42,15 +43,17 @@
             <addrLine>Kirchgasse 9</addrLine>
             <addrLine>8001 Zürich</addrLine>
          </address>
-        <availability status="restricted" n="CC-BY">
-          <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-          <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
-        </availability>
-        <date when="2023-10-18"/>
+         <availability>
+            <licence target="https://creativecommons.org/publicdomain/mark/1.0/deed.fr"/>
+            <p>Images : Public Domain Mark (e-rara)</p>
+            <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+            <p>Édition : CC BY</p>
+         </availability>
+         <date when="2026-04-29"/>
       </publicationStmt>
       <sourceDesc>
         <msDesc>
-          <msIdentifier xml:id="e-rara-62382">
+           <msIdentifier xml:id="ZBZ_C_85_G">
             <country>Schweiz</country>
             <settlement>Zürich</settlement>
             <institution>Zentralbibliothek Zürich</institution>
@@ -61,31 +64,32 @@
               <biblStruct>
                 <monogr>
                   <author>
-                    <persName role="presumed_author" ref="isni:000000012129718X">
+                     <persName ref="isni:0000000076887892">
                       <surname>Hyperius</surname>
                       <forename>Andreas</forename>
                     </persName>
                   </author>
-                  <!--<editor>
-                    <persName role="editor" ref="none">
-                      <surname>Mylius</surname>
-                      <forename>Johannes</forename>
-                      <note source="gnd" select=" https://d-nb.info/gnd/119770431 "/>
-                    </persName>
-                  </editor>-->
-                  <title type="complete_title">Hyperius, Andreas: in omnes D. Pauli Apostoli epistolas, atque etiam in epistolam D. Iudae</title>
-                  <title type="short_title">Commentarii in epistolas D. Pauli ad Timotheum</title>
+                   <title type="book_title">Commentarii D. Andreae Hyperii doctissimi in epistolas D. Pauli ad Timotheum, Titum, Philemonem et D. Iudae</title>
+                   <title type="commentary_title">Epistolae D. Pauli prioris ad Timotheum argumentum.</title>
                   <imprint>
-                    <pubPlace cert="medium" ref="geonames:2657896">Zurich</pubPlace>
+                    <pubPlace cert="high" ref="geonames:2657896">Zurich</pubPlace>
                     <respStmt>
                       <resp>Imprimeur</resp>
-                      <persName role="presumed_printer" ref="isni:0000000121270868">
+                      <persName ref="isni:0000000121270868">
                         <surname>Christoph</surname>
                         <forename>Froschauer</forename>
                       </persName>
                        <note><ref target="https://hls-dhs-dss.ch/fr/articles/010612/2018-01-11/"></ref>Historische Lexikon der Schweiz (HLS)</note>
                     </respStmt>
-                    <date cert="low">1582</date>
+                    <respStmt>
+                        <resp>éditeur</resp>
+                        <persName ref="none">
+                           <surname>Mylius</surname>
+                           <forename>Johannes</forename>
+                        </persName>
+                       <note><ref target=" https://d-nb.info/gnd/119770431"/>GND</note>
+                    </respStmt>
+                    <date cert="high">1582</date>
                   </imprint>
                 </monogr>
               </biblStruct>
@@ -95,7 +99,7 @@
             <objectDesc>
               <supportDesc>
                 <support>
-                  <dim>in-8°</dim>
+                  <dim>In-2°</dim>
                 </support>
               </supportDesc>
             </objectDesc>
@@ -104,76 +108,82 @@
             <surrogates>
               <bibl>
                 <ref target="https://doi.org/10.3931/e-rara-62382 "/>
+                 <ptr target="https://www.e-rara.ch/i3f/v20/16892585/manifest"/>
                 <relatedItem type="original">
-                  <ref target="#e-rara-3101">e-rara</ref>
+                  <ref target="#ZBZ_C_85_G">e-rara</ref>
                 </relatedItem>
               </bibl>
             </surrogates>
             <listBibl>
               <bibl>
                 <ref target="https://d-nb.info/gnd/118555146">
-                  <orgName>gnd</orgName>
+                  <orgName>GND</orgName>
                   <idno>118555146</idno>
                 </ref>
               </bibl>
+               <bibl>
+                  <ref target="https://ihr-num.unige.ch/rrp/X686">
+                     <orgName>RRP</orgName>
+                     <idno>X686</idno>
+                  </ref>
+               </bibl>
             </listBibl>
           </additional>
         </msDesc>
       </sourceDesc>
     </fileDesc>
-    <encodingDesc>
-      <projectDesc>
-        <p>This digital corpus is part of the 16th Century Exegesis of Paul project, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF.</p>
-      </projectDesc>
-      <editorialDecl>
-        <correction>
-          <p>The segmentation was corrected manually and the transcription from the OCR was corrected. See the OCR construction project:  </p>
-        </correction>
-        <normalization>
-          <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
-        </normalization>
-      </editorialDecl>
-      <appInfo>
-        <application ident="Kraken" version="4.1">
-          <label>Kraken</label>
-          <ptr target="https://github.com/mittagessen/kraken"/>
-        </application>
-      </appInfo>
-      <appInfo>
-        <application ident="FoNDUE" version="0.1">
-          <label>FoNDUE</label>
-          <ptr target="https://test2.fondue.unige.ch/"/>
-        </application>
-      </appInfo>
-      <classDecl>
-        <taxonomy xml:id="SegmOnto">
-          <bibl>
-            <title>SegmOnto</title>
-            <ptr target="https://segmonto.github.io/"/>
-          </bibl>
-          <category xml:id="SegmOntoZones"/>
-          <category xml:id="SegmOntoLines"/>
-        </taxonomy>
-      </classDecl>
-    </encodingDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="frm">Latin from 16e centuary</language>
-      </langUsage>
-      <textClass>
-        <keywords>
-          <term type="form">theological commentaries</term>
-          <term type="segmentation_quality">gold</term>
-          <term type="transcription_quality">gold</term>
-          <term type="intermediary_reg_quality">not applicable</term>
-          <term type="normalized_reg_quality">normalize with a python script</term>
-          <term type="ling_annotation_quality">not applicable</term>
-        </keywords>
-      </textClass>
-    </profileDesc>
-    <revisionDesc>
-      <change when="2023-10-18" who="#FG">Création du fichier TEI P5.</change>
-    </revisionDesc>
+     <encodingDesc>
+        <projectDesc>
+           <p>This digital corpus is part of the 16th Century Exegesis of Paul project <ref target="https://www.unige.ch/ihr/fr/recherche/projets/exegese-paulinienne/"/>, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF <ref target="https://data.snf.ch/grants/grant/207696"></ref>.</p>
+        </projectDesc>
+        <editorialDecl>
+           <correction>
+              <p>The segmentation was corrected manually, and the OCR transcription was fully or partially corrected depending on the dataset.</p>
+           </correction>
+           <normalization>
+              <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
+           </normalization>
+        </editorialDecl>
+        <appInfo>
+           <application ident="Kraken" version="5.3.0">
+              <label>Kraken</label>
+              <ptr target="https://github.com/mittagessen/kraken"/>
+           </application>
+        </appInfo>
+        <appInfo>
+           <application ident="FoNDUE" version="0.1">
+              <label>FoNDUE</label>
+              <ptr target="https://fondue.unige.ch/"/>
+           </application>
+        </appInfo>
+        <classDecl>
+           <taxonomy xml:id="SegmOnto">
+              <bibl>
+                 <title>SegmOnto</title>
+                 <ptr target="https://segmonto.github.io/"/>
+              </bibl>
+              <category xml:id="SegmOntoZones"/>
+              <category xml:id="SegmOntoLines"/>
+           </taxonomy>
+        </classDecl>
+     </encodingDesc>
+     <profileDesc>
+        <langUsage>
+           <language ident="lat">Latin : 16th century</language>
+        </langUsage>
+        <textClass>
+           <keywords>
+              <term type="form">theological commentaries</term>
+              <term type="segmentation_quality">gold</term>
+              <term type="transcription_quality">gold</term>
+              <term type="intermediary_reg_quality">not applicable</term>
+              <term type="normalized_reg_quality">normalize with a python script<ref target="https://github.com/16thExegesisDH/PipeLineThm/tree/main/PYTHON/normalisation"></ref></term>
+           </keywords>
+        </textClass>
+     </profileDesc>
+     <revisionDesc>
+        <change when="2026-04-29" who="#FG">Création du fichier TEI P5.</change>
+     </revisionDesc>
   </teiHeader>
   <!-- ajout du SourceDoc du chapitre 1 -->
   <sourceDoc>

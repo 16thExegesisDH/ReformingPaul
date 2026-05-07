@@ -8,7 +8,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title> Commentarium in epistolam divi Pauli apostoli ad Timotheum primam. Pellikan, Konrad. Zürich: Christoph Froschauer, 1539</title>
+            <title> Commentarium in epistolam divi Pauli apostoli ad Timotheum primam. Konrad, Pellikan. Zürich : Christoph Froschauer, 1539</title>
             <respStmt>
                <resp>FNS Paul exegesis projet.</resp>
                <persName xml:id="UZ">
@@ -23,13 +23,6 @@
                   <forename>Floriane</forename>
                   <surname>Goy</surname>
                   <ptr type="orcid" target="0009-0005-9944-035X"/>
-               </persName>
-            </respStmt>
-            <respStmt>
-               <resp>correction of OCR transcription, conversion to TEI, metadata encoding.</resp>
-               <persName xml:id="BD">
-                  <forename>Béatrice</forename>
-                  <surname>Dupuis</surname>
                </persName>
             </respStmt>
          </titleStmt>
@@ -60,7 +53,7 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier xml:id="ZB_III_B_14">
+               <msIdentifier xml:id="ZBZ_III_B_14_G">
                   <country>Schweiz</country>
                   <settlement>Zürich</settlement>
                   <institution>Zentralbibliothek Zürich</institution>
@@ -110,14 +103,14 @@
                         <ref target="https://doi.org/10.3931/e-rara-2604"/>
                         <ptr target="https://www.e-rara.ch/i3f/v20/843605/manifest"/>
                         <relatedItem type="original">
-                           <ref target="#ZB_III_B_14">e-rara</ref>
+                           <ref target="#ZBZ_III_B_14_G">e-rara</ref>
                         </relatedItem>
                      </bibl>
                   </surrogates>
                   <listBibl>
                      <bibl>
                         <ref target="https://d-nb.info/gnd/118739867">
-                           <orgName>d-nb gnd</orgName>
+                           <orgName>GND</orgName>
                            <idno>118739867</idno>
                         </ref>
                      </bibl>
@@ -169,7 +162,7 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="lat">Latin from 16th century</language>
+            <language ident="lat">Latin : 16th century</language>
          </langUsage>
          <textClass>
             <keywords>

@@ -8,7 +8,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Commentarii in utranque Pauli epistolam ad Timotheum: [Calvin Jean], [1548]</title>
+        <title>In priorem Pauli ad Timotheum commentarius. Johannes Calvin. Genf : Jean Girard, 1548.</title>
         <respStmt>
           <resp>FNS Paul exegesis projet.</resp>
           <persName xml:id="UZ">
@@ -27,8 +27,9 @@
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="total_images" n="48"/>
-        <measure unit="processed_images" n="16"/>
+        <measure unit="total_images_book" n="158"/>
+        <measure unit="total_images_commentary" n="96"/>
+        <measure unit="processed_images_commentary" n="96"/>
       </extent>
       <publicationStmt>
         <publisher>16th Century Exegesis of Paul</publisher>
@@ -42,15 +43,17 @@
           <addrLine>Kirchgasse 9</addrLine>
           <addrLine>8001 Zürich</addrLine>
         </address>
-        <availability status="restricted" n="CC-BY">
+        <availability>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/deed.fr"/>
+          <p>Images : Public Domain Mark (e-rara)</p>
           <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-          <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
+          <p>Édition : CC BY</p>
         </availability>
-        <date when="2023-10-18"/>
+        <date when="2026-04-30"/>
       </publicationStmt>
       <sourceDesc>
         <msDesc>
-          <msIdentifier xml:id="e-rara-62382">
+          <msIdentifier xml:id="BGE_Bb_1493_2">
             <country>Schweiz</country>
             <settlement>Genève</settlement>
             <institution>Bibliothèque de Genève</institution>
@@ -61,23 +64,24 @@
               <biblStruct>
                 <monogr>
                   <author>
-                    <persName role="presumed_author" ref="isni:0000000121030063">
+                    <persName ref="isni:0000000121030063" nymRef="63">
                       <surname>Calvin</surname>
-                      <forename>Jean</forename>
+                      <forename>Johannes</forename>
                     </persName>
+                    <note><ref target="https://hls-dhs-dss.ch/fr/articles/011069/2009-09-17/"></ref>Historische Lexikon der Schweiz (HLS) </note>
                   </author>
-                  <title type="complete_title">Joannis Calvini Commentarii in utranque Pauli epistolam ad Timotheum</title>
-                  <title type="short_title">Commentarii in utranque Pauli epistolam ad Timotheum</title>
+                  <title type="book_title">Commentarii in utranque Pauli epistolam ad Timotheum</title>
+                  <title type="commentary_title">In priorem Pauli ad Timotheum commentarius</title>
                   <imprint>
-                    <pubPlace cert="medium" ref="geonames:2660646">Geneve</pubPlace>
+                    <pubPlace cert="high" ref="geonames:2660646">Genf</pubPlace>
                     <respStmt>
                       <resp>Imprimeur</resp>
-                      <persName role="presumed_printer" ref="isni:0000000121021159">
+                      <persName ref="isni:0000000121021159">
                         <surname>Jean</surname>
                         <forename>Gérard</forename>
                       </persName>
                     </respStmt>
-                    <date cert="low">1548</date>
+                    <date cert="high">1548</date>
                   </imprint>
                 </monogr>
               </biblStruct>
@@ -87,7 +91,7 @@
             <objectDesc>
               <supportDesc>
                 <support>
-                  <dim>in-8°</dim>
+                  <dim>In 8°</dim>
                 </support>
               </supportDesc>
             </objectDesc>
@@ -95,17 +99,24 @@
           <additional>
             <surrogates>
               <bibl>
-                <ref target="https://doi.org/10.3931/e-rara-62382"/>
+                <ref target="https://doi.org/10.3931/e-rara-5708"/>
+                <ptr target=" https://www.e-rara.ch/i3f/v20/1751458/manifest"/>
                 <relatedItem type="original">
-                  <ref target="#e-rara-62382">e-rara</ref>
+                  <ref target="#BGE_Bb_1493_2">e-rara</ref>
                 </relatedItem>
               </bibl>
             </surrogates>
             <listBibl>
               <bibl>
                 <ref target="https://d-nb.info/gnd/118518534">
-                  <orgName>gnd</orgName>
+                  <orgName>GND</orgName>
                   <idno>118518534</idno>
+                </ref>
+              </bibl>
+              <bibl>
+                <ref target="https://ihr-num.unige.ch/rrp/X262">
+                  <orgName>RRP</orgName>
+                  <idno>X262</idno>
                 </ref>
               </bibl>
             </listBibl>
@@ -115,18 +126,18 @@
     </fileDesc>
     <encodingDesc>
       <projectDesc>
-        <p>This digital corpus is part of the 16th Century Exegesis of Paul project, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF.</p>
+        <p>This digital corpus is part of the 16th Century Exegesis of Paul project <ref target="https://www.unige.ch/ihr/fr/recherche/projets/exegese-paulinienne/"/>, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF <ref target="https://data.snf.ch/grants/grant/207696"></ref>.</p>
       </projectDesc>
       <editorialDecl>
         <correction>
-          <p>The segmentation was corrected manually and the transcription from the OCR was corrected. See the OCR construction project:  </p>
+          <p>The segmentation was corrected manually, and the OCR transcription was fully or partially corrected depending on the dataset.</p>
         </correction>
         <normalization>
           <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
         </normalization>
       </editorialDecl>
       <appInfo>
-        <application ident="Kraken" version="4.1">
+        <application ident="Kraken" version="5.3.0">
           <label>Kraken</label>
           <ptr target="https://github.com/mittagessen/kraken"/>
         </application>
@@ -134,7 +145,7 @@
       <appInfo>
         <application ident="FoNDUE" version="0.1">
           <label>FoNDUE</label>
-          <ptr target="https://test2.fondue.unige.ch/"/>
+          <ptr target="https://fondue.unige.ch/"/>
         </application>
       </appInfo>
       <classDecl>
@@ -150,21 +161,20 @@
     </encodingDesc>
     <profileDesc>
       <langUsage>
-        <language ident="frm">Latin from 16e centuary</language>
+        <language ident="lat">Latin : 16th century</language>
       </langUsage>
       <textClass>
         <keywords>
           <term type="form">theological commentaries</term>
-          <term type="segmentation_quality">gold fot Chapter 2, silver for the others</term>
-          <term type="transcription_quality">gold fot Chapter 2, silver for the others</term>
+          <term type="segmentation_quality">gold</term>
+          <term type="transcription_quality">gold</term>
           <term type="intermediary_reg_quality">not applicable</term>
-          <term type="normalized_reg_quality">normalize with a python script</term>
-          <term type="ling_annotation_quality">not applicable</term>
+          <term type="normalized_reg_quality">normalize with a python script<ref target="https://github.com/16thExegesisDH/PipeLineThm/tree/main/PYTHON/normalisation"></ref></term>
         </keywords>
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2023-10-18" who="#FG">Création du fichier TEI P5.</change>
+      <change when="2026-04-30" who="#FG">Création du fichier TEI P5.</change>
     </revisionDesc>
   </teiHeader>
   <sourceDoc>

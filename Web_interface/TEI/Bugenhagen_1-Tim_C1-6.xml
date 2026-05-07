@@ -8,7 +8,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Annotationes in Epistolas Pavli Ad Timotheum : [Bugenhagen, Johannes], [1524]</title>
+        <title>In priorem ad Timotheum epistolam annotationes.Johannes, Bugenhagen. Basel: [Petri Adam], 1524.</title>
         <respStmt>
           <resp>FNS Paul exegesis projet.</resp>
           <persName xml:id="UZ">
@@ -27,8 +27,9 @@
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="total_images" n="48"/>
-        <measure unit="processed_images" n="16"/>
+        <measure unit="total_images_book" n="314"/>
+        <measure unit="total_images_commentary" n="45"/>
+        <measure unit="processed_images_commentary" n="45"/>
       </extent>
       <publicationStmt>
         <publisher>16th Century Exegesis of Paul</publisher>
@@ -42,15 +43,17 @@
           <addrLine>Kirchgasse 9</addrLine>
           <addrLine>8001 Zürich</addrLine>
         </address>
-        <availability status="restricted" n="CC-BY">
+        <availability>
+          <licence target=" http://rightsstatements.org/vocab/NoC-NC/1.0/"/>
+          <p>Images : Non-commercial use only (MDZ)</p>
           <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-          <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
+          <p>Édition : CC BY</p>
         </availability>
-        <date when="2023-10-18"/>
+        <date when="2026-04-29"/>
       </publicationStmt>
       <sourceDesc>
         <msDesc>
-          <msIdentifier xml:id="bsb00027764">
+          <msIdentifier xml:id="BSB_Res_Exeg.309_Beibd.3">
             <country>Deutschland</country>
             <settlement>München</settlement>
             <institution>Bayerische Staatsbibliothek</institution>
@@ -61,24 +64,24 @@
               <biblStruct>
                 <monogr>
                   <author>
-                    <persName role="presumed_author" ref="isni:0000000109036374">
+                    <persName ref="isni:0000000109036374" nymRef="192">
                       <surname>Johannes</surname>
                       <forename>Bugenhagen</forename>
                     </persName>
                   </author>
-                  <title type="complete_title">Bugenhagen, Johannes: Annotationes in decem epistolas Pauli scilicet ad [...] Timotheum primam &amp; secundam</title>
-                  <title type="short_title">Annotationes in decem epistolas Pauli scilicet ad [...] Timotheum primam</title>
+                  <title type="book_title">Bugenhagen, Johannes: Annotationes in decem epistolas Pauli scilicet ad [...] Timotheum primam &amp; secundam</title>
+                  <title type="commentary_title">In priorem ad Timotheum epistolam annotationes.</title>
                   <imprint>
                     <pubPlace cert="medium" ref="geonames:7285161">Basel</pubPlace>
                     <respStmt>
                       <resp>Imprimeur</resp>
                       <persName role="presumed_printer" ref="isni:0000000116244569">
-                        <surname>Adam?</surname>
-                        <forename>Petri?</forename>
+                        <surname>Adam</surname>
+                        <forename>Petri</forename>
                       </persName>
                       <note><ref target="https://hls-dhs-dss.ch/de/articles/021524/2010-06-03/"></ref>Historische Lexikon der Schweiz (HLS)</note> 
                     </respStmt>
-                    <date cert="low">1524</date>
+                    <date cert="high">1524</date>
                   </imprint>
                 </monogr>
               </biblStruct>
@@ -88,7 +91,7 @@
             <objectDesc>
               <supportDesc>
                 <support>
-                  <dim>in-8°</dim>
+                  <dim>In-8°</dim>
                 </support>
               </supportDesc>
             </objectDesc>
@@ -97,16 +100,23 @@
             <surrogates>
               <bibl>
                 <ref target="https://mdz-nbn-resolving.de/details:bsb00027764"/>
+                <ptr target="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00027764/manifest"/>
                 <relatedItem type="original">
-                  <ref target="#bsb00027764">mdz</ref>
+                  <ref target="#BSB_Res_Exeg.309_Beibd.3">MDZ</ref>
                 </relatedItem>
               </bibl>
             </surrogates>
             <listBibl>
               <bibl>
                 <ref target=" https://d-nb.info/gnd/118517287 ">
-                  <orgName>gnd</orgName>
+                  <orgName>GND</orgName>
                   <idno>118517287</idno>
+                </ref>
+              </bibl>
+              <bibl>
+                <ref target="https://ihr-num.unige.ch/rrp/X454">
+                  <orgName>RRP</orgName>
+                  <idno>X454</idno>
                 </ref>
               </bibl>
             </listBibl>
@@ -116,18 +126,18 @@
     </fileDesc>
     <encodingDesc>
       <projectDesc>
-        <p>This digital corpus is part of the 16th Century Exegesis of Paul project, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF.</p>
+        <p>This digital corpus is part of the 16th Century Exegesis of Paul project <ref target="https://www.unige.ch/ihr/fr/recherche/projets/exegese-paulinienne/"/>, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF <ref target="https://data.snf.ch/grants/grant/207696"></ref>.</p>
       </projectDesc>
       <editorialDecl>
         <correction>
-          <p>The segmentation was corrected manually and the transcription from the OCR was corrected. See the OCR construction project:  </p>
+          <p>The segmentation was corrected manually, and the OCR transcription was fully or partially corrected depending on the dataset.</p>
         </correction>
         <normalization>
           <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
         </normalization>
       </editorialDecl>
       <appInfo>
-        <application ident="Kraken" version="4.1">
+        <application ident="Kraken" version="5.3.0">
           <label>Kraken</label>
           <ptr target="https://github.com/mittagessen/kraken"/>
         </application>
@@ -135,7 +145,7 @@
       <appInfo>
         <application ident="FoNDUE" version="0.1">
           <label>FoNDUE</label>
-          <ptr target="https://test2.fondue.unige.ch/"/>
+          <ptr target="https://fondue.unige.ch/"/>
         </application>
       </appInfo>
       <classDecl>
@@ -151,7 +161,7 @@
     </encodingDesc>
     <profileDesc>
       <langUsage>
-        <language ident="frm">Latin from 16e centuary</language>
+        <language ident="lat">Latin : 16th century</language>
       </langUsage>
       <textClass>
         <keywords>
@@ -159,13 +169,12 @@
           <term type="segmentation_quality">gold</term>
           <term type="transcription_quality">gold</term>
           <term type="intermediary_reg_quality">not applicable</term>
-          <term type="normalized_reg_quality">normalize with a python script</term>
-          <term type="ling_annotation_quality">not applicable</term>
+          <term type="normalized_reg_quality">normalize with a python script<ref target="https://github.com/16thExegesisDH/PipeLineThm/tree/main/PYTHON/normalisation"></ref></term>
         </keywords>
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2023-10-18" who="#FG">Création du fichier TEI P5.</change>
+      <change when="2026-04-30" who="#FG">Création du fichier TEI P5.</change>
     </revisionDesc>
   </teiHeader>
   <sourceDoc>

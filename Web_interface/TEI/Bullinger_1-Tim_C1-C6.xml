@@ -8,7 +8,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Commentarii In Epistolas D. Pavli Ad Timotheum : [Bullinger, Heinrich], [1536]</title>
+            <title>Commentarius in priorem epistolam ad Timotheum. Heinrich, Bullinger. Zürich : Christoph Froschauer, 1536.</title>
             <respStmt>
                <resp>FNS Paul exegesis projet.</resp>
                <persName xml:id="UZ">
@@ -27,8 +27,9 @@
             </respStmt>
          </titleStmt>
          <extent>
-            <measure unit="total_images" n="48"/>
-            <measure unit="processed_images" n="16"/>
+            <measure unit="total_images_book" n="479"/>
+            <measure unit="total_images_commentary" n="165"/>
+            <measure unit="processed_images_commentary" n="165"/>
          </extent>
          <publicationStmt>
             <publisher>16th Century Exegesis of Paul</publisher>
@@ -42,42 +43,46 @@
                <addrLine>Kirchgasse 9</addrLine>
                <addrLine>8001 Zürich</addrLine>
             </address>
-            <availability status="restricted" n="CC-BY">
+            <availability>
+               <licence target="https://creativecommons.org/publicdomain/mark/1.0/deed.fr"/>
+               <p>Images : Public Domain Mark (e-rara)</p>
                <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-               <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
+               <p>Édition : CC BY</p>
             </availability>
-            <date when="2023-10-18"/>
+            <date when="2026-04-30"/>
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier xml:id="erara23723">
+               <msIdentifier xml:id="ZBZ_RARA_5.266_2">
                   <country>Switzerland</country>
                   <settlement>Zürich</settlement>
                   <institution>Zentralbibliothek Zürich</institution>
-                  <idno type="shelfmark">VD 16 B 5144 Vischer C 251</idno>
+                  <idno type="shelfmark">RARA ; 5.266,2</idno>
                </msIdentifier>
                <msContents>
                   <p>
                      <biblStruct>
                         <monogr>
                            <author>
-                              <persName role="presumed_author" ref="isni:0000000109036374">
+                              <persName ref="isni:0000000109036374" nymRef="50">
                                  <surname>Heinrich</surname>
                                  <forename>Bullinger</forename>
                               </persName>
+                              <note><ref target="https://hls-dhs-dss.ch/de/articles/010443/2011-04-07/"></ref>Historische Lexikon der Schweiz (HLS)</note>
                            </author>
-                           <title type="complete_title">Bullinger, Heinrich: In D. Apostoli Pauli ad Thessalonicenses, Timotheum, Titum &amp;Philemonem epistolas</title>
-                           <title type="short_title">Commentarii In D. Apostoli Pauli ad Ad Timotheum</title>
+                           <title type="book_title">In D. Apostoli Pauli ad Thessalonicenses, Timotheum, Titum &amp;Philemonem epistolas</title>
+                           <title type="commentary_title">Commentarius in priorem epistolam ad Timotheum</title>
                            <imprint>
-                              <pubPlace cert="medium" ref="geonames:2657896">Zürich</pubPlace>
+                              <pubPlace cert="high" ref="geonames:2657896">Zürich</pubPlace>
                               <respStmt>
                                  <resp>Imprimeur</resp>
-                                 <persName role="presumed_printer" ref="isni:0000000121270868">
+                                 <persName ref="isni:0000000121270868">
                                     <surname>Froschauer</surname>
                                     <forename>Christoph</forename>
                                  </persName>
+                                 <note><ref target="https://hls-dhs-dss.ch/fr/articles/010612/2018-01-11/"></ref>Historische Lexikon der Schweiz (HLS)</note>
                               </respStmt>
-                              <date cert="low">1536</date>
+                              <date cert="high">1536</date>
                            </imprint>
                         </monogr>
                      </biblStruct>
@@ -87,7 +92,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <dim>in-8°</dim>
+                           <dim>In-8°</dim>
                         </support>
                      </supportDesc>
                   </objectDesc>
@@ -96,8 +101,9 @@
                   <surrogates>
                      <bibl>
                         <ref target="https://doi.org/10.3931/e-rara-23723"/>
+                        <ptr target="https://www.e-rara.ch/i3f/v20/7325750/manifest"/>
                         <relatedItem type="original">
-                           <ref target="#23723">e-rara</ref>
+                           <ref target="#ZBZ_RARA_5.266_2">e-rara</ref>
                         </relatedItem>
                      </bibl>
                   </surrogates>
@@ -108,6 +114,12 @@
                            <idno>118517384</idno>
                         </ref>
                      </bibl>
+                     <bibl>
+                        <ref target="https://ihr-num.unige.ch/rrp/X559">
+                           <orgName>RRP</orgName>
+                           <idno>X559</idno>
+                        </ref>
+                     </bibl>
                   </listBibl>
                </additional>
             </msDesc>
@@ -115,18 +127,18 @@
       </fileDesc>
       <encodingDesc>
          <projectDesc>
-            <p>This digital corpus is part of the 16th Century Exegesis of Paul project, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF.</p>
+            <p>This digital corpus is part of the 16th Century Exegesis of Paul project <ref target="https://www.unige.ch/ihr/fr/recherche/projets/exegese-paulinienne/"/>, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF <ref target="https://data.snf.ch/grants/grant/207696"></ref>.</p>
          </projectDesc>
          <editorialDecl>
             <correction>
-               <p>The segmentation was corrected manually and the transcription from the OCR was corrected. See the OCR construction project:  </p>
+               <p>The segmentation was corrected manually, and the OCR transcription was fully or partially corrected depending on the dataset.</p>
             </correction>
             <normalization>
                <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
             </normalization>
          </editorialDecl>
          <appInfo>
-            <application ident="Kraken" version="4.1">
+            <application ident="Kraken" version="5.3.0">
                <label>Kraken</label>
                <ptr target="https://github.com/mittagessen/kraken"/>
             </application>
@@ -134,7 +146,7 @@
          <appInfo>
             <application ident="FoNDUE" version="0.1">
                <label>FoNDUE</label>
-               <ptr target="https://test2.fondue.unige.ch/"/>
+               <ptr target="https://fondue.unige.ch/"/>
             </application>
          </appInfo>
          <classDecl>
@@ -150,7 +162,7 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="frm">Latin from 16e centuary</language>
+            <language ident="lat">Latin : 16th century</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -158,13 +170,12 @@
                <term type="segmentation_quality">gold</term>
                <term type="transcription_quality">gold</term>
                <term type="intermediary_reg_quality">not applicable</term>
-               <term type="normalized_reg_quality">not applicable</term>
-               <term type="ling_annotation_quality">not applicable</term>
+               <term type="normalized_reg_quality">normalize with a python script<ref target="https://github.com/16thExegesisDH/PipeLineThm/tree/main/PYTHON/normalisation"></ref></term>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2023-10-18" who="#FG">Création du fichier TEI P5.</change>
+         <change when="2026-04-30" who="#FG">Création du fichier TEI P5.</change>
       </revisionDesc>
    </teiHeader>
    <sourceDoc>
@@ -10969,7 +10980,7 @@
             </zone>
          </zone>
          <zone xml:id="f7325956_block_2"
-               type="MarginTextZone:ManuscriptAddendum"
+               type="MarginTextZone-ManuscriptAddendum"
                n="2"
                ulx="86"
                uly="325"

@@ -8,7 +8,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Commentarius in priorem Timothei epistolam : [Anonymus], [1533]</title>
+            <title>Commentarius in priorem Timothei epistolam. Anonymus. Basel : Heinrich Petri, 1533</title>
             <respStmt>
                <resp>FNS Paul exegesis projet.</resp>
                <persName xml:id="UZ">
@@ -27,8 +27,9 @@
             </respStmt>
          </titleStmt>
          <extent>
-            <measure unit="total_images" n="48"/>
-            <measure unit="processed_images" n="16"/>
+            <measure unit="total_images_book" n="193"/>
+            <measure unit="total_images_commentary" n="193"/>
+            <measure unit="processed_images_commentary" n="193"/>
          </extent>
          <publicationStmt>
             <publisher>16th Century Exegesis of Paul</publisher>
@@ -42,16 +43,18 @@
                <addrLine>Kirchgasse 9</addrLine>
                <addrLine>8001 Zürich</addrLine>
             </address>
-            <availability status="restricted" n="CC-BY">
+            <availability>
+               <licence target="https://creativecommons.org/publicdomain/mark/1.0/deed.fr"/>
+               <p>Images : Public Domain Mark (e-rara)</p>
                <licence target="https://creativecommons.org/licenses/by/4.0/"/>
-               <p>Creative Commons Attribution 4.0 CC BY 4.0</p>
+               <p>Édition : CC BY</p>
             </availability>
-            <date when="2023-10-18"/>
+            <date when="2026-04-29"/>
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier xml:id="bsb11059254">
-                  <country>Deutschland</country>
+               <msIdentifier xml:id="UB_UBH_FG_VIII2_16_7">
+                  <country>Schweiz</country>
                   <settlement>Basel</settlement>
                   <institution>Universitätsbibliothek Basel</institution>
                   <idno type="shelfmark">UBH FG VIII2 16:7</idno>
@@ -61,24 +64,23 @@
                      <biblStruct>
                         <monogr>
                            <author>
-                              <persName role="presumed_author" ref="isni:anonyme">
-                                 <surname>?</surname>
-                                 <forename>?</forename>
+                              <persName>
+                                 <surname>Anonymus</surname>
                               </persName>
                            </author>
-                           <title type="complete_title">Anonymus: Commentarius in priorem Timothei epistolam à viro summae pietatis studio conscriptus</title>
-                           <title type="short_title">Commentarius in priorem Timothei epistolam</title>
+                           <title type="book_title">Commentarius in priorem Timothei epistolam ab viro summae pietatis studio conscriptus</title>
+                           <title type="commentary_title">Commentarius in priorem Timothei epistolam</title>
                            <imprint>
-                              <pubPlace cert="medium" ref="geonames:2661604">Basel</pubPlace>
+                              <pubPlace cert="high" ref="geonames:2661604">Basel</pubPlace>
                               <respStmt>
                                  <resp>Imprimeur</resp>
-                                 <persName role="presumed_printer" ref="isni:0000000120967946">
+                                 <persName ref="isni:0000000120967946">
                                     <surname>Heinrich</surname>
                                     <forename>Petri</forename>
                                  </persName>
                                  <note><ref target="https://hls-dhs-dss.ch/fr/articles/041530/2010-05-10/"></ref>Historische Lexikon der Schweiz (HLS) </note>
                               </respStmt>
-                              <date cert="low">1533</date>
+                              <date cert="high">1533</date>
                            </imprint>
                         </monogr>
                      </biblStruct>
@@ -88,7 +90,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <dim>in-8°</dim>
+                           <dim>In-8°</dim>
                         </support>
                      </supportDesc>
                   </objectDesc>
@@ -97,16 +99,17 @@
                   <surrogates>
                      <bibl>
                         <ref target="https://doi.org/10.3931/e-rara-3101"/>
+                        <ptr target="https://www.e-rara.ch/i3f/v20/952762/manifest"/>
                         <relatedItem type="original">
-                           <ref target="#e-rara-3101">e-rara</ref>
+                           <ref target="#UB_UBH_FG_VIII2_16_7">e-rara</ref>
                         </relatedItem>
                      </bibl>
                   </surrogates>
                   <listBibl>
                      <bibl>
-                        <ref target=" http://d-nb.info/gnd/118682938 ">
-                           <orgName>gnd</orgName>
-                           <idno>118682938</idno>
+                        <ref target="https://ihr-num.unige.ch/rrp/X654">
+                           <orgName>RRP</orgName>
+                           <idno>X654</idno>
                         </ref>
                      </bibl>
                   </listBibl>
@@ -116,18 +119,18 @@
       </fileDesc>
       <encodingDesc>
          <projectDesc>
-            <p>This digital corpus is part of the 16th Century Exegesis of Paul project, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF.</p>
+            <p>This digital corpus is part of the 16th Century Exegesis of Paul project <ref target="https://www.unige.ch/ihr/fr/recherche/projets/exegese-paulinienne/"/>, directed by Prof-Ueli Zahnd (IHR) and funded by the SNSF <ref target="https://data.snf.ch/grants/grant/207696"></ref>.</p>
          </projectDesc>
          <editorialDecl>
             <correction>
-               <p>The segmentation was corrected manually and the transcription from the OCR was corrected. See the OCR construction project:  </p>
+               <p>The segmentation was corrected manually, and the OCR transcription was fully or partially corrected depending on the dataset.</p>
             </correction>
             <normalization>
                <p>For regularisation purposes, this transcription has been standardised using a Python script.</p>
             </normalization>
          </editorialDecl>
          <appInfo>
-            <application ident="Kraken" version="4.1">
+            <application ident="Kraken" version="5.3.0">
                <label>Kraken</label>
                <ptr target="https://github.com/mittagessen/kraken"/>
             </application>
@@ -135,7 +138,7 @@
          <appInfo>
             <application ident="FoNDUE" version="0.1">
                <label>FoNDUE</label>
-               <ptr target="https://test2.fondue.unige.ch/"/>
+               <ptr target="https://fondue.unige.ch/"/>
             </application>
          </appInfo>
          <classDecl>
@@ -151,7 +154,7 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language ident="frm">Latin from 16e centuary</language>
+            <language ident="lat">Latin : 16th century</language>
          </langUsage>
          <textClass>
             <keywords>
@@ -159,13 +162,12 @@
                <term type="segmentation_quality">gold</term>
                <term type="transcription_quality">gold</term>
                <term type="intermediary_reg_quality">not applicable</term>
-               <term type="normalized_reg_quality">normalize with a python script</term>
-               <term type="ling_annotation_quality">not applicable</term>
+               <term type="normalized_reg_quality">normalize with a python script<ref target="https://github.com/16thExegesisDH/PipeLineThm/tree/main/PYTHON/normalisation"></ref></term>
             </keywords>
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2023-10-18" who="#FG">Création du fichier TEI P5.</change>
+         <change when="2026-04-29" who="#FG">Création du fichier TEI P5.</change>
       </revisionDesc>
    </teiHeader>
    <sourceDoc>
@@ -257,7 +259,7 @@
             </zone>
          </zone>
          <zone xml:id="f952765_block_2"
-               type="MarginTextZone:ManuscriptAddendum"
+               type="MarginTextZone-ManuscriptAddendum"
                n="2"
                ulx="119"
                uly="94"
